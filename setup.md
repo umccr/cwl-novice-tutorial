@@ -38,7 +38,7 @@ data-toggle="tab">Linux</a></li>
       {: .callout }
    2. Open PowerShell as Administrator ("Start menu" > "PowerShell" > right-click > "Run as Administrator")
       and paste the following commands followed by <kbd>Enter</kbd> to install WSL 2:
-      `wsl --update`
+      `wsl --update`, and then
       `wsl --install --distribution Ubuntu`
       To ensure that `Ubuntu` is the default subsystem instead of `docker-desktop-*`, you may need to use:
       `wsl --set-default Ubuntu`
