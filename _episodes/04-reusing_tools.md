@@ -26,12 +26,11 @@ The last step of our workflow is counting the RNA-seq reads for which we will us
 > Have a look at the CWL document. Which inputs does this tool need? And what are the outputs of this tool?
 >
 > > ## Solution
-> > The `featureCounts` CWL document can be found in the [GitHub repo][featurecounts-cwl]; it has 2 inputs: `annotations` (line 6) and `mapped_reads`, both files. These inputs can be found on lines 6 and 9.
-> > The output of this tool is a file called `featurecounts` (line 21).
+> > The `featureCounts` CWL document can be found in the [GitHub repo][featurecounts-cwl]; it has 3 inputs: `annotations` and `mapped_reads`, both files, along with `reads_are_paired` (a boolean choice). These inputs can be found on lines 6, 9, and 12.
+> > The output of this tool is a file called `featurecounts` (line 27).
 > >
 > {: .solution}
 {: .challenge}
-{% include links.md %}
 
 We need a local copy of `featureCounts` in order to use it in our workflow.
 We already imported this as a git submodule during setup,
@@ -116,6 +115,7 @@ so the tool should be located at `bio-cwl-tools/subread/featureCounts.cwl`.
 > >     in:
 > >       mapped_reads: index_alignment/bam_sorted_indexed
 > >       annotations: fruitfly_gene_model
+> >       reads_are_paired: {default: true}
 > >     out: [featurecounts]
 > >
 > > outputs:
@@ -170,4 +170,3 @@ cwltool --cachedir cache rna_seq_workflow_3.cwl workflow_input_3.yml
 [featurecounts-cwl]: https://github.com/common-workflow-library/bio-cwl-tools/blob/release/subread/featureCounts.cwl
 
 {% include links.md %}
-

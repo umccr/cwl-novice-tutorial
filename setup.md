@@ -261,7 +261,7 @@ docker pull quay.io/biocontainers/star:2.7.5c--0
 docker pull quay.io/biocontainers/fastqc:0.11.9--hdfd78af_1
 docker pull quay.io/biocontainers/cutadapt:3.7--py39hbf8eff0_1
 docker pull quay.io/biocontainers/samtools:1.14--hb421002_0
-docker pull quay.io/biocontainers/subread:1.5.0p3--0
+docker pull quay.io/biocontainers/subread:2.0.6--he4a0461_0
 ~~~
 {: .language-bash}
 
