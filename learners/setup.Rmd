@@ -1,0 +1,133 @@
+---
+title: Setup
+---
+
+## OS Setup
+
+These lessons assume that you are using the freely available Visual Studio Code application with the
+Benten extension along with the CWL reference runner (`cwltool`).
+
+This tutorial requires three pieces of software to run and visualize the workflows: Docker, cwltool, and graphviz.
+
+Please follow instructions for your OS by clicking on the relevant link below.
+
+* [Windows Setup](#windows-setup)
+
+* [MacOS Setup](#macos-setup)
+
+* [Linux Setup](#linux-setup)
+
+```{r, child = 'files/windows_setup.Rmd'}
+
+```
+
+Continue to [Confirm Software Installations](#confirm-software-installations) after completing the setup for Windows.
+
+```{r, child = 'files/macos_setup.Rmd'}
+
+```
+
+Continue to [Confirm Software Installations](#confirm-software-installations) after completing the setup for MacOS.
+
+```{r, child = 'files/linux_setup.Rmd'}
+
+```
+
+Continue to [Confirm Software Installations](#confirm-software-installations) after completing the setup for Linux.
+
+## Confirm Software Installations
+
+### Docker
+
+To confirm docker is installed, run the following command to display the version number:
+
+```bash
+docker version
+```
+
+You should see something similar to the output shown below.
+
+:::::::::::::::::::::::: spoiler
+
+### Docker Version Output Example
+
+```
+Client: Docker Engine - Community
+ Version:           20.10.13
+ API version:       1.41
+ Go version:        go1.16.15
+ Git commit:        a224086
+ Built:             Thu Mar 10 14:08:15 2022
+ OS/Arch:           linux/amd64
+ Context:           default
+ Experimental:      true
+
+Server: Docker Engine - Community
+ Engine:
+  Version:          20.10.13
+  API version:      1.41 (minimum version 1.12)
+  Go version:       go1.16.15
+  Git commit:       906f57f
+  Built:            Thu Mar 10 14:06:05 2022
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.5.10
+  GitCommit:        2a1d4dbdb2a1030dc5b01e96fb110a9d9f150ecc
+ runc:
+  Version:          1.0.3
+  GitCommit:        v1.0.3-0-gf46b6ba
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+```
+
+::::::::::::::::::::::::::::::
+
+### Confirm cwltool is installed
+
+To confirm `cwltool` is installed, run the following command to display the version number:
+
+```bash
+cwltool --version
+```
+
+You should see something similar to the output shown below.
+
+:::::::::::::::::::::::: spoiler
+
+### Cwltool Version Output Example
+
+```
+/home/learner/env/bin/cwltool 3.1.20220224085855
+```
+
+::::::::::::::::::::::::
+
+### GraphViz
+
+To confirm `graphviz` is installed, run the following command to display the version number:
+
+```bash
+dot -V
+```
+
+You should see something similar to the output shown below.
+
+:::::::::::::::::::::::: spoiler
+
+### Graphviz version output example
+
+```
+dot - graphviz version 2.43.0 (0)
+```
+
+::::::::::::::::::::::::
+
+```{r, child = 'files/containers_setup.Rmd'}
+
+```
+
+```{r, child = 'files/data_setup.Rmd'}
+
+```

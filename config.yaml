@@ -8,67 +8,53 @@
 # lc: Library Carpentry
 # cp: Carpentries (to use for instructor training for instance)
 # incubator: The Carpentries Incubator
-carpentry: 'incubator'
+carpentry: 'cwl'
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Introduction to Workflows with Common Workflow Language'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ # FIXME
+created: 2024-04-29
 
 # Comma-separated list of keywords for the lesson
-keywords: 'software, data, lesson, The Carpentries' # FIXME
+keywords: 'software, data, lesson, workflows, Common Workflow Language' # FIXME
 
 # Life cycle stage of the lesson
 # possible values: pre-alpha, alpha, beta, stable
-life_cycle: 'pre-alpha' # FIXME
+life_cycle: 'beta'
 
 # License of the lesson
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
-source: 'https://github.com/carpentries/workbench-template-md' # FIXME
+# This is updated by GitHub actions prior to use  # FIXME
+source: 'https://github.com/__USERNAME__/__PROJECT__'
 
 # Default branch of your lesson
 branch: 'main'
 
 # Who to contact if there are any issues
-contact: 'team@carpentries.org' # FIXME
-
-# Navigation ------------------------------------------------
-#
-# Use the following menu items to specify the order of
-# individual pages in each dropdown section. Leave blank to
-# include all pages in the folder.
-#
-# Example -------------
-#
-# episodes:
-# - introduction.md
-# - first-steps.md
-#
-# learners:
-# - setup.md
-#
-# instructors:
-# - instructor-notes.md
-#
-# profiles:
-# - one-learner.md
-# - another-learner.md
+contact: 'https://www.commonwl.org/#Support'
 
 # Order of episodes in your lesson
-episodes: 
-- introduction.md
+episodes:
+  - 01-introduction.Rmd
+  - 02-shell_to_cwl.Rmd
+  - 03-dependency_graphs.Rmd
+  - 04-reusing_tools.Rmd
+  - debug.md
+  - more_info.md
 
 # Information for Learners
-learners: 
+learners:
+  - setup.Rmd
+
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #

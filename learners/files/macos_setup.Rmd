@@ -1,0 +1,101 @@
+---
+title: MacOS Setup
+---
+
+<br>
+
+## MacOS Setup
+
+### VSCode Installation
+
+Download and install [VSCode][vs_code]
+
+<br>
+
+### VSCode Extensions
+
+**Install Benten Extension**
+
+[Open Benten in the marketplace](https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl) and click the `Install` button or follow the directions.
+
+**Install Redhat Yaml VSCode Extension**
+
+[Open RedHad Yaml in the marketplace][redhat_yaml_vs_code_marketplace] and click the `Install` button.
+
+If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
+
+#### Attribute CWL files to the yaml file type
+
+Add the following chunk to the VSCode [user settings json][user_settings_json] to attribute CWL to the YAML file type.
+
+```json
+{
+    "files.associations": {
+        "*.cwl": "yaml"
+    }
+}
+```
+
+<br>
+
+### Docker Installation
+
+[Install docker](https://docs.docker.com/desktop/mac/install)
+
+<br>
+
+### Install MiniConda
+
+[Install miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
+
+<br>
+
+### Conda Setup
+
+#### Update Conda sources configuration
+
+Tell conda about which channels (sources) we will use
+
+```bash
+conda config --add channels conda-forge
+```
+
+<br>
+
+#### Create a conda virtual environment
+
+Create a virtual environment using conda
+
+```bash
+conda create --name cwltutorial python==3.11 mamba
+```
+
+<br>
+
+#### Activate the virtual environment
+
+```bash
+conda activate cwltutorial
+```
+
+<br>
+
+#### Install prerequisites via Mamba
+
+```bash
+mamba install cwltool graphviz wget git nodejs
+```
+
+:::::::::::::::: callout
+
+Reactivating the conda virtual environment
+
+The virtual environment needs to be activated every time you start a terminal using
+`conda activate cwltutorial`.
+
+::::::::::::::::
+
+[vs_code]: https://code.visualstudio.com/
+[benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
+[redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings
