@@ -1,0 +1,122 @@
+---
+title: Linux Setup
+---
+
+## Linux Setup
+
+<br>
+
+### Install VSCode
+
+Download and install [VSCode](https://code.visualstudio.com/)
+
+<br>
+
+### VSCode extensions
+
+
+**Install Benten VSCode Extension**
+
+[Open Benten in the marketplace][benten_vs_code_marketplace] and click the `Install` button.
+
+If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
+
+
+**Install Redhat Yaml VSCode Extension**
+
+[Open RedHad Yaml in the marketplace][redhat_yaml_vs_code_marketplace] and click the `Install` button.
+
+If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
+
+
+#### Attribute CWL files to the yaml file type
+
+Add the following chunk to the VSCode [user settings json][user_settings_json] to attribute CWL to the YAML file type.
+
+```json
+{
+    "files.associations": {
+        "*.cwl": "yaml"
+    }
+}
+```
+
+<br>
+
+### Install Docker
+
+[Click here to follow the instructions for installing docker on linux][docker_server_install]
+
+<br>
+
+:::::::: callout
+
+## Extra action if you install Docker using Snap
+[Snap](https://snapcraft.io/) is an app management system for linux - which is popular on
+Ubuntu and other systems. Docker is available via Snap - if you have installed it using
+this service you will need to take the following steps, to ensure docker will work properly.
+
+```bash
+mkdir ~/tmp
+export TMPDIR=~/tmp
+```
+
+Each time you open a new terminal you will have to enter the `export TMPDIR=~/tmp` command,
+or you can add it to your `~/.profile` or `~/.bashrc` file.
+
+::::::::::::::
+
+#### Enable docker usage as a non-root user
+
+Follow the instructions in the Docker documentation to [enable docker usage as a non-root user][enable_user_docker_usage]
+
+You will need to logout for this to take effect.
+
+
+### Install cwltool
+
+First we will make a Python virtual environment by running the following commands in the terminal.
+
+```bash
+python3 -m venv env       # Create a virtual environment named 'env' in the current directory
+source env/bin/activate   # Activate the 'env' environment
+```
+
+You will know that this worked as the terminal prompt will now have `(env)` at the beginning.
+
+:::::::::::: callout
+
+### Reactivating the python virtual environment
+
+Every time you launch VS Code or launch a new terminal, you must run `source env/bin/activate`
+to re-enable access to this Python Virtual Environment.
+
+::::::::::::::
+
+Next, install cwltool by running the following in the terminal:
+
+```bash
+pip install cwltool
+```
+
+Later we will make visualisations of our workflows.
+To support that we need to install `graphviz`.
+
+##### Install graphviz
+
+Here is the command for Debian-based Linux systems to install `graphviz` and other helpful programs:
+
+```bash
+sudo apt-get install -y graphviz wget git nodejs
+```
+
+For other Linux systems, check [the graphviz download page][graphviz_download_page]
+
+
+[vs_code]: https://code.visualstudio.com/
+[benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
+[redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings
+[docker_server_install]: https://docs.docker.com/engine/install/#server
+[enable_user_docker_usage]: https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
+[graphviz_download_page]: https://graphviz.org/download/#linux

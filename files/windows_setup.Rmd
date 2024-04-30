@@ -1,0 +1,151 @@
+---
+title: Windows Setup
+---
+
+## Windows Setup
+
+### WSL2 Installation
+
+::::::::::::::::::prereq
+
+Ensure you're running Windows 10 or higher
+
+To check your Windows version and build number, press the Windows logo key + <kbd>R</kbd>, type `winver`, select OK.
+You can update to the latest Windows version by selecting "Start" > "Settings" > "Windows Update" > "Check for updates".
+
+It is also expected you download the 'terminal' app from the Microsoft store:
+
+::::::::::::::::::
+
+Follow the [wsl installation instructions][wsl_installation_instructions].
+
+You may also wish to go through [Getting started with WSL2][getting_started_with_wsl2].
+
+::::::::::::::: callout
+
+For this tutorial, we expect you use the Ubuntu distribution.
+
+::::::::::::::::
+
+### Confirm WSL2 is installed
+
+Open PowerShell as Administrator and type in the following
+
+```
+wsl --list
+```
+
+You should see your linux distribution you have installed in the previous step.
+
+### Installing apt tools
+
+For this tutorial, we will require a few linux tools to be installed.
+
+Open up the 'terminal' app and select a new tab of the Ubuntu version you have just installed
+
+```bash
+sudo apt-get update -y -q && \
+sudo apt-get install -y -q \
+  python3-venv \
+  wget \
+  graphviz \
+  nodejs \
+  wslu
+```
+
+### Install Docker Desktop
+
+Install Docker Desktop by following the instructions on the [Docker Desktop Installation Page][windows_docker_desktop_installation_page]
+
+* Accept the terms and conditions, if prompted
+* Wait for Docker Desktop to finish starting
+* Skip the tutorial, if prompted
+
+
+#### Ensure Docker Desktop is Using the WSL2 Backend
+
+* From the top menu choose "Settings" > "General"
+
+* Make sure 'Use the WSL 2 based engine' is selected
+
+
+### VSCode Installation
+
+Download and install [VSCode][vs_code]
+
+
+#### Install VSCode Extensions
+
+
+
+**Install the WSL Integration extension**
+
+[Open WSL2 Extension in the marketplace][remote_wsl_vs_code_marketplace]
+
+You should now see 'WSL Targets' under the 'Remote Explorer' tab on the left hand side of the screen.
+
+Right-click Ubuntu to set it as the default distribution
+
+
+
+**Install Benten VSCode Extension**
+
+[Open Benten in the marketplace][benten_vs_code_marketplace] and click the `Install` button.
+
+If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
+
+
+
+**Install Redhat Yaml VSCode Extension**
+
+[Open RedHad Yaml in the marketplace][redhat_yaml_vs_code_marketplace] and click the `Install` button.
+
+If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
+
+
+
+#### Attribute CWL files to the yaml file type
+
+Add the following chunk to the VSCode [user settings json][user_settings_json] to attribute CWL to the YAML file type.
+
+```json
+{
+    "files.associations": {
+        "*.cwl": "yaml"
+    }
+}
+```
+
+
+### Install cwltool (latest)
+
+First we will make a Python virtual environment by running the following commands in the terminal.
+
+```bash
+python3 -m venv env       # Create a virtual environment named 'env' in the current directory
+source env/bin/activate   # Activate the 'env' environment
+```
+
+You will know that this worked as the terminal prompt will now have `(env)` at the beginning.
+
+
+### Reactivating the python virtual environment
+
+Every time you launch VS Code or launch a new terminal, you must run `source env/bin/activate`
+to re-enable access to this Python Virtual Environment.
+
+Next, install cwltool by running the following in the terminal:
+
+```bash
+pip install cwltool
+```
+
+
+[vs_code]: https://code.visualstudio.com/
+[benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
+[redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
+[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings
+[wsl_installation_instructions]: https://learn.microsoft.com/en-us/windows/wsl/install
+[getting_started_with_wsl2]: https://medium.com/@awlucattini_60867/getting-started-with-wsl2-c11826654776?source=friends_link&sk=ddd411c0794ba2fce877984c300882ae
+[windows_docker_desktop_installation_page]: https://docs.docker.com/desktop/install/windows-install/
+[remote_wsl_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl

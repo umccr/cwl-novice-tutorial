@@ -1,8 +1,9 @@
 ---
-title: 'Reference'
+layout: reference
 ---
 
 ## Glossary
 
-This is a placeholder file. Please add content here. 
+FIXME
 
+{% include links.md %}
