@@ -91,11 +91,11 @@
   Introduction to Workflows with Common Workflow Language
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 0%" class="percentage">
-    0%
+<aside class="col-md-12 lesson-progress"><div style="width: NaN%" class="percentage">
+    NaN%
   </div>
   <div class="progress ">
-    <div class="progress-bar " role="progressbar" style="width: 0%" aria-valuenow="0" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar " role="progressbar" style="width: NaN%" aria-valuenow="NaN" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -201,7 +201,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="debug.html">5. Debugging Workflows</a>
+        <a href="addendum-01-debug.html">5. Debugging Workflows</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -210,7 +210,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="more_info.html">6. More information</a>
+        <a href="more_info.html">6. More Information</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -273,7 +273,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>CWL and Shell Tools</h1>
-        <p>Last updated on 2024-04-30 |
+        <p>Last updated on 2024-05-05 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/02-shell_to_cwl.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -494,12 +494,12 @@ in a particular order.</p>
 </div>
 <div class="section level3">
 <h3 id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a></h3>
-<div id="discussion1" class="callout discussion">
+<div id="changing-the-output-string" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+<div id="changing-the-output-string" class="callout-inner">
+<h3 class="callout-title">Changing the output string 🌶<a class="anchor" aria-label="anchor" href="#changing-the-output-string"></a>
 </h3>
 <div class="callout-content">
 <p>What do you need to change to print a different text on the command
@@ -526,12 +526,12 @@ text in the <code>hello_world.yml</code> file.</p>
 </div>
 </div>
 </div>
-<div id="discussion2" class="callout discussion">
+<div id="updating-the-arguments" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion2"></a>
+<div id="updating-the-arguments" class="callout-inner">
+<h3 class="callout-title">Updating the arguments 🌶🌶<a class="anchor" aria-label="anchor" href="#updating-the-arguments"></a>
 </h3>
 <div class="callout-content">
 <p>How can one add the <code>-e</code> argument to the echo command to
@@ -559,12 +559,12 @@ interpret backslashes?</p>
 </div>
 </div>
 </div>
-<div id="discussion3" class="callout discussion">
+<div id="redirecting-cwltool-stdout-and-stderr" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion3"></a>
+<div id="redirecting-cwltool-stdout-and-stderr" class="callout-inner">
+<h3 class="callout-title">Redirecting cwltool stdout and stderr 🌶🌶<a class="anchor" aria-label="anchor" href="#redirecting-cwltool-stdout-and-stderr"></a>
 </h3>
 <div class="callout-content">
 <p>Rerun the <code>echo.cwl</code> script but point stdout and stderr to
@@ -577,7 +577,7 @@ different files.</p>
 <div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
-  <h4 class="accordion-header" id="headingHint1">Hint: Redirecting stdout and stderr</h4>
+  <h4 class="accordion-header" id="headingHint1">Hint: Redirecting CLI stdout and stderr</h4>
 </button>
 <div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
@@ -603,13 +603,13 @@ redirect stdout and stderr to different files respectively</p>
 </div>
 </div>
 </div>
-<div id="specifying-the-outputs-of-the-tool-as-an-actual-output" class="callout discussion">
+<div id="specifying-the-stdout-of-the-tool-as-a-cwl-output" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="specifying-the-outputs-of-the-tool-as-an-actual-output" class="callout-inner">
-<h3 class="callout-title">Specifying the outputs of the tool as an
-actual output<a class="anchor" aria-label="anchor" href="#specifying-the-outputs-of-the-tool-as-an-actual-output"></a>
+<div id="specifying-the-stdout-of-the-tool-as-a-cwl-output" class="callout-inner">
+<h3 class="callout-title">Specifying the stdout of the tool as a CWL
+output 🌶🌶🌶<a class="anchor" aria-label="anchor" href="#specifying-the-stdout-of-the-tool-as-a-cwl-output"></a>
 </h3>
 <div class="callout-content">
 <p>Using <a href="https://cwl-for-eo.github.io/guide/how-to/cwl-how-to/02-stdout/capture-stdout/" class="external-link">this
@@ -627,7 +627,7 @@ requirements section of the tool description.</p>
 <div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
-  <h4 class="accordion-header" id="headingHint2">OutputBinding</h4>
+  <h4 class="accordion-header" id="headingHint2">Hint - stdout output binding</h4>
 </button>
 <div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
 <div class="accordion-body">
@@ -948,12 +948,13 @@ space.</p>
 </div>
 <div class="section level3">
 <h3 id="challenges-1">Challenges<a class="anchor" aria-label="anchor" href="#challenges-1"></a></h3>
-<div id="discussion7" class="callout discussion">
+<div id="directly-embed-a-commandlinetool-into-a-file" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion7"></a>
+<div id="directly-embed-a-commandlinetool-into-a-file" class="callout-inner">
+<h3 class="callout-title">Directly embed a Commandlinetool into a file
+🌶🌶<a class="anchor" aria-label="anchor" href="#directly-embed-a-commandlinetool-into-a-file"></a>
 </h3>
 <div class="callout-content">
 <p>How could one embed the fastqc tool description directly into the
@@ -994,9 +995,9 @@ workflow?</p>
 </div>
 </div>
 </div>
-<div id="embedding-tool-descriptions" class="callout discussion">
+<div id="embedding-tool-descriptions" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="embedding-tool-descriptions" class="callout-inner">
 <h3 class="callout-title">Embedding Tool Descriptions<a class="anchor" aria-label="anchor" href="#embedding-tool-descriptions"></a>
@@ -1106,8 +1107,8 @@ any links that you are not going to use.
   "url": "https://__USERNAME__.github.io/__PROJECT__/instructor/02-shell_to_cwl.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/instructor/02-shell_to_cwl.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-04-30",
-  "datePublished": "2024-04-30"
+  "dateModified": "2024-05-05",
+  "datePublished": "2024-05-05"
 }
 
   </script><script>

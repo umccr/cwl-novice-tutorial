@@ -91,11 +91,11 @@
   Introduction to Workflows with Common Workflow Language
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 0%" class="percentage">
-    0%
+<aside class="col-md-12 lesson-progress"><div style="width: NaN%" class="percentage">
+    NaN%
   </div>
   <div class="progress ">
-    <div class="progress-bar " role="progressbar" style="width: 0%" aria-valuenow="0" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar " role="progressbar" style="width: NaN%" aria-valuenow="NaN" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -201,7 +201,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="debug.html">5. Debugging Workflows</a>
+        <a href="addendum-01-debug.html">5. Debugging Workflows</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -210,7 +210,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="more_info.html">6. More information</a>
+        <a href="more_info.html">6. More Information</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -259,7 +259,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="03-dependency_graphs.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="debug.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="addendum-01-debug.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -267,14 +267,14 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Developing
         </a>
-        <a class="chapter-link float-end" href="debug.html" rel="next">
+        <a class="chapter-link float-end" href="addendum-01-debug.html" rel="next">
           Next: Debugging Workflows... 
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Resources for Reusing Tools and Scripts</h1>
-        <p>Last updated on 2024-04-30 |
+        <p>Last updated on 2024-05-05 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/04-reusing_tools.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -328,7 +328,7 @@ tool.</p>
 </div>
 <div id="find-the-featurecounts-tool-in-the-bio-cwl-tools-library" class="callout-inner">
 <h3 class="callout-title">Find the featureCounts tool in the
-bio-cwl-tools library<a class="anchor" aria-label="anchor" href="#find-the-featurecounts-tool-in-the-bio-cwl-tools-library"></a>
+bio-cwl-tools library 🌶<a class="anchor" aria-label="anchor" href="#find-the-featurecounts-tool-in-the-bio-cwl-tools-library"></a>
 </h3>
 <div class="callout-content">
 <p>Find the <code>featureCounts</code> tool in the <a href="https://github.com/common-workflow-library/bio-cwl-tools" class="external-link">bio-cwl-tools
@@ -345,10 +345,11 @@ tool need? And what are the outputs of this tool?</p>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The <code>featureCounts</code> CWL document can be found in the <a href="https://github.com/common-workflow-library/bio-cwl-tools/blob/release/subread/featureCounts.cwl" class="external-link">GitHub
-repo</a>. It has three inputs: - annotations - A GTF or GFF file
-containing the gene annotations - mapped_reads - A BAM file containing
-the mapped reads - reads_are_paired - A boolean value. These inputs can
-be found on lines 6, 9, and 12.</p>
+repo</a>.</p>
+<p>It has three inputs: - annotations - A GTF or GFF file containing the
+gene annotations - mapped_reads - A BAM file containing the mapped reads
+- reads_are_paired - A boolean value. These inputs can be found on lines
+6, 9, and 12.</p>
 <p>The output of this tool is a file called <code>featurecounts</code>
 (line 27).</p>
 </div>
@@ -368,15 +369,15 @@ should be located at
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="add-the-featurecounts-tool-to-the-workflow" class="callout-inner">
-<h3 class="callout-title">Add the featureCounts tool to the
-workflow<a class="anchor" aria-label="anchor" href="#add-the-featurecounts-tool-to-the-workflow"></a>
+<h3 class="callout-title">Add the featureCounts tool to the workflow
+🌶🌶<a class="anchor" aria-label="anchor" href="#add-the-featurecounts-tool-to-the-workflow"></a>
 </h3>
 <div class="callout-content">
 <p>Please copy the <code>rna_seq_workflow_2.cwl</code> file to create
 <code>rna_seq_workflow_3.cwl</code>.</p>
 <p>Add the <code>featureCounts</code> tool to the workflow as a workflow
 step.</p>
-<p><strong>Bonus</strong>:</p>
+<p><strong>Bonus</strong>: 🌶🌶🌶</p>
 <p>Similar to the <code>STAR</code> tool, this tool also needs more RAM
 than the default.</p>
 <p>Update the RAM used to run the tool without editing the
@@ -579,7 +580,7 @@ any links that you are not going to use.
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="03-dependency_graphs.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="debug.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="addendum-01-debug.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -587,7 +588,7 @@ any links that you are not going to use.
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Developing
         </a>
-        <a class="chapter-link float-end" href="debug.html" rel="next">
+        <a class="chapter-link float-end" href="addendum-01-debug.html" rel="next">
           Next: Debugging Workflows... 
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
@@ -634,8 +635,8 @@ any links that you are not going to use.
   "url": "https://__USERNAME__.github.io/__PROJECT__/04-reusing_tools.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/04-reusing_tools.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-04-30",
-  "datePublished": "2024-04-30"
+  "dateModified": "2024-05-05",
+  "datePublished": "2024-05-05"
 }
 
   </script><script>

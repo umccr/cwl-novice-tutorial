@@ -231,7 +231,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="debug.html">5. Debugging Workflows</a>
+        <a href="addendum-01-debug.html">5. Debugging Workflows</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -243,7 +243,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="more_info.html">6. More information</a>
+        <a href="more_info.html">6. More Information</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -308,7 +308,7 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-04-30 |
+<p>Last updated on 2024-05-05 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/01-introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -592,7 +592,7 @@ and stewardship. Scientific Data. <a href="https://doi.org/10.1038/sdata.2016.18
 </ol>
 </div></section><section id="aio-02-shell_to_cwl"><p>Content from <a href="02-shell_to_cwl.html">CWL and Shell Tools</a></p>
 <hr>
-<p>Last updated on 2024-04-30 |
+<p>Last updated on 2024-05-05 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/02-shell_to_cwl.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -815,12 +815,12 @@ in a particular order.</p>
 <div class="section level3">
 <h3 id="challenges">Challenges<a class="anchor" aria-label="anchor" href="#challenges"></a>
 </h3>
-<div id="discussion1" class="callout discussion">
+<div id="changing-the-output-string" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+<div id="changing-the-output-string" class="callout-inner">
+<h3 class="callout-title">Changing the output string 🌶<a class="anchor" aria-label="anchor" href="#changing-the-output-string"></a>
 </h3>
 <div class="callout-content">
 <p>What do you need to change to print a different text on the command
@@ -847,12 +847,12 @@ text in the <code>hello_world.yml</code> file.</p>
 </div>
 </div>
 </div>
-<div id="discussion2" class="callout discussion">
+<div id="updating-the-arguments" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion2"></a>
+<div id="updating-the-arguments" class="callout-inner">
+<h3 class="callout-title">Updating the arguments 🌶🌶<a class="anchor" aria-label="anchor" href="#updating-the-arguments"></a>
 </h3>
 <div class="callout-content">
 <p>How can one add the <code>-e</code> argument to the echo command to
@@ -880,12 +880,12 @@ interpret backslashes?</p>
 </div>
 </div>
 </div>
-<div id="discussion3" class="callout discussion">
+<div id="redirecting-cwltool-stdout-and-stderr" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion3"></a>
+<div id="redirecting-cwltool-stdout-and-stderr" class="callout-inner">
+<h3 class="callout-title">Redirecting cwltool stdout and stderr 🌶🌶<a class="anchor" aria-label="anchor" href="#redirecting-cwltool-stdout-and-stderr"></a>
 </h3>
 <div class="callout-content">
 <p>Rerun the <code>echo.cwl</code> script but point stdout and stderr to
@@ -898,7 +898,7 @@ different files.</p>
 <div id="accordionHint1" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
-  <h4 class="accordion-header" id="headingHint1">Hint: Redirecting stdout and stderr</h4>
+  <h4 class="accordion-header" id="headingHint1">Hint: Redirecting CLI stdout and stderr</h4>
 </button>
 <div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
 <div class="accordion-body">
@@ -924,13 +924,13 @@ redirect stdout and stderr to different files respectively</p>
 </div>
 </div>
 </div>
-<div id="specifying-the-outputs-of-the-tool-as-an-actual-output" class="callout discussion">
+<div id="specifying-the-stdout-of-the-tool-as-a-cwl-output" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="specifying-the-outputs-of-the-tool-as-an-actual-output" class="callout-inner">
-<h3 class="callout-title">Specifying the outputs of the tool as an
-actual output<a class="anchor" aria-label="anchor" href="#specifying-the-outputs-of-the-tool-as-an-actual-output"></a>
+<div id="specifying-the-stdout-of-the-tool-as-a-cwl-output" class="callout-inner">
+<h3 class="callout-title">Specifying the stdout of the tool as a CWL
+output 🌶🌶🌶<a class="anchor" aria-label="anchor" href="#specifying-the-stdout-of-the-tool-as-a-cwl-output"></a>
 </h3>
 <div class="callout-content">
 <p>Using <a href="https://cwl-for-eo.github.io/guide/how-to/cwl-how-to/02-stdout/capture-stdout/" class="external-link">this
@@ -948,7 +948,7 @@ requirements section of the tool description.</p>
 <div id="accordionHint2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
-  <h4 class="accordion-header" id="headingHint2">OutputBinding</h4>
+  <h4 class="accordion-header" id="headingHint2">Hint - stdout output binding</h4>
 </button>
 <div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
 <div class="accordion-body">
@@ -1279,12 +1279,13 @@ space.</p>
 <div class="section level3">
 <h3 id="challenges-1">Challenges<a class="anchor" aria-label="anchor" href="#challenges-1"></a>
 </h3>
-<div id="discussion7" class="callout discussion">
+<div id="directly-embed-a-commandlinetool-into-a-file" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion7"></a>
+<div id="directly-embed-a-commandlinetool-into-a-file" class="callout-inner">
+<h3 class="callout-title">Directly embed a Commandlinetool into a file
+🌶🌶<a class="anchor" aria-label="anchor" href="#directly-embed-a-commandlinetool-into-a-file"></a>
 </h3>
 <div class="callout-content">
 <p>How could one embed the fastqc tool description directly into the
@@ -1325,9 +1326,9 @@ workflow?</p>
 </div>
 </div>
 </div>
-<div id="embedding-tool-descriptions" class="callout discussion">
+<div id="embedding-tool-descriptions" class="callout">
 <div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
+<i class="callout-icon" data-feather="bell"></i>
 </div>
 <div id="embedding-tool-descriptions" class="callout-inner">
 <h3 class="callout-title">Embedding Tool Descriptions<a class="anchor" aria-label="anchor" href="#embedding-tool-descriptions"></a>
@@ -1368,7 +1369,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-03-dependency_graphs"><p>Content from <a href="03-dependency_graphs.html">Developing Multi-Step Workflows</a></p>
 <hr>
-<p>Last updated on 2024-04-30 |
+<p>Last updated on 2024-05-05 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/03-dependency_graphs.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1444,7 +1445,7 @@ forward and reverse RNA reads. Likewise, the
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>rna_seq_workflow_2.cwl (Click to expand)</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1580,7 +1581,7 @@ genome necessary for the mapping.</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>workflow_input_2.yml (Click to expand)</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1604,12 +1605,12 @@ genome necessary for the mapping.</p>
 </div>
 </div>
 </div>
-<div id="exercise-draw-the-workflow" class="callout discussion">
+<div id="challenge-draw-the-workflow" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="exercise-draw-the-workflow" class="callout-inner">
-<h3 class="callout-title">Exercise: Draw the workflow<a class="anchor" aria-label="anchor" href="#exercise-draw-the-workflow"></a>
+<div id="challenge-draw-the-workflow" class="callout-inner">
+<h3 class="callout-title">Challenge: Draw the workflow 🌶<a class="anchor" aria-label="anchor" href="#challenge-draw-the-workflow"></a>
 </h3>
 <div class="callout-content">
 <p>Draw the connecting arrows in the following graph of our workflow.
@@ -1624,7 +1625,7 @@ example Paint or print out the graph.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To find out how the inputs and the steps are connected to each other,
 you look at the <code>in</code> field of the different steps.</p>
@@ -1762,7 +1763,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-04-reusing_tools"><p>Content from <a href="04-reusing_tools.html">Resources for Reusing Tools and Scripts</a></p>
 <hr>
-<p>Last updated on 2024-04-30 |
+<p>Last updated on 2024-05-05 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/04-reusing_tools.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1816,7 +1817,7 @@ tool.</p>
 </div>
 <div id="find-the-featurecounts-tool-in-the-bio-cwl-tools-library" class="callout-inner">
 <h3 class="callout-title">Find the featureCounts tool in the
-bio-cwl-tools library<a class="anchor" aria-label="anchor" href="#find-the-featurecounts-tool-in-the-bio-cwl-tools-library"></a>
+bio-cwl-tools library 🌶<a class="anchor" aria-label="anchor" href="#find-the-featurecounts-tool-in-the-bio-cwl-tools-library"></a>
 </h3>
 <div class="callout-content">
 <p>Find the <code>featureCounts</code> tool in the <a href="https://github.com/common-workflow-library/bio-cwl-tools" class="external-link">bio-cwl-tools
@@ -1833,10 +1834,11 @@ tool need? And what are the outputs of this tool?</p>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>The <code>featureCounts</code> CWL document can be found in the <a href="https://github.com/common-workflow-library/bio-cwl-tools/blob/release/subread/featureCounts.cwl" class="external-link">GitHub
-repo</a>. It has three inputs: - annotations - A GTF or GFF file
-containing the gene annotations - mapped_reads - A BAM file containing
-the mapped reads - reads_are_paired - A boolean value. These inputs can
-be found on lines 6, 9, and 12.</p>
+repo</a>.</p>
+<p>It has three inputs: - annotations - A GTF or GFF file containing the
+gene annotations - mapped_reads - A BAM file containing the mapped reads
+- reads_are_paired - A boolean value. These inputs can be found on lines
+6, 9, and 12.</p>
 <p>The output of this tool is a file called <code>featurecounts</code>
 (line 27).</p>
 </div>
@@ -1857,15 +1859,15 @@ should be located at
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
 <div id="add-the-featurecounts-tool-to-the-workflow" class="callout-inner">
-<h3 class="callout-title">Add the featureCounts tool to the
-workflow<a class="anchor" aria-label="anchor" href="#add-the-featurecounts-tool-to-the-workflow"></a>
+<h3 class="callout-title">Add the featureCounts tool to the workflow
+🌶🌶<a class="anchor" aria-label="anchor" href="#add-the-featurecounts-tool-to-the-workflow"></a>
 </h3>
 <div class="callout-content">
 <p>Please copy the <code>rna_seq_workflow_2.cwl</code> file to create
 <code>rna_seq_workflow_3.cwl</code>.</p>
 <p>Add the <code>featureCounts</code> tool to the workflow as a workflow
 step.</p>
-<p><strong>Bonus</strong>:</p>
+<p><strong>Bonus</strong>: 🌶🌶🌶</p>
 <p>Similar to the <code>STAR</code> tool, this tool also needs more RAM
 than the default.</p>
 <p>Update the RAM used to run the tool without editing the
@@ -2068,75 +2070,177 @@ tools</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</section></section><section id="aio-debug"><p>Content from <a href="debug.html">Debugging Workflows</a></p>
+</section></section><section id="aio-addendum-01-debug"><p>Content from <a href="addendum-01-debug.html">Debugging Workflows</a></p>
 <hr>
-<p>Last updated on 2024-04-30 |
+<p>Last updated on 2024-05-05 |
         
-        <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/debug.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/addendum-01-debug.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
-<p>When working on a CWL workflow, you will probably encounter errors.
-There are many different errors possible. It is always very important to
-check the error message in the terminal, because it will give you
-information on the error. This error message will give you the type of
-error as well as the line of code that contains the error. Some of these
-errors will be explained in this episode.</p>
-<p>As a first step to check if your CWL script contains any errors, you
-can run the workflow with the <code>--validate</code> flag. ~~~ cwltool
-–validate CWL_SCRIPT.cwl ~~~ {: .language-bash}</p>
-<p>It is possible that the script is validated, however, it still gets
-an error. If you encounter an error, the best practice is to run the
-workflow with the <code>--debug</code> flag. This will provide you with
-extensive information on the error you encounter. ~~~ cwltool –debug
-CWL_SCRIPT.cwl ~~~ {: .language-bash}</p>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li><p>“How can I check my CWL file for errors?”</p></li>
+<li><p>“How can I get more information to help with solving an
+error?”</p></li>
+<li><p>“What are some common error messages when using CWL?”</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li><p>Check a CWL file for errors</p></li>
+<li><p>Output debugging information</p></li>
+<li><p>Interpret and fix commonly encountered error messages
+keypoints:</p></li>
+<li><p>Run the workflow with the <code>--validate</code> option to check
+for errors</p></li>
+<li><p>The <code>--debug</code> option will output more
+information</p></li>
+<li><p>‘Wiring’ errors won’t necessarily yield an error message</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="section level3">
-<h3 id="yaml-errors">YAML errors<a class="anchor" aria-label="anchor" href="#yaml-errors"></a>
+<h3 id="a-firm-reality-check">A Firm Reality Check<a class="anchor" aria-label="anchor" href="#a-firm-reality-check"></a>
 </h3>
-<p>First of all, errors in the YAML syntax. When writing a piece of
-code, it is very easy to make a mistake.</p>
+<p>When working on a CWL workflow, you will probably encounter errors.
+There are many different ways for errors to occur.</p>
+<p>It is always very important to check the error message in the
+terminal, because it will give you information on the error. This error
+message will give you the type of error as well as the line of code that
+contains the error.</p>
+<p>We will showcase some of the common errors in this episode.</p>
+<p>As a first step to check if your CWL script contains any errors, you
+can run the workflow with the <code>--validate</code> flag.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--validate</span> /path/to/cwl_script.cwl</span></code></pre>
+</div>
+<p>It is possible for a valid script to still generate an error.</p>
+<p>If you encounter an error, the best practice is to re-run the
+workflow with the <code>--debug</code> flag. This will provide you with
+extensive information on the error you encounter.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--debug</span> /path/to/cwl_script.cwl /path/to/cwl_input.yaml</span></code></pre>
+</div>
+</div>
+<section id="syntax-errors"><h2 class="section-heading">Syntax Errors<a class="anchor" aria-label="anchor" href="#syntax-errors"></a>
+</h2>
+<hr class="half-width">
+<p>When writing a piece of code, it is very easy to make a mistake in
+your YAML syntax.</p>
 <p>Some very common YAML errors are:</p>
-<div class="section level4">
-<h4 id="tabs">Tabs<a class="anchor" aria-label="anchor" href="#tabs"></a>
-</h4>
+<div class="section level3">
+<h3 id="tabs">Tabs<a class="anchor" aria-label="anchor" href="#tabs"></a>
+</h3>
 <p>Using tabs instead of spaces. In YAML files indentations are made
-using spaces, not tabs. Please download and run [this
-example][tab-error] which includes a tab character.</p>
-<pre><code>$ cwltool tab-error.cwl workflow_input.yml</code></pre>
-<p>{: .language-bash}</p>
+using spaces, not tabs. Please download and run <a href="files/debug/tab-error.cwl">this example</a> which includes a tab
+character.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> cwltool tab-error.cwl workflow_input.yml</span></code></pre>
+</div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Show details</h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 while scanning for the next token
 file:///tab-error.cwl:5:1:   found character '\t' that cannot start any token</code></pre>
-<p>{: .error}</p>
 </div>
-<div class="section level4">
-<h4 id="field-name-typos">Field Name Typos<a class="anchor" aria-label="anchor" href="#field-name-typos"></a>
-</h4>
+</div>
+</div>
+</div>
+</div>
+</section><section id="field-name-typos"><h2 class="section-heading">Field Name Typos<a class="anchor" aria-label="anchor" href="#field-name-typos"></a>
+</h2>
+<hr class="half-width">
 <p>Typos in field names. It is very easy to forget for example the
-capital letters in field names. Errors with typos in field names will
-show <code>invalid field</code>.</p>
-<p><strong>rna_seq_workflow_fieldname_fail.cwl</strong> ~~~ cwlVersion:
-v1.2 class: Workflow</p>
-<p>inputs: rna_reads_fruitfly: File ref_fruitfly_genome: Directory</p>
-<p>steps: quality_control: run: bio-cwl-tools/fastqc/fastqc_2.cwl in:
-reads_file: rna_reads_fruitfly out: [html_file]</p>
-<p>mapping_reads: requirements: ResourceRequirement: ramMin: 5120 run:
-bio-cwl-tools/STAR/STAR-Align.cwl in: RunThreadN: {default: 4}
-GenomeDir: ref_fruitfly_genome ForwardReads: rna_reads_fruitfly
-OutSAMtype: {default: BAM} SortedByCoordinate: {default: true}
-OutSAMunmapped: {default: Within} out: [alignment]</p>
-<p>index_alignment: run: bio-cwl-tools/samtools/samtools_index.cwl in:
-bam_sorted: mapping_reads/alignment out: [bam_sorted_indexed]</p>
-<p>outputs: qc_html: type: File outputsource: quality_control/html_file
-bam_sorted_indexed: type: File outputSource:
-index_alignment/bam_sorted_indexed ~~~ {: .language-yaml}</p>
-<p><strong>workflow_input_debug.yml</strong> ~~~ rna_reads_fruitfly:
-class: File location: rnaseq/GSM461177_1_subsampled.fastqsanger format:
-<a href="http://edamontology.org/format_1930" class="external-link uri">http://edamontology.org/format_1930</a> # FASTQ
-ref_fruitfly_genome: class: Directory location: rnaseq/dm6-STAR-index
-~~~ {: .language-yaml}</p>
-<pre><code>$ cwltool rna_seq_workflow_fieldname_fail.cwl workflow_input_debug.yml</code></pre>
-<p>{: .language-bash}</p>
+capital letters in field names.</p>
+<p>Errors with typos in field names will show
+<code>invalid field</code>.</p>
+<p><strong>rna_seq_workflow_fieldname_fail.cwl</strong></p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu">cwlVersion</span><span class="kw">:</span><span class="at"> v1.2</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="fu">class</span><span class="kw">:</span><span class="at"> Workflow</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="at">  </span><span class="fu">rna_reads_fruitfly</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="at">  </span><span class="fu">ref_fruitfly_genome</span><span class="kw">:</span><span class="at"> Directory</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="at">  </span><span class="fu">quality_control</span><span class="kw">:</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/fastqc/fastqc_2.cwl</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="at">      </span><span class="fu">reads_file</span><span class="kw">:</span><span class="at"> rna_reads_fruitfly</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">html_file</span><span class="kw">]</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="at">  </span><span class="fu">mapping_reads</span><span class="kw">:</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="at">    </span><span class="fu">requirements</span><span class="kw">:</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="at">      </span><span class="fu">ResourceRequirement</span><span class="kw">:</span></span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a><span class="at">        </span><span class="fu">ramMin</span><span class="kw">:</span><span class="at"> </span><span class="dv">5120</span></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/STAR/STAR-Align.cwl</span></span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a><span class="at">      </span><span class="fu">RunThreadN</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span><span class="kw">}</span></span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="at">      </span><span class="fu">GenomeDir</span><span class="kw">:</span><span class="at"> ref_fruitfly_genome</span></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a><span class="at">      </span><span class="fu">ForwardReads</span><span class="kw">:</span><span class="at"> rna_reads_fruitfly</span></span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a><span class="at">      </span><span class="fu">OutSAMtype</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> BAM</span><span class="kw">}</span></span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a><span class="at">      </span><span class="fu">SortedByCoordinate</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="kw">}</span></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a><span class="at">      </span><span class="fu">OutSAMunmapped</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> Within</span><span class="kw">}</span></span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">alignment</span><span class="kw">]</span></span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a><span class="at">  </span><span class="fu">index_alignment</span><span class="kw">:</span></span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/samtools/samtools_index.cwl</span></span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a><span class="at">      </span><span class="fu">bam_sorted</span><span class="kw">:</span><span class="at"> mapping_reads/alignment</span></span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">bam_sorted_indexed</span><span class="kw">]</span></span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a></span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a><span class="fu">outputs</span><span class="kw">:</span></span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a><span class="at">  </span><span class="fu">qc_html</span><span class="kw">:</span></span>
+<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a><span class="at">    </span><span class="fu">outputsource</span><span class="kw">:</span><span class="at"> quality_control/html_file</span></span>
+<span id="cb5-39"><a href="#cb5-39" tabindex="-1"></a><span class="at">  </span><span class="fu">bam_sorted_indexed</span><span class="kw">:</span></span>
+<span id="cb5-40"><a href="#cb5-40" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb5-41"><a href="#cb5-41" tabindex="-1"></a><span class="at">    </span><span class="fu">outputSource</span><span class="kw">:</span><span class="at"> index_alignment/bam_sorted_indexed</span></span></code></pre>
+</div>
+<p><strong>Validate command</strong></p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--validate</span> rna_seq_workflow_fieldname_fail.cwl</span></code></pre>
+</div>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
+<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>CWLTOOL VALIDATE ERROR MESSAGE</h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 rna_seq_workflow_fieldname_fail.cwl:1:1:   Object `rna_seq_workflow_fieldname_fail.cwl` is not valid
                                           because
@@ -2146,31 +2250,91 @@ rna_seq_workflow_fieldname_fail.cwl:36:3:       item is invalid because
 rna_seq_workflow_fieldname_fail.cwl:38:5:         invalid field `outputsource`, expected one of:
                                                   'label', 'secondaryFiles', 'streamable', 'doc', 'id',
                                                   'format', 'outputSource', 'linkMerge', 'pickValue', 'type'</code></pre>
-<p>{: .error}</p>
 </div>
-<div class="section level4">
-<h4 id="variable-name-typos">Variable Name Typos<a class="anchor" aria-label="anchor" href="#variable-name-typos"></a>
-</h4>
-<p>Typos in variable names. Similar to typos in field names, it is easy
-to make a mistake in referencing to a variable. These errors will show
+</div>
+</div>
+</div>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
+<div class="callout-content">
+<p>Using an IDE can help warn of incorrect fields before needing to
+validate via the command-line tool</p>
+</div>
+</div>
+</div>
+</section><section id="variable-name-typos"><h2 class="section-heading">Variable Name Typos<a class="anchor" aria-label="anchor" href="#variable-name-typos"></a>
+</h2>
+<hr class="half-width">
+<p>Typos in variable names.</p>
+<p>Similar to typos in field names, it is easy to make a mistake in
+referencing to a variable.<br>
+These errors will show
 <code>Field references unknown identifier.</code></p>
-<p><strong>rna_seq_workflow_varname_fail.cwl</strong> ~~~ cwlVersion:
-v1.2 class: Workflow</p>
-<p>inputs: rna_reads_fruitfly: File ref_fruitfly_genome: Directory</p>
-<p>steps: quality_control: run: bio-cwl-tools/fastqc/fastqc_2.cwl in:
-reads_file: rna_reads_fruitfly out: [html_file]</p>
-<p>mapping_reads: requirements: ResourceRequirement: ramMin: 5120 run:
-bio-cwl-tools/STAR/STAR-Align.cwl in: RunThreadN: {default: 4}
-GenomeDir: ref_fruitfly_genome ForwardReads: rna_reads_fruitfly
-OutSAMtype: {default: BAM} SortedByCoordinate: {default: true}
-OutSAMunmapped: {default: Within} out: [alignment]</p>
-<p>index_alignment: run: bio-cwl-tools/samtools/samtools_index.cwl in:
-bam_sorted: mapping_reads/alignments out: [bam_sorted_indexed]</p>
-<p>outputs: qc_html: type: File outputSource: quality_control/html_file
-bam_sorted_indexed: type: File outputSource:
-index_alignment/bam_sorted_indexed ~~~ {: .language-yaml}</p>
-<pre><code>$ cwltool rna_seq_workflow_varname_fail.cwl workflow_input_debug.yml</code></pre>
-<p>{: .language-bash}</p>
+<p><strong>rna_seq_workflow_varname_fail.cwl</strong></p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">cwlVersion</span><span class="kw">:</span><span class="at"> v1.2</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fu">class</span><span class="kw">:</span><span class="at"> Workflow</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="at">  </span><span class="fu">rna_reads_fruitfly</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="at">  </span><span class="fu">ref_fruitfly_genome</span><span class="kw">:</span><span class="at"> Directory</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a><span class="at">  </span><span class="fu">quality_control</span><span class="kw">:</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/fastqc/fastqc_2.cwl</span></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a><span class="at">      </span><span class="fu">reads_file</span><span class="kw">:</span><span class="at"> rna_reads_fruitfly</span></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">html_file</span><span class="kw">]</span></span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a><span class="at">  </span><span class="fu">mapping_reads</span><span class="kw">:</span></span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a><span class="at">    </span><span class="fu">requirements</span><span class="kw">:</span></span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a><span class="at">      </span><span class="fu">ResourceRequirement</span><span class="kw">:</span></span>
+<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a><span class="at">        </span><span class="fu">ramMin</span><span class="kw">:</span><span class="at"> </span><span class="dv">5120</span></span>
+<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/STAR/STAR-Align.cwl</span></span>
+<span id="cb8-20"><a href="#cb8-20" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb8-21"><a href="#cb8-21" tabindex="-1"></a><span class="at">      </span><span class="fu">RunThreadN</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span><span class="kw">}</span></span>
+<span id="cb8-22"><a href="#cb8-22" tabindex="-1"></a><span class="at">      </span><span class="fu">GenomeDir</span><span class="kw">:</span><span class="at"> ref_fruitfly_genome</span></span>
+<span id="cb8-23"><a href="#cb8-23" tabindex="-1"></a><span class="at">      </span><span class="fu">ForwardReads</span><span class="kw">:</span><span class="at"> rna_reads_fruitfly</span></span>
+<span id="cb8-24"><a href="#cb8-24" tabindex="-1"></a><span class="at">      </span><span class="fu">OutSAMtype</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> BAM</span><span class="kw">}</span></span>
+<span id="cb8-25"><a href="#cb8-25" tabindex="-1"></a><span class="at">      </span><span class="fu">SortedByCoordinate</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="kw">}</span></span>
+<span id="cb8-26"><a href="#cb8-26" tabindex="-1"></a><span class="at">      </span><span class="fu">OutSAMunmapped</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> Within</span><span class="kw">}</span></span>
+<span id="cb8-27"><a href="#cb8-27" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">alignment</span><span class="kw">]</span></span>
+<span id="cb8-28"><a href="#cb8-28" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" tabindex="-1"></a><span class="at">  </span><span class="fu">index_alignment</span><span class="kw">:</span></span>
+<span id="cb8-30"><a href="#cb8-30" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/samtools/samtools_index.cwl</span></span>
+<span id="cb8-31"><a href="#cb8-31" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb8-32"><a href="#cb8-32" tabindex="-1"></a><span class="at">      </span><span class="fu">bam_sorted</span><span class="kw">:</span><span class="at"> mapping_reads/alignments</span></span>
+<span id="cb8-33"><a href="#cb8-33" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">bam_sorted_indexed</span><span class="kw">]</span></span>
+<span id="cb8-34"><a href="#cb8-34" tabindex="-1"></a></span>
+<span id="cb8-35"><a href="#cb8-35" tabindex="-1"></a><span class="fu">outputs</span><span class="kw">:</span></span>
+<span id="cb8-36"><a href="#cb8-36" tabindex="-1"></a><span class="at">  </span><span class="fu">qc_html</span><span class="kw">:</span></span>
+<span id="cb8-37"><a href="#cb8-37" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb8-38"><a href="#cb8-38" tabindex="-1"></a><span class="at">    </span><span class="fu">outputSource</span><span class="kw">:</span><span class="at"> quality_control/html_file</span></span>
+<span id="cb8-39"><a href="#cb8-39" tabindex="-1"></a><span class="at">  </span><span class="fu">bam_sorted_indexed</span><span class="kw">:</span></span>
+<span id="cb8-40"><a href="#cb8-40" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb8-41"><a href="#cb8-41" tabindex="-1"></a><span class="at">    </span><span class="fu">outputSource</span><span class="kw">:</span><span class="at"> index_alignment/bam_sorted_indexed</span></span></code></pre>
+</div>
+<p><strong>Validate command</strong></p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">$</span> cwltool <span class="at">--validate</span> rna_seq_workflow_varname_fail.cwl</span></code></pre>
+</div>
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">
+<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>CWLTOOL VALIDATE ERROR MESSAGE</h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 rna_seq_workflow_varname_fail.cwl:8:1:  checking field `steps`
 rna_seq_workflow_varname_fail.cwl:29:3:   checking object
@@ -2181,82 +2345,225 @@ rna_seq_workflow_varname_fail.cwl:32:7:       checking object
                                                 Field `source` references unknown identifier
                                                 `mapping_reads/alignments`, tried
                                                 file:///.../rna_seq_workflow_varname_fail.cwl#mapping_reads/alignments</code></pre>
-<p>{: .error}</p>
 </div>
 </div>
-<div class="section level3">
-<h3 id="wiring-error">Wiring error<a class="anchor" aria-label="anchor" href="#wiring-error"></a>
+</div>
+</div>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout2"></a>
 </h3>
+<div class="callout-content">
+<p>Using an IDE, a simple Ctrl+F on a variable can help you see where
+that variable is present throughout a CWL code. Only one occurence of a
+variable might mean it has been spelt differently elsewhere.</p>
+</div>
+</div>
+</div>
+</section><section id="wiring-error"><h2 class="section-heading">Wiring error<a class="anchor" aria-label="anchor" href="#wiring-error"></a>
+</h2>
+<hr class="half-width">
 <p>Wiring errors often occur when you forget to add an output from a
-workflow’s step to the <code>outputs</code> section. This doesn’t cause
-an error message, but there won’t be any output in your directory. To
-get the desired output you have to run the workflow again. Best practice
-is to check your <code>outputs</code> section before running your script
-to make sure all the outputs you want are there.</p>
+workflow’s step to the <code>outputs</code> section.</p>
+<p>This doesn’t cause an error message, but there won’t be any output in
+your directory. To get the desired output you have to run the workflow
+again.</p>
+<p>Best practice is to check your <code>outputs</code> section before
+running your script to make sure all the outputs you want are there.</p>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="section level3">
-<h3 id="type-mismatch">Type mismatch<a class="anchor" aria-label="anchor" href="#type-mismatch"></a>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout3"></a>
 </h3>
+<div class="callout-content">
+<p>All file / directory outputs of a workflow or tool will be placed
+into a single directory.</p>
+<p>Ensure all expected files and directories are there. For string /
+boolean output, splitting stderr and stdout of the cwltool commandline
+into separate files allows the user to easily look through the stdout of
+a workflow without needing the noise of stderr. Redirects are briefly
+discussed in the second episode of this tutorial.</p>
+</div>
+</div>
+</div>
+</section><section id="type-mismatch"><h2 class="section-heading">Type mismatch<a class="anchor" aria-label="anchor" href="#type-mismatch"></a>
+</h2>
+<hr class="half-width">
 <p>Type errors take place when there is a mismatch in type between
 variables. When you declare a variable in the <code>inputs</code>
 section, the type of this variable has to match the type in the YAML
 inputs file and the type used in one of the workflows steps. The error
 message that is shown when this error occurs will tell you on which line
 the mismatch happens.</p>
-<p><strong>rna_seq_workflow_type_fail.cwl</strong> ~~~ cwlVersion: v1.2
-class: Workflow</p>
-<p>inputs: rna_reads_fruitfly: int ref_fruitfly_genome: Directory</p>
-<p>steps: quality_control: run: bio-cwl-tools/fastqc/fastqc_2.cwl in:
-reads_file: rna_reads_fruitfly out: [html_file]</p>
-<p>mapping_reads: requirements: ResourceRequirement: ramMin: 5120 run:
-bio-cwl-tools/STAR/STAR-Align.cwl in: RunThreadN: {default: 4}
-GenomeDir: ref_fruitfly_genome ForwardReads: rna_reads_fruitfly
-OutSAMtype: {default: BAM} SortedByCoordinate: {default: true}
-OutSAMunmapped: {default: Within} out: [alignment]</p>
-<p>index_alignment: run: bio-cwl-tools/samtools/samtools_index.cwl in:
-bam_sorted: mapping_reads/alignment out: [bam_sorted_indexed]</p>
-<p>outputs: qc_html: type: File outputSource: quality_control/html_file
-bam_sorted_indexed: type: File outputSource:
-index_alignment/bam_sorted_indexed ~~~ {: .language-yaml}</p>
-<pre><code>$ cwltool rna_seq_workflow_type_fail.cwl workflow_input_debug.yml</code></pre>
-<p>{: .language-bash}</p>
-<pre><code>ERROR Tool definition failed validation:
-
-rna_seq_workflow_type_fail.cwl:5:3:   Source 'rna_reads_fruitfly' of type "int" is incompatible
+<p><strong>rna_seq_workflow_type_fail.cwl</strong></p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">cwlVersion</span><span class="kw">:</span><span class="at"> v1.2</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="fu">class</span><span class="kw">:</span><span class="at"> Workflow</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="at">  </span><span class="fu">rna_reads_fruitfly</span><span class="kw">:</span><span class="at"> int</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="at">  </span><span class="fu">ref_fruitfly_genome</span><span class="kw">:</span><span class="at"> Directory</span></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a><span class="at">  </span><span class="fu">quality_control</span><span class="kw">:</span></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/fastqc/fastqc_2.cwl</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a><span class="at">      </span><span class="fu">reads_file</span><span class="kw">:</span><span class="at"> rna_reads_fruitfly</span></span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">html_file</span><span class="kw">]</span></span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a></span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a><span class="at">  </span><span class="fu">mapping_reads</span><span class="kw">:</span></span>
+<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a><span class="at">    </span><span class="fu">requirements</span><span class="kw">:</span></span>
+<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a><span class="at">      </span><span class="fu">ResourceRequirement</span><span class="kw">:</span></span>
+<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a><span class="at">        </span><span class="fu">ramMin</span><span class="kw">:</span><span class="at"> </span><span class="dv">5120</span></span>
+<span id="cb11-19"><a href="#cb11-19" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/STAR/STAR-Align.cwl</span></span>
+<span id="cb11-20"><a href="#cb11-20" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb11-21"><a href="#cb11-21" tabindex="-1"></a><span class="at">      </span><span class="fu">RunThreadN</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span><span class="kw">}</span></span>
+<span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a><span class="at">      </span><span class="fu">GenomeDir</span><span class="kw">:</span><span class="at"> ref_fruitfly_genome</span></span>
+<span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a><span class="at">      </span><span class="fu">ForwardReads</span><span class="kw">:</span><span class="at"> rna_reads_fruitfly</span></span>
+<span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a><span class="at">      </span><span class="fu">OutSAMtype</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> BAM</span><span class="kw">}</span></span>
+<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a><span class="at">      </span><span class="fu">SortedByCoordinate</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="kw">}</span></span>
+<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a><span class="at">      </span><span class="fu">OutSAMunmapped</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> Within</span><span class="kw">}</span></span>
+<span id="cb11-27"><a href="#cb11-27" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">alignment</span><span class="kw">]</span></span>
+<span id="cb11-28"><a href="#cb11-28" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="#cb11-29" tabindex="-1"></a><span class="at">  </span><span class="fu">index_alignment</span><span class="kw">:</span></span>
+<span id="cb11-30"><a href="#cb11-30" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/samtools/samtools_index.cwl</span></span>
+<span id="cb11-31"><a href="#cb11-31" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb11-32"><a href="#cb11-32" tabindex="-1"></a><span class="at">      </span><span class="fu">bam_sorted</span><span class="kw">:</span><span class="at"> mapping_reads/alignment</span></span>
+<span id="cb11-33"><a href="#cb11-33" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">bam_sorted_indexed</span><span class="kw">]</span></span>
+<span id="cb11-34"><a href="#cb11-34" tabindex="-1"></a></span>
+<span id="cb11-35"><a href="#cb11-35" tabindex="-1"></a><span class="fu">outputs</span><span class="kw">:</span></span>
+<span id="cb11-36"><a href="#cb11-36" tabindex="-1"></a><span class="at">  </span><span class="fu">qc_html</span><span class="kw">:</span></span>
+<span id="cb11-37"><a href="#cb11-37" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb11-38"><a href="#cb11-38" tabindex="-1"></a><span class="at">    </span><span class="fu">outputSource</span><span class="kw">:</span><span class="at"> quality_control/html_file</span></span>
+<span id="cb11-39"><a href="#cb11-39" tabindex="-1"></a><span class="at">  </span><span class="fu">bam_sorted_indexed</span><span class="kw">:</span></span>
+<span id="cb11-40"><a href="#cb11-40" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb11-41"><a href="#cb11-41" tabindex="-1"></a><span class="at">    </span><span class="fu">outputSource</span><span class="kw">:</span><span class="at"> index_alignment/bam_sorted_indexed</span></span></code></pre>
+</div>
+<p><strong>Validation Command</strong></p>
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">$</span> cwltool rna_seq_workflow_type_fail.cwl workflow_input_debug.yml</span></code></pre>
+</div>
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">
+<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Incompatible type cwltool error message</h3>
+</button>
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div class="accordion-body">
+<pre><code>rna_seq_workflow_type_fail.cwl:5:3:   Source 'rna_reads_fruitfly' of type "int" is incompatible
 rna_seq_workflow_type_fail.cwl:12:7:   with sink 'reads_file' of type "File"
 rna_seq_workflow_type_fail.cwl:5:3:   Source 'rna_reads_fruitfly' of type "int" is incompatible
 rna_seq_workflow_type_fail.cwl:23:7:   with sink 'ForwardReads' of type ["File", {"type":
-                                       "array", "items": "File"}]</code></pre>
-<p>{: .error}</p>
+                                       "array", "items": "File"}]
+</code></pre>
 </div>
-<div class="section level3">
-<h3 id="format-error">Format error<a class="anchor" aria-label="anchor" href="#format-error"></a>
-</h3>
+</div>
+</div>
+</div>
+</section><section id="format-error"><h2 class="section-heading">Format error<a class="anchor" aria-label="anchor" href="#format-error"></a>
+</h2>
+<hr class="half-width">
 <p>Some files need a specific format that needs to be specified in the
-YAML inputs file, for example the fastq file in the RNA-seq analysis.
-When you don’t specify a format, an error will occur. You can for
+YAML inputs file, for example the fastq file in the RNA-seq
+analysis.</p>
+<p>When you don’t specify a format, an error will occur. You can for
 example use the <a href="https://www.ebi.ac.uk/ols/ontologies/edam" class="external-link">EDAM</a> ontology.</p>
-<p><strong>rna_seq_workflow_debug.cwl</strong> ~~~ cwlVersion: v1.2
-class: Workflow</p>
-<p>inputs: rna_reads_fruitfly: File ref_fruitfly_genome: Directory</p>
-<p>steps: quality_control: run: bio-cwl-tools/fastqc/fastqc_2.cwl in:
-reads_file: rna_reads_fruitfly out: [html_file]</p>
-<p>mapping_reads: requirements: ResourceRequirement: ramMin: 5120 run:
-bio-cwl-tools/STAR/STAR-Align.cwl in: RunThreadN: {default: 4}
-GenomeDir: ref_fruitfly_genome ForwardReads: rna_reads_fruitfly
-OutSAMtype: {default: BAM} SortedByCoordinate: {default: true}
-OutSAMunmapped: {default: Within} out: [alignment]</p>
-<p>index_alignment: run: bio-cwl-tools/samtools/samtools_index.cwl in:
-bam_sorted: mapping_reads/alignment out: [bam_sorted_indexed]</p>
-<p>outputs: qc_html: type: File outputSource: quality_control/html_file
-bam_sorted_indexed: type: File outputSource:
-index_alignment/bam_sorted_indexed ~~~ {: .language-yaml}</p>
-<p><strong>workflow_input_undefined.yml</strong> ~~~ rna_reads_fruitfly:
-class: File location: rnaseq/GSM461177_1_subsampled.fastqsanger
-ref_fruitfly_genome: class: Directory location: rnaseq/dm6-STAR-index
-~~~ {: .language-yaml}</p>
-<pre><code>$ cwltool rna_seq_workflow_debug.cwl workflow_input_undefined.yml</code></pre>
-<p>{: .language-bash}</p>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout4"></a>
+</h3>
+<div class="callout-content">
+<p>The format attribute for a File entry is only required if the format
+attribute is specified on the workflow input.</p>
+<p>You may use
+<code>cwltool --make-template /path/to/cwl_workflow.cwl</code> to set
+the formats for each input for you.</p>
+</div>
+</div>
+</div>
+<p><strong>rna_seq_workflow_with_format.cwl</strong></p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">cwlVersion</span><span class="kw">:</span><span class="at"> v1.2</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="fu">class</span><span class="kw">:</span><span class="at"> Workflow</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a><span class="fu">inputs</span><span class="kw">:</span></span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a><span class="at">  </span><span class="fu">rna_reads_fruitfly</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a><span class="at">  </span><span class="fu">ref_fruitfly_genome</span><span class="kw">:</span><span class="at"> Directory</span></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb14-9"><a href="#cb14-9" tabindex="-1"></a><span class="at">  </span><span class="fu">quality_control</span><span class="kw">:</span></span>
+<span id="cb14-10"><a href="#cb14-10" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/fastqc/fastqc_2.cwl</span></span>
+<span id="cb14-11"><a href="#cb14-11" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb14-12"><a href="#cb14-12" tabindex="-1"></a><span class="at">      </span><span class="fu">reads_file</span><span class="kw">:</span><span class="at"> rna_reads_fruitfly</span></span>
+<span id="cb14-13"><a href="#cb14-13" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">html_file</span><span class="kw">]</span></span>
+<span id="cb14-14"><a href="#cb14-14" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" tabindex="-1"></a><span class="at">  </span><span class="fu">mapping_reads</span><span class="kw">:</span></span>
+<span id="cb14-16"><a href="#cb14-16" tabindex="-1"></a><span class="at">    </span><span class="fu">requirements</span><span class="kw">:</span></span>
+<span id="cb14-17"><a href="#cb14-17" tabindex="-1"></a><span class="at">      </span><span class="fu">ResourceRequirement</span><span class="kw">:</span></span>
+<span id="cb14-18"><a href="#cb14-18" tabindex="-1"></a><span class="at">        </span><span class="fu">ramMin</span><span class="kw">:</span><span class="at"> </span><span class="dv">5120</span></span>
+<span id="cb14-19"><a href="#cb14-19" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/STAR/STAR-Align.cwl</span></span>
+<span id="cb14-20"><a href="#cb14-20" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb14-21"><a href="#cb14-21" tabindex="-1"></a><span class="at">      </span><span class="fu">RunThreadN</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> </span><span class="dv">4</span><span class="kw">}</span></span>
+<span id="cb14-22"><a href="#cb14-22" tabindex="-1"></a><span class="at">      </span><span class="fu">GenomeDir</span><span class="kw">:</span><span class="at"> ref_fruitfly_genome</span></span>
+<span id="cb14-23"><a href="#cb14-23" tabindex="-1"></a><span class="at">      </span><span class="fu">ForwardReads</span><span class="kw">:</span><span class="at"> rna_reads_fruitfly</span></span>
+<span id="cb14-24"><a href="#cb14-24" tabindex="-1"></a><span class="at">      </span><span class="fu">OutSAMtype</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> BAM</span><span class="kw">}</span></span>
+<span id="cb14-25"><a href="#cb14-25" tabindex="-1"></a><span class="at">      </span><span class="fu">SortedByCoordinate</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span><span class="kw">}</span></span>
+<span id="cb14-26"><a href="#cb14-26" tabindex="-1"></a><span class="at">      </span><span class="fu">OutSAMunmapped</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">default</span><span class="kw">:</span><span class="at"> Within</span><span class="kw">}</span></span>
+<span id="cb14-27"><a href="#cb14-27" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">alignment</span><span class="kw">]</span></span>
+<span id="cb14-28"><a href="#cb14-28" tabindex="-1"></a></span>
+<span id="cb14-29"><a href="#cb14-29" tabindex="-1"></a><span class="at">  </span><span class="fu">index_alignment</span><span class="kw">:</span></span>
+<span id="cb14-30"><a href="#cb14-30" tabindex="-1"></a><span class="at">    </span><span class="fu">run</span><span class="kw">:</span><span class="at"> bio-cwl-tools/samtools/samtools_index.cwl</span></span>
+<span id="cb14-31"><a href="#cb14-31" tabindex="-1"></a><span class="at">    </span><span class="fu">in</span><span class="kw">:</span></span>
+<span id="cb14-32"><a href="#cb14-32" tabindex="-1"></a><span class="at">      </span><span class="fu">bam_sorted</span><span class="kw">:</span><span class="at"> mapping_reads/alignment</span></span>
+<span id="cb14-33"><a href="#cb14-33" tabindex="-1"></a><span class="at">    </span><span class="fu">out</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">bam_sorted_indexed</span><span class="kw">]</span></span>
+<span id="cb14-34"><a href="#cb14-34" tabindex="-1"></a></span>
+<span id="cb14-35"><a href="#cb14-35" tabindex="-1"></a><span class="fu">outputs</span><span class="kw">:</span></span>
+<span id="cb14-36"><a href="#cb14-36" tabindex="-1"></a><span class="at">  </span><span class="fu">qc_html</span><span class="kw">:</span></span>
+<span id="cb14-37"><a href="#cb14-37" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb14-38"><a href="#cb14-38" tabindex="-1"></a><span class="at">    </span><span class="fu">outputSource</span><span class="kw">:</span><span class="at"> quality_control/html_file</span></span>
+<span id="cb14-39"><a href="#cb14-39" tabindex="-1"></a><span class="at">  </span><span class="fu">bam_sorted_indexed</span><span class="kw">:</span></span>
+<span id="cb14-40"><a href="#cb14-40" tabindex="-1"></a><span class="at">    </span><span class="fu">type</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb14-41"><a href="#cb14-41" tabindex="-1"></a><span class="at">    </span><span class="fu">outputSource</span><span class="kw">:</span><span class="at"> index_alignment/bam_sorted_indexed</span></span></code></pre>
+</div>
+<p><strong>workflow_input_undefined_format.yaml</strong></p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">rna_reads_fruitfly</span><span class="kw">:</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="at">  </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="at">  </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/GSM461177_1_subsampled.fastqsanger</span></span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a><span class="fu">ref_fruitfly_genome</span><span class="kw">:</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="at">  </span><span class="fu">class</span><span class="kw">:</span><span class="at"> Directory</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="at">  </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/dm6-STAR-index</span></span></code></pre>
+</div>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> cwltool rna_seq_workflow_with_format.cwl workflow_input_undefined.yml</span></code></pre>
+</div>
+<div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
+  <h3 class="accordion-header" id="headingSpoiler5">
+<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Incompatible format error message</h3>
+</button>
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div class="accordion-body">
 <pre><code>ERROR Exception on step 'mapping_reads'
 ERROR [step mapping_reads] Cannot make job: Expected value of 'ForwardReads' to have format http://edamontology.org/format_1930 but
   File has no 'format' defined: {
@@ -2267,15 +2574,17 @@ ERROR [step mapping_reads] Cannot make job: Expected value of 'ForwardReads' to 
     "nameroot": "GSM461177_1_subsampled",
     "nameext": ".fastqsanger"
 }</code></pre>
-<p>{: .error} {% include links.md %} [tab-error]: {{ page.root
-}}/code/tab-error.cwl</p>
+</div>
+</div>
+</div>
+</div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</div></section><section id="aio-more_info"><p>Content from <a href="more_info.html">More information</a></p>
+</section></section><section id="aio-more_info"><p>Content from <a href="more_info.html">More Information</a></p>
 <hr>
-<p>Last updated on 2024-04-30 |
+<p>Last updated on 2024-05-05 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/more_info.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2343,8 +2652,8 @@ Practices</a> in CWL</li>
   "url": "https://__USERNAME__.github.io/__PROJECT__/aio.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/aio.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-04-30",
-  "datePublished": "2024-04-30"
+  "dateModified": "2024-05-05",
+  "datePublished": "2024-05-05"
 }
 
   </script><script>

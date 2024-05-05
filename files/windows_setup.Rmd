@@ -23,7 +23,7 @@ You may also wish to go through [Getting started with WSL2][getting_started_with
 
 ::::::::::::::: callout
 
-For this tutorial, we expect you use the Ubuntu distribution.
+For this tutorial, we expect you use the Ubuntu distribution as your WSL2 distribution of choice.
 
 ::::::::::::::::
 
@@ -31,7 +31,7 @@ For this tutorial, we expect you use the Ubuntu distribution.
 
 Open PowerShell as Administrator and type in the following
 
-```
+```bash
 wsl --list
 ```
 
@@ -68,6 +68,7 @@ Install Docker Desktop by following the instructions on the [Docker Desktop Inst
 
 * Make sure 'Use the WSL 2 based engine' is selected
 
+<br>
 
 ### VSCode Installation
 

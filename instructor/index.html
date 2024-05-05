@@ -192,7 +192,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="debug.html">5. Debugging Workflows</a>
+        <a href="addendum-01-debug.html">5. Debugging Workflows</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -201,7 +201,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="more_info.html">6. More information</a>
+        <a href="more_info.html">6. More Information</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -337,7 +337,7 @@ Workflows</a>
 <td>
 How can we expand to a multi-step workflow?<br>Iterative workflow
 development<br>Workflows as dependency graphs<br>How to use sketches
-for workflow design?<br>:::::::::::::::::::::::::::::
+for workflow design?
 </td>
 </tr><tr><td>
 <span class="visually-hidden">Duration: </span>00h 00m
@@ -353,20 +353,23 @@ How to find other solutions/CWL recipes for awkward problems?
 <span class="visually-hidden">Duration: </span>00h 00m
 </td>
 <td>
- 5. <a href="debug.html">Debugging Workflows</a>
+ 5. <a href="addendum-01-debug.html">Debugging Workflows</a>
 </td>
 <td>
+“How can I check my CWL file for errors?”<br><br>“How can I get more
+information to help with solving an error?”<br><br>“What are some
+common error messages when using CWL?”
 </td>
 </tr><tr><td>
 <span class="visually-hidden">Duration: </span>00h 00m
 </td>
 <td>
- 6. <a href="more_info.html">More information</a>
+ 6. <a href="more_info.html">More Information</a>
 </td>
 <td>
 </td>
 </tr><tr><td>
-<span class="visually-hidden">Duration: </span>00h 10m
+<span class="visually-hidden">Duration: </span>00h 00m
 </td>
 <td>
 Finish
@@ -425,7 +428,8 @@ started with WSL2</a>.</p>
 <h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
 </h3>
 <div class="callout-content">
-<p>For this tutorial, we expect you use the Ubuntu distribution.</p>
+<p>For this tutorial, we expect you use the Ubuntu distribution as your
+WSL2 distribution of choice.</p>
 </div>
 </div>
 </div>
@@ -433,7 +437,11 @@ started with WSL2</a>.</p>
 <div class="section level3">
 <h3 id="confirm-wsl2-is-installed">Confirm WSL2 is installed<a class="anchor" aria-label="anchor" href="#confirm-wsl2-is-installed"></a></h3>
 <p>Open PowerShell as Administrator and type in the following</p>
-<pre><code><span><span class="va">wsl</span> <span class="op">-</span><span class="op">-</span><span class="va">list</span></span></code></pre>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">wsl</span> <span class="at">--list</span></span></code></pre>
+</div>
 <p>You should see your linux distribution you have installed in the
 previous step.</p>
 </div>
@@ -466,7 +474,8 @@ Desktop Installation Page</a></p>
 <h4 id="ensure-docker-desktop-is-using-the-wsl2-backend">Ensure Docker Desktop is Using the WSL2 Backend<a class="anchor" aria-label="anchor" href="#ensure-docker-desktop-is-using-the-wsl2-backend"></a></h4>
 <ul><li><p>From the top menu choose “Settings” &gt; “General”</p></li>
 <li><p>Make sure ‘Use the WSL 2 based engine’ is selected</p></li>
-</ul></div>
+</ul><p><br></p>
+</div>
 </div>
 <div class="section level3">
 <h3 id="vscode-installation">VSCode Installation<a class="anchor" aria-label="anchor" href="#vscode-installation"></a></h3>
@@ -552,8 +561,6 @@ or follow the directions.</p>
 <p><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml" class="external-link">Open
 RedHad Yaml in the marketplace</a> and click the <code>Install</code>
 button.</p>
-<p>If you are given the option to enable the extension on ‘WSL: Ubuntu’
-please do so.</p>
 <div class="section level4">
 <h4 id="attribute-cwl-files-to-the-yaml-file-type-1">Attribute CWL files to the yaml file type<a class="anchor" aria-label="anchor" href="#attribute-cwl-files-to-the-yaml-file-type-1"></a></h4>
 <p>Add the following chunk to the VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings" class="external-link">user
@@ -652,14 +659,10 @@ Software Installations</a> after completing the setup for MacOS.</p>
 <p><a href="https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl" class="external-link">Open
 Benten in the marketplace</a> and click the <code>Install</code>
 button.</p>
-<p>If you are given the option to enable the extension on ‘WSL: Ubuntu’
-please do so.</p>
 <p><strong>Install Redhat Yaml VSCode Extension</strong></p>
 <p><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml" class="external-link">Open
 RedHad Yaml in the marketplace</a> and click the <code>Install</code>
 button.</p>
-<p>If you are given the option to enable the extension on ‘WSL: Ubuntu’
-please do so.</p>
 <div class="section level4">
 <h4 id="attribute-cwl-files-to-the-yaml-file-type-2">Attribute CWL files to the yaml file type<a class="anchor" aria-label="anchor" href="#attribute-cwl-files-to-the-yaml-file-type-2"></a></h4>
 <p>Add the following chunk to the VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings" class="external-link">user
@@ -1093,8 +1096,8 @@ any links that you are not going to use.
   "url": "https://__USERNAME__.github.io/__PROJECT__/instructor/index.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/instructor/index.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-04-30",
-  "datePublished": "2024-04-30"
+  "dateModified": "2024-05-05",
+  "datePublished": "2024-05-05"
 }
 
   </script><script>
