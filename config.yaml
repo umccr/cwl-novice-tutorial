@@ -42,7 +42,7 @@ episodes:
   - 02-shell_to_cwl.Rmd
   - 03-dependency_graphs.Rmd
   - 04-reusing_tools.Rmd
-  - debug.md
+  - addendum-01-debug.Rmd
   - more_info.md
 
 # Information for Learners
