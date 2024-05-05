@@ -19,14 +19,10 @@ Download and install [VSCode](https://code.visualstudio.com/)
 
 [Open Benten in the marketplace][benten_vs_code_marketplace] and click the `Install` button.
 
-If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
-
 
 **Install Redhat Yaml VSCode Extension**
 
 [Open RedHad Yaml in the marketplace][redhat_yaml_vs_code_marketplace] and click the `Install` button.
-
-If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
 
 
 #### Attribute CWL files to the yaml file type

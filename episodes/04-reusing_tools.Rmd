@@ -29,7 +29,7 @@ The last step of our workflow is counting the RNA-seq reads for which we will us
 
 :::::::::::::::::::::::::::::: challenge
 
-### Find the featureCounts tool in the bio-cwl-tools library
+### Find the featureCounts tool in the bio-cwl-tools library 🌶
 
 Find the `featureCounts` tool in the [bio-cwl-tools library][bio-cwl-tools].
 Have a look at the CWL document. Which inputs does this tool need? And what are the outputs of this tool?
@@ -39,6 +39,7 @@ Have a look at the CWL document. Which inputs does this tool need? And what are 
 :::::::::::::::::::::::::::::: solution
 
 The `featureCounts` CWL document can be found in the [GitHub repo][featurecounts-cwl].
+
 It has three inputs:
 - annotations
   - A GTF or GFF file containing the gene annotations
@@ -62,13 +63,13 @@ so the tool should be located at `bio-cwl-tools/subread/featureCounts.cwl`.
 
 ::::::::::::::::::::::::::::: challenge
 
-### Add the featureCounts tool to the workflow
+### Add the featureCounts tool to the workflow 🌶🌶
 
 Please copy the `rna_seq_workflow_2.cwl` file to create `rna_seq_workflow_3.cwl`.
 
 Add the `featureCounts` tool to the workflow as a workflow step.
 
-**Bonus**: 
+**Bonus**: 🌶🌶🌶
 
 Similar to the `STAR` tool, this tool also needs more RAM than the default.
 
