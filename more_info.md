@@ -1,7 +1,8 @@
 ---
-title: "More information"
+title: "More Information"
+teaching: 0
+exercises: 0
 ---
-
 If you want to know more about CWL script and workflows, you can look at one of these websites:
 
 - [CWL User Guide](http://www.commonwl.org/user_guide/index.html)

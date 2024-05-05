@@ -5,19 +5,23 @@ exercises: 0
 ---
 
 ::::::::::::::::::::::::::::: questions
+
 - How can we expand to a multi-step workflow?
 - Iterative workflow development
 - Workflows as dependency graphs
 - How to use sketches for workflow design?
+
 :::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::: objectives
+
 - Explain that a workflow is a dependency graph
 - Use cwlviewer online
 - Generate Graphviz diagram using cwltool
 - Exercise with the printout of a simple workflow; draw arrows on code; hand draw a graph on another sheet of paper
 - Recognise that workflow development can be iterative i.e. that it doesn't have to happen all at once
 - Understand the flow of data between tools
+
 :::::::::::::::::::::::::::::
 
 
@@ -149,7 +153,6 @@ the `mapping_reads` step definition with a `ResourceRequirement` to allocate a m
 :::::::::::::::::::::::
 
 
-
 The newly added `mapping_reads` step also need an input not provided by any of our other steps,
 therefore an additional workflow-level input is added: a directory that contains the reference genome
 necessary for the mapping.
@@ -182,7 +185,7 @@ fruitfly_gene_model:
 
 ::::::::::::::::::::::::::::: challenge
 
-### Exercise: Draw the workflow
+### Challenge: Draw the workflow 🌶
 
 Draw the connecting arrows in the following graph of our workflow. Also, provide the outputs/inputs
 of the different steps. You can use for example Paint or print out the graph.

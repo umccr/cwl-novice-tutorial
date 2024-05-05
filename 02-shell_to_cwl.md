@@ -162,12 +162,15 @@ However, CWL syntax requires only that each field is properly defined, it does n
 
 :::::::::::::::::::::::::::::::::::::: challenge
 
+### Changing the output string 🌶
+
 What do you need to change to print a different text on the command line?
 
 :::::::::::::::::::::::::::::::::::::::::::::
 
 
 :::::::::::::::::::::::::::::::::::::: solution
+
 
 To change the text on the command line, you only have to change the text in the `hello_world.yml` file.
 
@@ -180,6 +183,8 @@ message_text: Good job!
 :::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::: challenge
+
+### Updating the arguments 🌶🌶
 
 How can one add the `-e` argument to the echo command to interpret backslashes?
 
@@ -199,6 +204,8 @@ arguments:
 
 :::::::::::::::::::::::::::: challenge
 
+### Redirecting cwltool stdout and stderr 🌶🌶
+
 Rerun the `echo.cwl` script but point stdout and stderr to different files.
 
 What is the difference between the stdout and stderr from the `echo.cwl` script?
@@ -207,7 +214,7 @@ What is the difference between the stdout and stderr from the `echo.cwl` script?
 
 :::::::::::::::::::::::::::: hint
 
-### Hint: Redirecting stdout and stderr
+### Hint: Redirecting CLI stdout and stderr
 
 Use the redirectors `1>` and `2>` to redirect stdout and stderr to different files respectively
 
@@ -223,7 +230,7 @@ $ cwltool echo.cwl hello_world.yml 1>echo_stdout.txt 2>echo_stderr.txt
 
 :::::::::::::::::::::::::::: challenge
 
-### Specifying the outputs of the tool as an actual output
+### Specifying the stdout of the tool as a CWL output 🌶🌶🌶
 
 Using [this tutorial][capturing_stdout_tutorial] as a guide
 
@@ -239,7 +246,7 @@ How does this change the output of the cwltool command?
 
 :::::::::::::::::::::::::::: hint
 
-### OutputBinding
+### Hint - stdout output binding
 
 Copy the 'outputBinding' from the tutorial 'verbatim'.
 
@@ -507,6 +514,8 @@ delete the `cache` directory anytime, if you need to reclaim the disk space.
 
 :::::::::::::::::::::::::::::::::::::: challenge
 
+### Directly embed a Commandlinetool into a file 🌶🌶
+
 How could one embed the fastqc tool description directly into the workflow?
 
 ::::::::::::::::::::::::::::::::::::::
@@ -536,7 +545,7 @@ steps:
 
 ::::::::::::::::::::::::::::::::::::::
 
-:::::::::::::::::::::::::::::::::::::: discussion
+:::::::::::::::::::::::::::::::::::::: callout
 
 ### Embedding Tool Descriptions
 

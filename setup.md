@@ -43,7 +43,7 @@ You may also wish to go through [Getting started with WSL2][getting_started_with
 
 ::::::::::::::: callout
 
-For this tutorial, we expect you use the Ubuntu distribution.
+For this tutorial, we expect you use the Ubuntu distribution as your WSL2 distribution of choice.
 
 ::::::::::::::::
 
@@ -51,7 +51,7 @@ For this tutorial, we expect you use the Ubuntu distribution.
 
 Open PowerShell as Administrator and type in the following
 
-```
+```bash
 wsl --list
 ```
 
@@ -88,6 +88,7 @@ Install Docker Desktop by following the instructions on the [Docker Desktop Inst
 
 * Make sure 'Use the WSL 2 based engine' is selected
 
+<br>
 
 ### VSCode Installation
 
@@ -197,8 +198,6 @@ Download and install [VSCode][vs_code]
 
 [Open RedHad Yaml in the marketplace][redhat_yaml_vs_code_marketplace] and click the `Install` button.
 
-If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
-
 #### Attribute CWL files to the yaml file type
 
 Add the following chunk to the VSCode [user settings json][user_settings_json] to attribute CWL to the YAML file type.
@@ -299,14 +298,10 @@ Download and install [VSCode](https://code.visualstudio.com/)
 
 [Open Benten in the marketplace][benten_vs_code_marketplace] and click the `Install` button.
 
-If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
-
 
 **Install Redhat Yaml VSCode Extension**
 
 [Open RedHad Yaml in the marketplace][redhat_yaml_vs_code_marketplace] and click the `Install` button.
-
-If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
 
 
 #### Attribute CWL files to the yaml file type

@@ -22,8 +22,6 @@ Download and install [VSCode][vs_code]
 
 [Open RedHad Yaml in the marketplace][redhat_yaml_vs_code_marketplace] and click the `Install` button.
 
-If you are given the option to enable the extension on 'WSL: Ubuntu' please do so.
-
 #### Attribute CWL files to the yaml file type
 
 Add the following chunk to the VSCode [user settings json][user_settings_json] to attribute CWL to the YAML file type.
