@@ -60,6 +60,20 @@ conda config --add channels conda-forge
 
 <br>
 
+::::::::::::::::::: callout
+
+### M1 Users
+
+MacOS M1 users may need to ensure `libarchive` (from the conda-forge channel) has first been installed on their conda system before using mamba [^1]
+
+```bash
+conda remove -n base libarchive
+conda install -y -n base -c conda-forge \
+  libarchive 
+```
+
+::::::::::::::::::
+
 #### Create a conda virtual environment
 
 Create a virtual environment using conda
@@ -81,7 +95,12 @@ conda activate cwltutorial
 #### Install prerequisites via Mamba
 
 ```bash
-mamba install cwltool graphviz wget git nodejs
+mamba install --yes \
+  cwltool \
+  graphviz \
+  wget \
+  git \
+  nodejs
 ```
 
 :::::::::::::::: callout
@@ -93,7 +112,9 @@ The virtual environment needs to be activated every time you start a terminal us
 
 ::::::::::::::::
 
+[^1]: https://github.com/mamba-org/mamba/issues/1826#issuecomment-1196636463
+
 [vs_code]: https://code.visualstudio.com/
 [benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
 [redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
-[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings
+[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings#_settingsjson

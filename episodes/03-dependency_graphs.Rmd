@@ -7,8 +7,8 @@ exercises: 0
 ::::::::::::::::::::::::::::: questions
 
 - How can we expand to a multi-step workflow?
-- Iterative workflow development
-- Workflows as dependency graphs
+- What is iterative workflow development?
+- How to use workflows as dependency graphs?
 - How to use sketches for workflow design?
 
 :::::::::::::::::::::::::::::
