@@ -138,7 +138,7 @@ The aim of CWL is to reduce that barrier of usage of these tools to researchers.
 
 ::::::::::::::::::::
 
-CWL workflows are written in a subset of [YAML](https://www.commonwl.org/user_guide/topics/yaml-guide.html), with a syntax that does not restrict the
+CWL workflows are written in a subset of [YAML][yaml_guide], with a syntax that does not restrict the
 amount of detail provided for a tool or workflow.
 The execution model is explicit, all required elements of a tool's runtime environment
 must be specified by the CWL tool-description author.
@@ -199,3 +199,4 @@ workflow will be set up to connect these tools and generate the desired output f
 [^4]: M. R. Crusoe, S. Abeln, A. Iosup, P. Amstutz, J. Chilton, N. Tijanić, H. Ménager, S. Soiland-Reyes, B. Gavrilović, C. Goble, The CWL Community (2021): Methods Included: Standardizing Computational Reuse and Portability with the Common Workflow Language. Communication of the ACM. [https://doi.org/10.1145/3486897](https://doi.org/10.1145/3486897)
 
 [docker]: https://www.docker.com/
+[yaml_guide]: https://www.commonwl.org/user_guide/topics/yaml-guide.html
