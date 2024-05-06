@@ -218,9 +218,9 @@ Add the following chunk to the VSCode [user settings json][user_settings_json] t
 
 <br>
 
-### Install MiniConda
+### Install Conda
 
-[Install miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
+[Install Miniconda][miniconda_install]
 
 <br>
 
@@ -236,26 +236,12 @@ conda config --add channels conda-forge
 
 <br>
 
-::::::::::::::::::: callout
-
-### M1 Users
-
-MacOS M1 users may need to ensure `libarchive` (from the conda-forge channel) has first been installed on their conda system before using mamba [^1]
-
-```bash
-conda remove -n base libarchive
-conda install -y -n base -c conda-forge \
-  libarchive 
-```
-
-::::::::::::::::::
-
-#### Create a conda virtual environment
+#### Create a virtual environment
 
 Create a virtual environment using conda
 
 ```bash
-conda create --name cwltutorial python==3.11 mamba
+conda create --name cwltutorial python==3.11
 ```
 
 <br>
@@ -268,10 +254,10 @@ conda activate cwltutorial
 
 <br>
 
-#### Install prerequisites via Mamba
+#### Install prerequisites via conda
 
 ```bash
-mamba install --yes \
+conda install --yes \
   cwltool \
   graphviz \
   wget \
@@ -281,15 +267,17 @@ mamba install --yes \
 
 :::::::::::::::: callout
 
-Reactivating the conda virtual environment
+### Reactivating the conda virtual environment
 
 The virtual environment needs to be activated every time you start a terminal using
 `conda activate cwltutorial`.
 
 ::::::::::::::::
 
-[^1]: https://github.com/mamba-org/mamba/issues/1826#issuecomment-1196636463
 
+[docker_install]: https://docs.docker.com/desktop/mac/install
+[miniforge]: https://github.com/conda-forge/miniforge
+[miniconda_install]: https://docs.anaconda.com/free/miniconda/miniconda-install/
 [vs_code]: https://code.visualstudio.com/
 [benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
 [redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
