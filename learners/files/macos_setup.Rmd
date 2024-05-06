@@ -24,7 +24,7 @@ Download and install [VSCode][vs_code]
 
 #### Attribute CWL files to the yaml file type
 
-Add the following chunk to the VSCode [user settings json][user_settings_json] to attribute CWL to the YAML file type.
+Add the following chunk to the VSCode [user settings json][user_settings_json] in [settings.json](https://code.visualstudio.com/docs/getstarted/settings#_settingsjson) to attribute CWL to the YAML file type.
 
 ```json
 {
