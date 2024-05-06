@@ -335,9 +335,9 @@ this in a single step workflow?
 Workflows</a>
 </td>
 <td>
-How can we expand to a multi-step workflow?<br>Iterative workflow
-development<br>Workflows as dependency graphs<br>How to use sketches
-for workflow design?
+How can we expand to a multi-step workflow?<br>What is iterative
+workflow development?<br>How to use workflows as dependency
+graphs?<br>How to use sketches for workflow design?
 </td>
 </tr><tr><td>
 <span class="visually-hidden">Duration: </span>00h 00m
@@ -503,7 +503,7 @@ please do so.</p>
 </div>
 <div class="section level4">
 <h4 id="attribute-cwl-files-to-the-yaml-file-type">Attribute CWL files to the yaml file type<a class="anchor" aria-label="anchor" href="#attribute-cwl-files-to-the-yaml-file-type"></a></h4>
-<p>Add the following chunk to the VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings" class="external-link">user
+<p>Add the following chunk to the VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings#_settingsjson" class="external-link">user
 settings json</a> to attribute CWL to the YAML file type.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">JSON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -563,7 +563,7 @@ RedHad Yaml in the marketplace</a> and click the <code>Install</code>
 button.</p>
 <div class="section level4">
 <h4 id="attribute-cwl-files-to-the-yaml-file-type-1">Attribute CWL files to the yaml file type<a class="anchor" aria-label="anchor" href="#attribute-cwl-files-to-the-yaml-file-type-1"></a></h4>
-<p>Add the following chunk to the VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings" class="external-link">user
+<p>Add the following chunk to the VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings#_settingsjson" class="external-link">user
 settings json</a> to attribute CWL to the YAML file type.</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">JSON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -600,39 +600,65 @@ miniconda</a></p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--add</span> channels conda-forge</span></code></pre>
 </div>
 <p><br></p>
+<div id="m1-users" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="m1-users" class="callout-inner">
+<h3 class="callout-title">M1 Users<a class="anchor" aria-label="anchor" href="#m1-users"></a>
+</h3>
+<div class="callout-content">
+<p>MacOS M1 users may need to ensure <code>libarchive</code> (from the
+conda-forge channel) has first been installed on their conda system
+before using mamba <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">conda</span> remove <span class="at">-n</span> base libarchive</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-y</span> <span class="at">-n</span> base <span class="at">-c</span> conda-forge <span class="dt">\</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>  libarchive </span></code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section level4">
 <h4 id="create-a-conda-virtual-environment">Create a conda virtual environment<a class="anchor" aria-label="anchor" href="#create-a-conda-virtual-environment"></a></h4>
 <p>Create a virtual environment using conda</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> cwltutorial python==3.11 mamba</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> cwltutorial python==3.11 mamba</span></code></pre>
 </div>
 <p><br></p>
 </div>
 <div class="section level4">
 <h4 id="activate-the-virtual-environment">Activate the virtual environment<a class="anchor" aria-label="anchor" href="#activate-the-virtual-environment"></a></h4>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">conda</span> activate cwltutorial</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">conda</span> activate cwltutorial</span></code></pre>
 </div>
 <p><br></p>
 </div>
 <div class="section level4">
 <h4 id="install-prerequisites-via-mamba">Install prerequisites via Mamba<a class="anchor" aria-label="anchor" href="#install-prerequisites-via-mamba"></a></h4>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">mamba</span> install cwltool graphviz wget git nodejs</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">mamba</span> install <span class="at">--yes</span> <span class="dt">\</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>  cwltool <span class="dt">\</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>  graphviz <span class="dt">\</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>  wget <span class="dt">\</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>  git <span class="dt">\</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>  nodejs</span></code></pre>
 </div>
-<div id="callout2" class="callout">
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout2"></a>
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout3"></a>
 </h3>
 <div class="callout-content">
 <p>Reactivating the conda virtual environment</p>
@@ -665,16 +691,16 @@ RedHad Yaml in the marketplace</a> and click the <code>Install</code>
 button.</p>
 <div class="section level4">
 <h4 id="attribute-cwl-files-to-the-yaml-file-type-2">Attribute CWL files to the yaml file type<a class="anchor" aria-label="anchor" href="#attribute-cwl-files-to-the-yaml-file-type-2"></a></h4>
-<p>Add the following chunk to the VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings" class="external-link">user
+<p>Add the following chunk to the VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings#_settingsjson" class="external-link">user
 settings json</a> to attribute CWL to the YAML file type.</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">JSON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode json" tabindex="0"><code class="sourceCode json"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>    <span class="dt">"files.associations"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>        <span class="dt">"*.cwl"</span><span class="fu">:</span> <span class="st">"yaml"</span></span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>    <span class="fu">}</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="fu">}</span></span></code></pre>
+<pre class="sourceCode json" tabindex="0"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>    <span class="dt">"files.associations"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>        <span class="dt">"*.cwl"</span><span class="fu">:</span> <span class="st">"yaml"</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>    <span class="fu">}</span></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="fu">}</span></span></code></pre>
 </div>
 <p><br></p>
 </div>
@@ -698,11 +724,11 @@ for linux - which is popular on Ubuntu and other systems. Docker is
 available via Snap - if you have installed it using this service you
 will need to take the following steps, to ensure docker will work
 properly.</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">mkdir</span> ~/tmp</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="bu">export</span> <span class="va">TMPDIR</span><span class="op">=</span>~/tmp</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">mkdir</span> ~/tmp</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">export</span> <span class="va">TMPDIR</span><span class="op">=</span>~/tmp</span></code></pre>
 </div>
 <p>Each time you open a new terminal you will have to enter the
 <code>export TMPDIR=~/tmp</code> command, or you can add it to your
@@ -721,11 +747,11 @@ docker usage as a non-root user</a></p>
 <h3 id="install-cwltool">Install cwltool<a class="anchor" aria-label="anchor" href="#install-cwltool"></a></h3>
 <p>First we will make a Python virtual environment by running the
 following commands in the terminal.</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv env       <span class="co"># Create a virtual environment named 'env' in the current directory</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">source</span> env/bin/activate   <span class="co"># Activate the 'env' environment</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv env       <span class="co"># Create a virtual environment named 'env' in the current directory</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="bu">source</span> env/bin/activate   <span class="co"># Activate the 'env' environment</span></span></code></pre>
 </div>
 <p>You will know that this worked as the terminal prompt will now have
 <code>(env)</code> at the beginning.</p>
@@ -745,10 +771,10 @@ Virtual Environment.</p>
 </div>
 </div>
 <p>Next, install cwltool by running the following in the terminal:</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">pip</span> install cwltool</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">pip</span> install cwltool</span></code></pre>
 </div>
 <p>Later we will make visualisations of our workflows. To support that
 we need to install <code>graphviz</code>.</p>
@@ -756,10 +782,10 @@ we need to install <code>graphviz</code>.</p>
 <h5 id="install-graphviz">Install graphviz<a class="anchor" aria-label="anchor" href="#install-graphviz"></a></h5>
 <p>Here is the command for Debian-based Linux systems to install
 <code>graphviz</code> and other helpful programs:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> graphviz wget git nodejs</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> graphviz wget git nodejs</span></code></pre>
 </div>
 <p>For other Linux systems, check <a href="https://graphviz.org/download/#linux" class="external-link">the graphviz download
 page</a></p>
@@ -773,10 +799,10 @@ Software Installations</a> after completing the setup for Linux.</p>
 <h3 id="docker">Docker<a class="anchor" aria-label="anchor" href="#docker"></a></h3>
 <p>To confirm docker is installed, run the following command to display
 the version number:</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">docker</span> version</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">docker</span> version</span></code></pre>
 </div>
 <p>You should see something similar to the output shown below.</p>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
@@ -785,7 +811,7 @@ the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Docker Version Output Example</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <pre><code>Client: Docker Engine - Community
  Version:           20.10.13
@@ -824,10 +850,10 @@ Server: Docker Engine - Community
 <h3 id="confirm-cwltool-is-installed">Confirm cwltool is installed<a class="anchor" aria-label="anchor" href="#confirm-cwltool-is-installed"></a></h3>
 <p>To confirm <code>cwltool</code> is installed, run the following
 command to display the version number:</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--version</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--version</span></span></code></pre>
 </div>
 <p>You should see something similar to the output shown below.</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
@@ -836,7 +862,7 @@ command to display the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Cwltool Version Output Example</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <pre><code>/home/learner/env/bin/cwltool 3.1.20220224085855</code></pre>
 </div>
@@ -848,10 +874,10 @@ command to display the version number:</p>
 <h3 id="graphviz">GraphViz<a class="anchor" aria-label="anchor" href="#graphviz"></a></h3>
 <p>To confirm <code>graphviz</code> is installed, run the following
 command to display the version number:</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">dot</span> <span class="at">-V</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">dot</span> <span class="at">-V</span></span></code></pre>
 </div>
 <p>You should see something similar to the output shown below.</p>
 <div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
@@ -860,7 +886,7 @@ command to display the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler3">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Graphviz version output example</h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <pre><code>dot - graphviz version 2.43.0 (0)</code></pre>
 </div>
@@ -872,14 +898,14 @@ command to display the version number:</p>
 </h2>
 <hr class="half-width"><p>To avoid having to wait during the class, please run the following
 which will download all the required software containers.</p>
-<div class="codewrapper sourceCode" id="cb22">
+<div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/star:2.7.5c--0</span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/fastqc:0.11.9--hdfd78af_1</span>
-<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/cutadapt:3.7--py39hbf8eff0_1</span>
-<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/samtools:1.14--hb421002_0</span>
-<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/subread:2.0.6--he4a0461_0</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/star:2.7.5c--0</span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/fastqc:0.11.9--hdfd78af_1</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/cutadapt:3.7--py39hbf8eff0_1</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/samtools:1.14--hb421002_0</span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/subread:2.0.6--he4a0461_0</span></code></pre>
 </div>
 </section><section id="data-requirements"><h2 class="section-heading">Data Requirements<a class="anchor" aria-label="anchor" href="#data-requirements"></a>
 </h2>
@@ -891,22 +917,22 @@ tutorial we will use RNA sequencing data.</p>
 workflow. These existing tools will be imported via GitHub. First we
 need to create an empty git repository for all our files. To do this,
 use this command:</p>
-<div class="codewrapper sourceCode" id="cb23">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">git</span> init novice-tutorial-exercises</span></code></pre>
-</div>
-<p>Next, we need to move into our empty git repo:</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="bu">cd</span> novice-tutorial-exercises</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">git</span> init novice-tutorial-exercises</span></code></pre>
 </div>
-<p>Then import bio-cwl-tools with this command:</p>
+<p>Next, we need to move into our empty git repo:</p>
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">git</span> submodule add https://github.com/common-workflow-library/bio-cwl-tools.git</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="bu">cd</span> novice-tutorial-exercises</span></code></pre>
+</div>
+<p>Then import bio-cwl-tools with this command:</p>
+<div class="codewrapper sourceCode" id="cb26">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">git</span> submodule add https://github.com/common-workflow-library/bio-cwl-tools.git</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -914,12 +940,12 @@ use this command:</p>
 <p>Create a new directory inside the
 <code>novice-tutorial-exercises</code> directory and download the
 data:</p>
-<div id="callout5" class="callout">
+<div id="callout6" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
 <div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout5"></a>
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout6"></a>
 </h3>
 <div class="callout-content">
 <p>By running the following chunk in brackets the console will return to
@@ -927,20 +953,20 @@ the original working directory after the download is complete</p>
 </div>
 </div>
 </div>
-<div class="codewrapper sourceCode" id="cb26">
+<div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">mkdir</span> rnaseq</span>
-<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a><span class="kw">(</span></span>
-<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>  <span class="bu">cd</span> rnaseq</span>
-<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/GSM461177_1_subsampled.fastqsanger</span>
-<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/GSM461177_2_subsampled.fastqsanger</span>
-<span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/GSM461180_1_subsampled.fastqsanger</span>
-<span id="cb26-7"><a href="#cb26-7" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/GSM461180_2_subsampled.fastqsanger</span>
-<span id="cb26-8"><a href="#cb26-8" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/Drosophila_melanogaster.BDGP6.87.gtf</span>
-<span id="cb26-9"><a href="#cb26-9" tabindex="-1"></a>  <span class="fu">wget</span> https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz</span>
-<span id="cb26-10"><a href="#cb26-10" tabindex="-1"></a>  <span class="fu">gunzip</span> dm6.fa.gz  <span class="co"># STAR index requires an uncompressed reference genome</span></span>
-<span id="cb26-11"><a href="#cb26-11" tabindex="-1"></a><span class="kw">)</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">mkdir</span> rnaseq</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="kw">(</span></span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>  <span class="bu">cd</span> rnaseq</span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/GSM461177_1_subsampled.fastqsanger</span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/GSM461177_2_subsampled.fastqsanger</span>
+<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/GSM461180_1_subsampled.fastqsanger</span>
+<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/GSM461180_2_subsampled.fastqsanger</span>
+<span id="cb27-8"><a href="#cb27-8" tabindex="-1"></a>  <span class="fu">wget</span> https://zenodo.org/record/4541751/files/Drosophila_melanogaster.BDGP6.87.gtf</span>
+<span id="cb27-9"><a href="#cb27-9" tabindex="-1"></a>  <span class="fu">wget</span> https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz</span>
+<span id="cb27-10"><a href="#cb27-10" tabindex="-1"></a>  <span class="fu">gunzip</span> dm6.fa.gz  <span class="co"># STAR index requires an uncompressed reference genome</span></span>
+<span id="cb27-11"><a href="#cb27-11" tabindex="-1"></a><span class="kw">)</span></span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -956,17 +982,17 @@ appropriate to your set-up.</p>
   <h3 class="accordion-header" id="headingSpoiler4">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Option 1: Download the index</h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p>At least 9 GB of memory is required to generate the index, which will
 occupy 3.3GB of disk.</p>
 <p>If your computer doesn’t have that much memory, then you can download
 the directory by running the following in the <code>rnaseq</code>
 directory:</p>
-<div class="codewrapper sourceCode" id="cb27">
+<div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">wget</span> https://dataverse.nl/api/access/datafile/266295 <span class="at">--output-document</span> <span class="at">-</span> <span class="kw">|</span> <span class="fu">tar</span> <span class="at">-C</span> rnaseq <span class="at">-x</span> <span class="at">--xz</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">wget</span> https://dataverse.nl/api/access/datafile/266295 <span class="at">--output-document</span> <span class="at">-</span> <span class="kw">|</span> <span class="fu">tar</span> <span class="at">-C</span> rnaseq <span class="at">-x</span> <span class="at">--xz</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -978,24 +1004,24 @@ directory:</p>
   <h3 class="accordion-header" id="headingSpoiler5">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Option 2: Generate the index yourself</h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <p>To generate the genome index yourself: create a new file named
 <code>dm6-star-index.yaml</code> in the the
 <code>novice-tutorial-exercises</code> directory with the following
 contents:</p>
-<div class="codewrapper sourceCode" id="cb28">
+<div class="codewrapper sourceCode" id="cb29">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">InputFiles</span><span class="kw">:</span></span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="at"> </span><span class="kw">-</span><span class="at"> </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
-<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="at">   </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/dm6.fa</span></span>
-<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="at">   </span><span class="fu">format</span><span class="kw">:</span><span class="at"> http://edamontology.org/format_1929</span><span class="co">  # FASTA</span></span>
-<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a><span class="fu">IndexName</span><span class="kw">:</span><span class="at"> </span><span class="st">'dm6-STAR-index'</span></span>
-<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a><span class="fu">Overhang</span><span class="kw">:</span><span class="at"> </span><span class="dv">36</span></span>
-<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a><span class="fu">Gtf</span><span class="kw">:</span></span>
-<span id="cb28-8"><a href="#cb28-8" tabindex="-1"></a><span class="at"> </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
-<span id="cb28-9"><a href="#cb28-9" tabindex="-1"></a><span class="at"> </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/Drosophila_melanogaster.BDGP6.87.gtf</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">InputFiles</span><span class="kw">:</span></span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a><span class="at"> </span><span class="kw">-</span><span class="at"> </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="at">   </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/dm6.fa</span></span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a><span class="at">   </span><span class="fu">format</span><span class="kw">:</span><span class="at"> http://edamontology.org/format_1929</span><span class="co">  # FASTA</span></span>
+<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a><span class="fu">IndexName</span><span class="kw">:</span><span class="at"> </span><span class="st">'dm6-STAR-index'</span></span>
+<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a><span class="fu">Overhang</span><span class="kw">:</span><span class="at"> </span><span class="dv">36</span></span>
+<span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a><span class="fu">Gtf</span><span class="kw">:</span></span>
+<span id="cb29-8"><a href="#cb29-8" tabindex="-1"></a><span class="at"> </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb29-9"><a href="#cb29-9" tabindex="-1"></a><span class="at"> </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/Drosophila_melanogaster.BDGP6.87.gtf</span></span></code></pre>
 </div>
 <p>Next use the CWL reference runner <code>cwltool</code> that you
 installed above and the CWL description for the indexing mode of the
@@ -1022,13 +1048,13 @@ process has failed, and should be cancelled.</p>
 the menu “Preferences” and then selecting “Resources”.</p>
 <p>Windows users can configure WSL 2 to allocate more memory by opening
 the PowerShell and entering the following:</p>
-<div class="codewrapper sourceCode" id="cb31">
+<div class="codewrapper sourceCode" id="cb32">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="co"># turn off all wsl instances such as docker-desktop</span></span>
-<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="ex">wsl</span> <span class="at">--shutdown</span></span>
-<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a><span class="ex">notepad</span> <span class="st">"</span><span class="va">$env</span><span class="st">:USERPROFILE/.wslconfig"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="co"># turn off all wsl instances such as docker-desktop</span></span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="ex">wsl</span> <span class="at">--shutdown</span></span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a><span class="ex">notepad</span> <span class="st">"</span><span class="va">$env</span><span class="st">:USERPROFILE/.wslconfig"</span></span></code></pre>
 </div>
 <p>In <code>.wslconfig</code> add the following</p>
 <pre class="text"><code>[wsl2]
@@ -1047,7 +1073,12 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
-</section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
+</section><div class="footnotes footnotes-end-of-document">
+<hr><ol><li id="fn1"><p><a href="https://github.com/mamba-org/mamba/issues/1826#issuecomment-1196636463" class="external-link uri">https://github.com/mamba-org/mamba/issues/1826#issuecomment-1196636463</a><a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol></div>
+
+
+      </section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/01-introduction.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
@@ -1096,8 +1127,8 @@ any links that you are not going to use.
   "url": "https://__USERNAME__.github.io/__PROJECT__/instructor/index.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/instructor/index.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-05-05",
-  "datePublished": "2024-05-05"
+  "dateModified": "2024-05-06",
+  "datePublished": "2024-05-06"
 }
 
   </script><script>

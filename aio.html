@@ -308,7 +308,7 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-05-05 |
+<p>Last updated on 2024-05-06 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/01-introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -418,15 +418,17 @@ Accessible, Interoperable, and Reusable) manner.</p>
 <p>The rise in popularity of workflows has been matched by a rise in the
 number of disparate workflow managers that are available, each with
 their own syntax or methods for describing the tools and workflows,
-reducing portability and interoperability of these workflows. The Common
-Workflow Language (CWL) standard has been developed to address these
-problems, and to serve the general computational workflow needs
-described above.</p>
+reducing portability and interoperability of these workflows. For a
+comprehensive lists of all known computational workflow systems, see
+[Computational Data Analysis Workflow Systems] (<a href="https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems" class="external-link uri">https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems</a>)
+maintained by the CWL community. The Common Workflow Language (CWL)
+standard has been developed to address these problems, and to serve the
+general computational workflow needs described above.</p>
 </section><section id="benefits-of-computational-workflows"><h2 class="section-heading">Benefits of Computational Workflows<a class="anchor" aria-label="anchor" href="#benefits-of-computational-workflows"></a>
 </h2>
 <hr class="half-width">
 <p>In summary, computational workflows bring many benefits and an ideal
-computation workflow adopts and provides the properties below:</p>
+computational workflow adopts and provides the properties below:</p>
 <p><strong>Handy Properties of Computational Workflows</strong><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <table class="table">
 <colgroup>
@@ -482,11 +484,11 @@ Moving between on premise &amp; cloud</td>
 <hr class="half-width">
 <p>CWL is a free and open standard for describing command-line tool
 based workflows<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
-<p>These standards provide a common, but reduced, set of abstractions
-that are both used in practice and implemented in many popular workflow
-managers. The CWL language is declarative, enabling computational
-workflows to be constructed from diverse software tools, executing each
-through their command-line interface.</p>
+<p>CWL provides a common, but reduced, set of abstractions that are both
+used in practice and implemented in many popular workflow managers. The
+CWL language is declarative, enabling computational workflows to be
+constructed from diverse software tools, executing each through their
+command-line interface.</p>
 <div id="shell-scripts-reduce-portability" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -506,13 +508,14 @@ tools to researchers.</p>
 </div>
 </div>
 </div>
-<p>CWL workflows are written in a subset of <a href="https://www.commonwl.org/user_guide/yaml/" class="external-link">YAML</a>, with a syntax
-that does not restrict the amount of detail provided for a tool or
-workflow. The execution model is explicit, all required elements of a
-tool’s runtime environment must be specified by the CWL tool-description
-author. On top of these basic requirements they can also add hints or
-requirements to the tool-description, helping to guide users (and
-workflow engines) on what resources are needed for a tool.</p>
+<p>CWL workflows are written in a subset of <a href="https://www.commonwl.org/user_guide/topics/yaml-guide.html" class="external-link">YAML</a>,
+with a syntax that does not restrict the amount of detail provided for a
+tool or workflow. The execution model is explicit, all required elements
+of a tool’s runtime environment must be specified by the CWL
+tool-description author. On top of these basic requirements they can
+also add hints or requirements to the tool-description, helping to guide
+users (and workflow engines) on what resources are needed for a
+tool.</p>
 <div id="containerisation" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -521,36 +524,35 @@ workflow engines) on what resources are needed for a tool.</p>
 <h3 class="callout-title">Containerisation<a class="anchor" aria-label="anchor" href="#containerisation"></a>
 </h3>
 <div class="callout-content">
-<p>The CWL standards explicitly support the use of software container
+<p>The CWL standard explicitly support the use of software container
 technologies, such as <a href="https://www.docker.com/" class="external-link">docker</a>
 helping ensure that the execution of tools is reproducible.</p>
 </div>
 </div>
 </div>
-<p>Data locations are explicitly defined, and working directories kept
-separate for each tool invocation. These standards ensure the
-portability of tools and workflows, allowing the same workflows to be
-run on your local machine, or in a HPC or cloud environment, with
-minimal changes required.</p>
+<p>Data locations are explicitly defined, and working directories are
+kept separate for each tool invocation. This ensures the portability of
+tools and workflows, allowing the same workflows to be run on your local
+machine, or in a HPC or cloud environment, with minimal changes
+required.</p>
 </section><section id="rna-sequencing-example"><h2 class="section-heading">RNA sequencing example<a class="anchor" aria-label="anchor" href="#rna-sequencing-example"></a>
 </h2>
 <hr class="half-width">
-<p>In this tutorial a bio-informatics RNA-sequencing analysis is used as
+<p>In this tutorial a bioinformatics RNA-sequencing analysis is used as
 an example. However, there is no specific knowledge needed for this
 tutorial. RNA-sequencing is a technique which examines the quantity and
 sequences of <a href="https://en.wikipedia.org/wiki/RNA" class="external-link">RNA</a> in a
 sample using next-generation sequencing. The RNA reads are analyzed to
-measure the relative numbers of different RNA molecules in the sample.
-This analysis is differential gene expression.</p>
+quantify the relative abundance of different RNA molecules in the
+sample, a process known as differential gene expression analysis.</p>
 <p>The process looks like this:</p>
 <figure><img src="fig/RNAseqWorkflow.png" style='height: "400px"' alt="RNASeq Workflow graph" class="figure mx-auto d-block"><div class="figcaption">Diagram showing a typical RNA sequencing
 workflow. The workflow is linear, starting from taking biological
 samples and sequence reads, through quality control and trimming steps,
 to mapping to a genome and counting gene reads, to finally carrying out
 statistical analysis to identify differentially expressed genes.</div>
-</figure><p>During this tutorial, only the middle analytical steps will be
-performed. The adapter trimming is skipped. These steps will be
-done:<br>
+</figure><p>During this tutorial, the adapter trimming is skipped and only the
+following analytical steps will be performed.<br>
 - Quality control (FASTQC) - Alignment (mapping) - Counting reads
 associated with genes</p>
 <p>The different tools necessary for this analysis are already
@@ -566,11 +568,11 @@ tools and generate the desired output files.</p>
 <div class="callout-content">
 <ul>
 <li>CWL is a standard for describing workflows based on command-line
-tools</li>
-<li>CWL workflows are written in a subset of YAML</li>
-<li>A CWL workflow is more portable than a shell script</li>
+tools.</li>
+<li>CWL workflows are written in a subset of YAML.</li>
+<li>A CWL workflow is more portable than a shell script.</li>
 <li>CWL supports software containers, supporting reproducibility on
-different machines</li>
+different machines.</li>
 </ul>
 </div>
 </div>
@@ -592,7 +594,7 @@ and stewardship. Scientific Data. <a href="https://doi.org/10.1038/sdata.2016.18
 </ol>
 </div></section><section id="aio-02-shell_to_cwl"><p>Content from <a href="02-shell_to_cwl.html">CWL and Shell Tools</a></p>
 <hr>
-<p>Last updated on 2024-05-05 |
+<p>Last updated on 2024-05-06 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/02-shell_to_cwl.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -636,10 +638,10 @@ directory, or the same directory where input is located</li>
 </div>
 </div>
 </div>
-<p>CWL workflows are written in the YAML syntax. This <a href="https://www.commonwl.org/user_guide/yaml/" class="external-link">short tutorial</a>
-explains the parts of YAML used in CWL. A CWL document contains the
-workflow and the requirements for running that workflow. All CWL
-documents should start with two lines of code:</p>
+<p>CWL workflows are written in the YAML syntax. This <a href="https://www.commonwl.org/user_guide/topics/yaml-guide.html" class="external-link">short
+tutorial</a> explains the parts of YAML used in CWL. A CWL document
+contains the workflow and the requirements for running that workflow.
+All CWL documents should start with two lines of code:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -710,7 +712,7 @@ this CWL document (the <code>.cwl</code> workflow file) along with the
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Tool Output</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <pre class="text"><code>INFO Resolved 'echo.cwl' to 'file:///.../echo.cwl'
 INFO [job echo.cwl] /private/tmp/docker_tmprm65mucw$ echo \
@@ -833,7 +835,7 @@ line?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To change the text on the command line, you only have to change the
 text in the <code>hello_world.yml</code> file.</p>
@@ -865,7 +867,7 @@ interpret backslashes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -900,7 +902,7 @@ different files.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Hint: Redirecting CLI stdout and stderr</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Use the redirectors <code>1&gt;</code> and <code>2&gt;</code> to
 redirect stdout and stderr to different files respectively</p>
@@ -913,7 +915,7 @@ redirect stdout and stderr to different files respectively</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -950,7 +952,7 @@ requirements section of the tool description.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2">Hint - stdout output binding</h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
 <div class="accordion-body">
 <p>Copy the ‘outputBinding’ from the tutorial ‘verbatim’.</p>
 <p>Your output key should look like this</p>
@@ -974,7 +976,7 @@ requirements section of the tool description.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4">Show me the solution</h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1234,7 +1236,7 @@ relative to the current working directory.</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Console Outputs</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <pre><code>...
 Analysis complete for GSM461177_2_subsampled.fastqsanger
@@ -1298,7 +1300,7 @@ workflow?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5">Show me the solution</h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>The <code>run</code> field in the step can be replaced with the
 <code>CommandLineTool</code> definition.</p>
@@ -1369,7 +1371,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-03-dependency_graphs"><p>Content from <a href="03-dependency_graphs.html">Developing Multi-Step Workflows</a></p>
 <hr>
-<p>Last updated on 2024-05-05 |
+<p>Last updated on 2024-05-06 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/03-dependency_graphs.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1384,8 +1386,8 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>How can we expand to a multi-step workflow?</li>
-<li>Iterative workflow development</li>
-<li>Workflows as dependency graphs</li>
+<li>What is iterative workflow development?</li>
+<li>How to use workflows as dependency graphs?</li>
 <li>How to use sketches for workflow design?</li>
 </ul>
 </div>
@@ -1763,7 +1765,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-04-reusing_tools"><p>Content from <a href="04-reusing_tools.html">Resources for Reusing Tools and Scripts</a></p>
 <hr>
-<p>Last updated on 2024-05-05 |
+<p>Last updated on 2024-05-06 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/04-reusing_tools.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1831,7 +1833,7 @@ tool need? And what are the outputs of this tool?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The <code>featureCounts</code> CWL document can be found in the <a href="https://github.com/common-workflow-library/bio-cwl-tools/blob/release/subread/featureCounts.cwl" class="external-link">GitHub
 repo</a>.</p>
@@ -1880,7 +1882,7 @@ commandlinetool</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1">Hint: Feature Counts Workflow Step</h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Use the <code>run</code> field to add the <code>featureCounts</code>
 tool as a step in the workflow.</p>
@@ -1893,7 +1895,7 @@ tool as a step in the workflow.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2">Hint: Upgrade RAM</h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
 <div class="accordion-body">
 <p>Use a <code>requirements</code> entry with
 <code>ResourceRequirement</code> to allocate a <code>ramMin</code> of
@@ -1907,7 +1909,7 @@ tool as a step in the workflow.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Solution: workflow_input_2.yml (Click to expand)</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2006,7 +2008,7 @@ file, which is the <code>fruitfly_gene_model</code> file.</p>
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>workflow_input_3.yml (Click to expand)</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2072,7 +2074,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-addendum-01-debug"><p>Content from <a href="addendum-01-debug.html">Debugging Workflows</a></p>
 <hr>
-<p>Last updated on 2024-05-05 |
+<p>Last updated on 2024-05-06 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/addendum-01-debug.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2584,7 +2586,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-more_info"><p>Content from <a href="more_info.html">More Information</a></p>
 <hr>
-<p>Last updated on 2024-05-05 |
+<p>Last updated on 2024-05-06 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/more_info.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2593,16 +2595,20 @@ any links that you are not going to use.
 <p>If you want to know more about CWL script and workflows, you can look
 at one of these websites:</p>
 <ul>
-<li><a href="http://www.commonwl.org/user_guide/index.html" class="external-link">CWL User
+<li><a href="https://www.commonwl.org/user_guide/index.html" class="external-link">CWL User
 Guide</a></li>
-<li><a href="http://www.commonwl.org/user_guide/yaml/" class="external-link">YAML
+<li><a href="https://www.commonwl.org/user_guide/topics/yaml-guide" class="external-link">YAML
 Guide</a></li>
-<li>Extra <a href="https://www.commonwl.org/v1.0/CommandLineTool.html#CommandLineTool" class="external-link">CWL
-Command Line Tool</a> information</li>
-<li><a href="http://www.commonwl.org/user_guide/misc/" class="external-link">Miscellaneous CWL
-information</a></li>
+<li>Specs
+<ul>
+<li><a href="https://www.commonwl.org/v1.2/CommandLineTool.html" class="external-link">CWL
+Command Line Tool</a></li>
+<li><a href="https://www.commonwl.org/v1.2/Workflow.html" class="external-link">CWL
+Workflow</a></li>
+</ul>
+</li>
 <li>
-<a href="http://www.commonwl.org/user_guide/rec-practices/" class="external-link">Recommended
+<a href="https://www.commonwl.org/user_guide/topics/best-practices.html" class="external-link">Recommended
 Practices</a> in CWL</li>
 </ul></section>
 </div>
@@ -2652,8 +2658,8 @@ Practices</a> in CWL</li>
   "url": "https://__USERNAME__.github.io/__PROJECT__/aio.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/aio.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-05-05",
-  "datePublished": "2024-05-05"
+  "dateModified": "2024-05-06",
+  "datePublished": "2024-05-06"
 }
 
   </script><script>

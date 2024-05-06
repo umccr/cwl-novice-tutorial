@@ -278,7 +278,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2024-05-05 |
+        <p>Last updated on 2024-05-06 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/01-introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -387,14 +387,16 @@ Accessible, Interoperable, and Reusable) manner.</p>
 <hr class="half-width"><p>The rise in popularity of workflows has been matched by a rise in the
 number of disparate workflow managers that are available, each with
 their own syntax or methods for describing the tools and workflows,
-reducing portability and interoperability of these workflows. The Common
-Workflow Language (CWL) standard has been developed to address these
-problems, and to serve the general computational workflow needs
-described above.</p>
+reducing portability and interoperability of these workflows. For a
+comprehensive lists of all known computational workflow systems, see
+[Computational Data Analysis Workflow Systems] (<a href="https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems" class="external-link uri">https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems</a>)
+maintained by the CWL community. The Common Workflow Language (CWL)
+standard has been developed to address these problems, and to serve the
+general computational workflow needs described above.</p>
 </section><section id="benefits-of-computational-workflows"><h2 class="section-heading">Benefits of Computational Workflows<a class="anchor" aria-label="anchor" href="#benefits-of-computational-workflows"></a>
 </h2>
 <hr class="half-width"><p>In summary, computational workflows bring many benefits and an ideal
-computation workflow adopts and provides the properties below:</p>
+computational workflow adopts and provides the properties below:</p>
 <p><strong>Handy Properties of Computational Workflows</strong><a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 <table class="table"><colgroup><col width="19%"><col width="13%"><col width="66%"></colgroup><tbody><tr class="odd"><td><img src="fig/PropsCompute01.png" alt="props compute 01 png" class="figure"></td>
 <td><strong>Composition &amp; Abstraction</strong></td>
@@ -429,11 +431,11 @@ Moving between on premise &amp; cloud</td>
 </h2>
 <hr class="half-width"><p>CWL is a free and open standard for describing command-line tool
 based workflows<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
-<p>These standards provide a common, but reduced, set of abstractions
-that are both used in practice and implemented in many popular workflow
-managers. The CWL language is declarative, enabling computational
-workflows to be constructed from diverse software tools, executing each
-through their command-line interface.</p>
+<p>CWL provides a common, but reduced, set of abstractions that are both
+used in practice and implemented in many popular workflow managers. The
+CWL language is declarative, enabling computational workflows to be
+constructed from diverse software tools, executing each through their
+command-line interface.</p>
 <div id="shell-scripts-reduce-portability" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -453,13 +455,14 @@ tools to researchers.</p>
 </div>
 </div>
 </div>
-<p>CWL workflows are written in a subset of <a href="https://www.commonwl.org/user_guide/yaml/" class="external-link">YAML</a>, with a syntax
-that does not restrict the amount of detail provided for a tool or
-workflow. The execution model is explicit, all required elements of a
-tool’s runtime environment must be specified by the CWL tool-description
-author. On top of these basic requirements they can also add hints or
-requirements to the tool-description, helping to guide users (and
-workflow engines) on what resources are needed for a tool.</p>
+<p>CWL workflows are written in a subset of <a href="https://www.commonwl.org/user_guide/topics/yaml-guide.html" class="external-link">YAML</a>,
+with a syntax that does not restrict the amount of detail provided for a
+tool or workflow. The execution model is explicit, all required elements
+of a tool’s runtime environment must be specified by the CWL
+tool-description author. On top of these basic requirements they can
+also add hints or requirements to the tool-description, helping to guide
+users (and workflow engines) on what resources are needed for a
+tool.</p>
 <div id="containerisation" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -468,35 +471,34 @@ workflow engines) on what resources are needed for a tool.</p>
 <h3 class="callout-title">Containerisation<a class="anchor" aria-label="anchor" href="#containerisation"></a>
 </h3>
 <div class="callout-content">
-<p>The CWL standards explicitly support the use of software container
+<p>The CWL standard explicitly support the use of software container
 technologies, such as <a href="https://www.docker.com/" class="external-link">docker</a>
 helping ensure that the execution of tools is reproducible.</p>
 </div>
 </div>
 </div>
-<p>Data locations are explicitly defined, and working directories kept
-separate for each tool invocation. These standards ensure the
-portability of tools and workflows, allowing the same workflows to be
-run on your local machine, or in a HPC or cloud environment, with
-minimal changes required.</p>
+<p>Data locations are explicitly defined, and working directories are
+kept separate for each tool invocation. This ensures the portability of
+tools and workflows, allowing the same workflows to be run on your local
+machine, or in a HPC or cloud environment, with minimal changes
+required.</p>
 </section><section id="rna-sequencing-example"><h2 class="section-heading">RNA sequencing example<a class="anchor" aria-label="anchor" href="#rna-sequencing-example"></a>
 </h2>
-<hr class="half-width"><p>In this tutorial a bio-informatics RNA-sequencing analysis is used as
+<hr class="half-width"><p>In this tutorial a bioinformatics RNA-sequencing analysis is used as
 an example. However, there is no specific knowledge needed for this
 tutorial. RNA-sequencing is a technique which examines the quantity and
 sequences of <a href="https://en.wikipedia.org/wiki/RNA" class="external-link">RNA</a> in a
 sample using next-generation sequencing. The RNA reads are analyzed to
-measure the relative numbers of different RNA molecules in the sample.
-This analysis is differential gene expression.</p>
+quantify the relative abundance of different RNA molecules in the
+sample, a process known as differential gene expression analysis.</p>
 <p>The process looks like this:</p>
 <figure><img src="fig/RNAseqWorkflow.png" style='height: "400px"' alt="RNASeq Workflow graph" class="figure mx-auto d-block"><div class="figcaption">Diagram showing a typical RNA sequencing
 workflow. The workflow is linear, starting from taking biological
 samples and sequence reads, through quality control and trimming steps,
 to mapping to a genome and counting gene reads, to finally carrying out
 statistical analysis to identify differentially expressed genes.</div>
-</figure><p>During this tutorial, only the middle analytical steps will be
-performed. The adapter trimming is skipped. These steps will be
-done:<br>
+</figure><p>During this tutorial, the adapter trimming is skipped and only the
+following analytical steps will be performed.<br>
 - Quality control (FASTQC) - Alignment (mapping) - Counting reads
 associated with genes</p>
 <p>The different tools necessary for this analysis are already
@@ -511,11 +513,11 @@ tools and generate the desired output files.</p>
 </h3>
 <div class="callout-content">
 <ul><li>CWL is a standard for describing workflows based on command-line
-tools</li>
-<li>CWL workflows are written in a subset of YAML</li>
-<li>A CWL workflow is more portable than a shell script</li>
+tools.</li>
+<li>CWL workflows are written in a subset of YAML.</li>
+<li>A CWL workflow is more portable than a shell script.</li>
 <li>CWL supports software containers, supporting reproducibility on
-different machines</li>
+different machines.</li>
 </ul></div>
 </div>
 </div>
@@ -592,8 +594,8 @@ and stewardship. Scientific Data. <a href="https://doi.org/10.1038/sdata.2016.18
   "url": "https://__USERNAME__.github.io/__PROJECT__/01-introduction.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/01-introduction.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-05-05",
-  "datePublished": "2024-05-05"
+  "dateModified": "2024-05-06",
+  "datePublished": "2024-05-06"
 }
 
   </script><script>
