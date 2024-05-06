@@ -165,7 +165,7 @@ pip install cwltool
 [vs_code]: https://code.visualstudio.com/
 [benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
 [redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
-[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings
+[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
 [wsl_installation_instructions]: https://learn.microsoft.com/en-us/windows/wsl/install
 [getting_started_with_wsl2]: https://medium.com/@awlucattini_60867/getting-started-with-wsl2-c11826654776?source=friends_link&sk=ddd411c0794ba2fce877984c300882ae
 [windows_docker_desktop_installation_page]: https://docs.docker.com/desktop/install/windows-install/
@@ -236,6 +236,20 @@ conda config --add channels conda-forge
 
 <br>
 
+::::::::::::::::::: callout
+
+### M1 Users
+
+MacOS M1 users may need to ensure `libarchive` (from the conda-forge channel) has first been installed on their conda system before using mamba [^1]
+
+```bash
+conda remove -n base libarchive
+conda install -y -n base -c conda-forge \
+  libarchive 
+```
+
+::::::::::::::::::
+
 #### Create a conda virtual environment
 
 Create a virtual environment using conda
@@ -257,7 +271,12 @@ conda activate cwltutorial
 #### Install prerequisites via Mamba
 
 ```bash
-mamba install cwltool graphviz wget git nodejs
+mamba install --yes \
+  cwltool \
+  graphviz \
+  wget \
+  git \
+  nodejs
 ```
 
 :::::::::::::::: callout
@@ -269,10 +288,12 @@ The virtual environment needs to be activated every time you start a terminal us
 
 ::::::::::::::::
 
+[^1]: https://github.com/mamba-org/mamba/issues/1826#issuecomment-1196636463
+
 [vs_code]: https://code.visualstudio.com/
 [benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
 [redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
-[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings
+[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
 
 Continue to [Confirm Software Installations](#confirm-software-installations) after completing the setup for MacOS.
 
@@ -391,7 +412,7 @@ For other Linux systems, check [the graphviz download page][graphviz_download_pa
 [vs_code]: https://code.visualstudio.com/
 [benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
 [redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
-[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings
+[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
 [docker_server_install]: https://docs.docker.com/engine/install/#server
 [enable_user_docker_usage]: https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
 [graphviz_download_page]: https://graphviz.org/download/#linux

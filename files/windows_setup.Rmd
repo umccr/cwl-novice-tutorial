@@ -145,7 +145,7 @@ pip install cwltool
 [vs_code]: https://code.visualstudio.com/
 [benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
 [redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
-[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings
+[user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
 [wsl_installation_instructions]: https://learn.microsoft.com/en-us/windows/wsl/install
 [getting_started_with_wsl2]: https://medium.com/@awlucattini_60867/getting-started-with-wsl2-c11826654776?source=friends_link&sk=ddd411c0794ba2fce877984c300882ae
 [windows_docker_desktop_installation_page]: https://docs.docker.com/desktop/install/windows-install/
