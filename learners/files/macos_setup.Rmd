@@ -16,7 +16,7 @@ Download and install [VSCode][vs_code]
 
 **Install Benten Extension**
 
-[Open Benten in the marketplace](https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl) and click the `Install` button or follow the directions.
+[Open Benten in the marketplace][benten_vs_code_marketplace] and click the `Install` button or follow the directions.
 
 **Install Redhat Yaml VSCode Extension**
 
@@ -38,13 +38,21 @@ Add the following chunk to the VSCode [user settings json][user_settings_json] t
 
 ### Docker Installation
 
-[Install docker](https://docs.docker.com/desktop/mac/install)
+[Install docker][docker_install]
 
 <br>
 
-### Install MiniConda
+### Install Mamba
 
-[Install miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html)
+Mamba is a faster version of conda.
+
+First install miniforge (this will also install conda)
+
+[Install Miniforge][miniforge_install]
+
+Then install mamba.
+
+[Install Mamba][mamba_install]
 
 <br>
 
@@ -72,14 +80,16 @@ conda install -y -n base -c conda-forge \
   libarchive 
 ```
 
+If you continue to have issues, please re-install conda via miniforge (shown above), or just replace the `mamba` commands below with `conda`.  
+
 ::::::::::::::::::
 
-#### Create a conda virtual environment
+#### Create a virtual environment
 
 Create a virtual environment using conda
 
 ```bash
-conda create --name cwltutorial python==3.11 mamba
+mamba create --name cwltutorial python==3.11 mamba
 ```
 
 <br>
@@ -87,7 +97,7 @@ conda create --name cwltutorial python==3.11 mamba
 #### Activate the virtual environment
 
 ```bash
-conda activate cwltutorial
+mamba activate cwltutorial
 ```
 
 <br>
@@ -108,12 +118,16 @@ mamba install --yes \
 Reactivating the conda virtual environment
 
 The virtual environment needs to be activated every time you start a terminal using
-`conda activate cwltutorial`.
+`mamba activate cwltutorial`.
 
 ::::::::::::::::
 
-[^1]: https://github.com/mamba-org/mamba/issues/1826#issuecomment-1196636463
+[^1]: [Mamba libarchive Issue][mamba_libarchive_issue]
 
+[mamba_libarchive_issue]: https://github.com/mamba-org/mamba/issues/1826#issuecomment-1196636463
+[docker_install]: https://docs.docker.com/desktop/mac/install
+[miniforge]: https://github.com/conda-forge/miniforge
+[mamba_install]: https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html
 [vs_code]: https://code.visualstudio.com/
 [benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
 [redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
