@@ -172,9 +172,9 @@ The process looks like this:
 
 ![Diagram showing a typical RNA sequencing workflow. The workflow is linear, starting from taking biological samples and sequence reads, through quality control and trimming steps, to mapping to a genome and counting gene reads, to finally carrying out statistical analysis to identify differentially expressed genes.](fig/RNAseqWorkflow.png){alt='RNASeq Workflow graph' style='height: "400px"'}
 
-During this tutorial, the adapter trimming is skipped and  only the following 
-analytical steps will be performed.  
+During this tutorial, the following  analytical steps will be performed.  
 - Quality control (FASTQC)
+- Adapter trimming
 - Alignment (mapping)
 - Counting reads associated with genes
 

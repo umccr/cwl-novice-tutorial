@@ -569,8 +569,6 @@ mkdir rnaseq
   cd rnaseq
   wget https://zenodo.org/record/4541751/files/GSM461177_1_subsampled.fastqsanger
   wget https://zenodo.org/record/4541751/files/GSM461177_2_subsampled.fastqsanger
-  wget https://zenodo.org/record/4541751/files/GSM461180_1_subsampled.fastqsanger
-  wget https://zenodo.org/record/4541751/files/GSM461180_2_subsampled.fastqsanger
   wget https://zenodo.org/record/4541751/files/Drosophila_melanogaster.BDGP6.87.gtf
   wget https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz
   gunzip dm6.fa.gz  # STAR index requires an uncompressed reference genome
