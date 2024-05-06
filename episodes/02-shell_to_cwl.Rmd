@@ -530,5 +530,5 @@ Needs some exercises?
 :::::::::::::::::::::::::::::::::::::: 
 
 
-[yaml_tutorial]: https://www.commonwl.org/user_guide/yaml/
+[yaml_tutorial]: https://www.commonwl.org/user_guide/topics/yaml-guide.html
 [capturing_stdout_tutorial]: https://cwl-for-eo.github.io/guide/how-to/cwl-how-to/02-stdout/capture-stdout/

@@ -93,13 +93,16 @@ Reusable) manner.
 The rise in popularity of workflows has been matched by a rise in the 
 number of disparate workflow managers that are available, each with their own 
 syntax or methods for describing the tools and workflows, reducing portability 
-and interoperability of these workflows. The Common Workflow Language (CWL) 
+and interoperability of these workflows. For a comprehensive lists of all known 
+computational workflow systems, see [Computational Data Analysis Workflow Systems]
+(https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems)
+maintained by the CWL community. The Common Workflow Language (CWL) 
 standard has been developed to address these problems, and to serve the general 
 computational workflow needs described above.
 
 ## Benefits of Computational Workflows
 
-In summary, computational workflows bring many benefits and an ideal computation 
+In summary, computational workflows bring many benefits and an ideal computational 
 workflow adopts and provides the properties below:
 
 **Handy Properties of Computational Workflows**[^2]
@@ -118,7 +121,7 @@ workflow adopts and provides the properties below:
 
 CWL is a free and open standard for describing command-line tool based workflows[^3].
 
-These standards provide a common, but reduced, set of abstractions that are both used in
+CWL provides a common, but reduced, set of abstractions that are both used in
 practice and implemented in many popular workflow managers.
 The CWL language is declarative, enabling computational workflows to be constructed from
 diverse software tools, executing each through their command-line interface.
@@ -135,7 +138,7 @@ The aim of CWL is to reduce that barrier of usage of these tools to researchers.
 
 ::::::::::::::::::::
 
-CWL workflows are written in a subset of [YAML](https://www.commonwl.org/user_guide/yaml/), with a syntax that does not restrict the
+CWL workflows are written in a subset of [YAML](https://www.commonwl.org/user_guide/topics/yaml-guide.html), with a syntax that does not restrict the
 amount of detail provided for a tool or workflow.
 The execution model is explicit, all required elements of a tool's runtime environment
 must be specified by the CWL tool-description author.
@@ -147,30 +150,30 @@ needed for a tool.
 
 ### Containerisation
 
-The CWL standards explicitly support the use of software container technologies, such as [docker][docker] helping
+The CWL standard explicitly support the use of software container technologies, such as [docker][docker] helping
 ensure that the execution of tools is reproducible.
 
 ::::::::::::::::::::
 
-Data locations are explicitly defined, and working directories kept separate for each tool invocation.
-These standards ensure the portability of tools and workflows, allowing the same workflows
+Data locations are explicitly defined, and working directories are kept separate for each tool invocation.
+This ensures the portability of tools and workflows, allowing the same workflows
 to be run on your local machine, or in a HPC or cloud environment, with minimal changes required.
 
 ## RNA sequencing example
 
-In this tutorial a bio-informatics RNA-sequencing analysis is used as an example. However,
+In this tutorial a bioinformatics RNA-sequencing analysis is used as an example. However,
 there is no specific knowledge needed for this tutorial.
 RNA-sequencing is a technique which examines the quantity and sequences of
 [RNA](https://en.wikipedia.org/wiki/RNA) in a sample using next-generation sequencing.
-The RNA reads are analyzed to measure the relative numbers of different RNA molecules in
-the sample. This analysis is differential gene expression.
+The RNA reads are analyzed to quantify the relative abundance of different RNA molecules in the sample, 
+a process known as differential gene expression analysis.
 
 The process looks like this:
 
 ![Diagram showing a typical RNA sequencing workflow. The workflow is linear, starting from taking biological samples and sequence reads, through quality control and trimming steps, to mapping to a genome and counting gene reads, to finally carrying out statistical analysis to identify differentially expressed genes.](fig/RNAseqWorkflow.png){alt='RNASeq Workflow graph' style='height: "400px"'}
 
-During this tutorial, only the middle analytical steps will be performed. The adapter trimming is skipped.
-These steps will be done:  
+During this tutorial, the adapter trimming is skipped and  only the following 
+analytical steps will be performed.  
 - Quality control (FASTQC)
 - Alignment (mapping)
 - Counting reads associated with genes
@@ -181,10 +184,10 @@ workflow will be set up to connect these tools and generate the desired output f
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- CWL is a standard for describing workflows based on command-line tools
-- CWL workflows are written in a subset of YAML
-- A CWL workflow is more portable than a shell script
-- CWL supports software containers, supporting reproducibility on different machines
+- CWL is a standard for describing workflows based on command-line tools.
+- CWL workflows are written in a subset of YAML.
+- A CWL workflow is more portable than a shell script.
+- CWL supports software containers, supporting reproducibility on different machines.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
