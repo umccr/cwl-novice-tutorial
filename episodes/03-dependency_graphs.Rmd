@@ -189,6 +189,8 @@ opened in any web browser and in [Inkscape](https://inkscape.org/), for example.
 
 :::::::::::::::::::::::::::::::: callout
 
+### Windows Only: View images from the CLI with wslview
+
 Windows users can run `wslview workflow_graph_2.svg` in their terminal to view the graph in the default web browser
 
 ::::::::::::::::::::::::::::::::
