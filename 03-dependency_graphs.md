@@ -27,11 +27,11 @@ exercises: 0
 
 ## Multi-Step Workflow
 
-In the previous episode we worked through a single step workflow, carrying out a simple RNA read
-of the fruitfly genome. In this episode the workflow is extended with an equivalent reverse
-RNA read and the next two steps of the RNA-sequencing analysis, trimming the reads and
+In the previous episode we worked through a single step workflow, carrying out quality control check
+on RNA reads of the fruitfly genome. In this episode the workflow is extended with an equivalent reverse
+RNA reads and the next two steps of the RNA-sequencing analysis, trimming the reads and
 aligning the trimmed reads, are added.
-We will be using the [`cutadapt`](https://bio.tools/cutadapt)  and [`STAR`](https://bio.tools/star) tools for these tasks.
+We will be using the [`cutadapt`][cutadapt]  and [`STAR`][star] tools for these tasks.
 
 To make a multi-step workflow that can carry all this analysis out, we add more entries
 to the `steps` field. 
@@ -160,6 +160,10 @@ necessary for the mapping.
 This `ref_fruitfly_genome` is added in the `inputs` field of the workflow and in the YAML input file,
 `workflow_input_2.yml`.
 
+## Running the new workflow
+
+The workflow definition is complete and we now only need to write the YAML input file.
+
 ::::::::::::::::::::::: spoiler
 
 ### workflow_input_2.yml (Click to expand)
@@ -183,6 +187,12 @@ fruitfly_gene_model:
 
 :::::::::::::::::::::::
 
+We  have finished the workflow definition and the input file and now can run the workflow.
+
+```bash
+cwltool --cachedir cache rna_seq_workflow_2.cwl workflow_input_2.yml
+```
+
 ::::::::::::::::::::::::::::: challenge
 
 ### Challenge: Draw the workflow 🌶
@@ -197,8 +207,9 @@ of the different steps. You can use for example Paint or print out the graph.
 :::::::::::::::::::::::::::: solution
 
 ### Solution
- To find out how the inputs and the steps are connected to each other, you look at the `in` field
- of the different steps.
+
+To find out how the inputs and the steps are connected to each other, look at the `in` field
+of the different steps.
 
 ![](fig/Ep3_graph_answer.png){alt="Ep3 empty graph answer" style='height: "300px"'}
 
@@ -207,6 +218,7 @@ of the different steps. You can use for example Paint or print out the graph.
 :::::::::::::::::::::::::::: callout
 
 ## Iterative working
+
 Working on a workflow is often not something that happens all at once.
 Sometimes you already have a shell script ready that can be converted to a CWL workflow.
 Other times it is similar to this tutorial, you start with a single-step workflow and extend it to
@@ -244,8 +256,8 @@ workflow-level input or the presence of a particular output from another step.
 ### From CWL script to graph
 
 In this example the workflow is already made, so the graph can be generated using
-[cwlviewer](https://view.commonwl.org/) online or using `cwltool`. First, let's have a look at
-[cwlviewer](https://view.commonwl.org/). To use this tool, the workflow has to be put in a GitHub,
+[cwlviewer][cwl_viewer] online or using `cwltool`. First, let's have a look at
+[cwlviewer][cwl_viewer]. To use this tool, the workflow has to be put in a GitHub,
 GitLab or Git repository. To view the graph of the workflow enter the URL and click `Parse Workflow`.
 
 The cwlviewer displays the workflow as a graph, starting with the input. Then the different steps
@@ -265,7 +277,7 @@ cwltool --print-dot rna_seq_workflow_2.cwl | dot -Tsvg > workflow_graph_2.svg
 ```
 
 The resulting SVG file displays the same graph as the one in the cwlviewer. The SVG file can be
-opened in any web browser and in [Inkscape](https://inkscape.org/), for example.
+opened in any web browser and in [Inkscape][inkscape], for example.
 
 :::::::::::::::::::::::::::::::: callout
 
@@ -277,7 +289,7 @@ Windows users can run `wslview workflow_graph_2.svg` in their terminal to view t
 
 ### Visualisation in VSCode
 
-[__Benten__](https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl) is an extension
+[__Benten__][benten] is an extension
 in Visual Studio Code (VSCode) that among other things visualises a workflow in a graph. When Benten
 is installed in VSCode, the tool can be used to visualise the workflow. In the top-right corner of
 the VSCode window the CWL viewer can be opened, see the screenshot below.
@@ -300,3 +312,8 @@ The graph by VSCode/Benten doesn't show the output-input names between the diffe
 
 ::::::::::::::::::::::::
 
+[cwl_viewer]: https://view.commonwl.org/
+[inkscape]: https://inkscape.org/
+[benten]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
+[cutadapt]: https://bio.tools/cutadapt
+[star]: https://bio.tools/star
