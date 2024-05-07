@@ -25,7 +25,7 @@ The CWL documents of the previous steps were already provided for you, however, 
 In this episode you will use the bio-cwl-tools library to add the last step to the workflow.
 
 ## Adding new step in workflow
-The last step of our workflow is counting the RNA-seq reads for which we will use the [`featureCounts`](https://bio.tools/featurecounts) tool.
+The last step of our workflow is counting the RNA-seq reads for which we will use the [`featureCounts`][featurecounts] tool.
 
 :::::::::::::::::::::::::::::: challenge
 
@@ -135,10 +135,11 @@ cwltool --cachedir cache rna_seq_workflow_3.cwl workflow_input_3.yml
 
 ::::::::::::::::::::::::::::: keypoints
 
-- [bio-cwl-tools](https://github.com/common-workflow-library/bio-cwl-tools) is a library of CWL documents for biology/life-sciences related tools
+- [bio-cwl-tools][bio-cwl-tools] is a library of CWL documents for biology/life-sciences related tools
 
 :::::::::::::::::::::::::::
 
 
 [bio-cwl-tools]: https://github.com/common-workflow-library/bio-cwl-tools
+[featurecounts]: https://bio.tools/featurecounts
 [featurecounts-cwl]: https://github.com/common-workflow-library/bio-cwl-tools/blob/release/subread/featureCounts.cwl
