@@ -122,6 +122,8 @@ rna_seq_workflow_fieldname_fail.cwl:38:5:         invalid field `outputsource`, 
 
 ::::::::::::::::::::::::::::::: callout
 
+### IDEs are your friend
+
 Using an IDE can help warn of incorrect fields before needing to validate via the command-line tool
 
 :::::::::::::::::::::::::::::::
@@ -168,6 +170,8 @@ rna_seq_workflow_varname_fail.cwl:32:7:       checking object
 
 ::::::::::::::::::::::::::::::: callout
 
+### IDEs are your friend
+
 Using an IDE, a simple Ctrl+F on a variable can help you see where that variable is 
 present throughout a CWL code. Only one occurence of a variable might mean it has been spelt differently elsewhere.  
 
@@ -184,6 +188,8 @@ To get the desired output you have to run the workflow again.
 Best practice is to check your `outputs` section before running your script to make sure all the outputs you want are there.
 
 ::::::::::::::::::::::::::::::: callout
+
+### Output Collections
 
 All file / directory outputs of a workflow or tool will be placed into a single directory.  
 
@@ -236,6 +242,8 @@ Some files need a specific format that needs to be specified in the YAML inputs 
 When you don't specify a format, an error will occur. You can for example use the [EDAM](https://www.ebi.ac.uk/ols/ontologies/edam) ontology.
 
 :::::::::::::::::::::::::: callout
+
+### Format requirements
 
 The format attribute for a File entry is only required if the format attribute is specified 
 on the workflow input.  
