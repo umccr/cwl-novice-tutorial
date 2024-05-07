@@ -27,8 +27,8 @@ exercises: 0
 
 ## Multi-Step Workflow
 
-In the previous episode we worked through a single step workflow, carrying out a simple RNA read
-of the fruitfly genome. In this episode the workflow is extended with an equivalent reverse
+In the previous episode we worked through a single step workflow, carrying out quality control check
+on RNA read of the fruitfly genome. In this episode the workflow is extended with an equivalent reverse
 RNA read and the next two steps of the RNA-sequencing analysis, trimming the reads and
 aligning the trimmed reads, are added.
 We will be using the [`cutadapt`](https://bio.tools/cutadapt)  and [`STAR`](https://bio.tools/star) tools for these tasks.
@@ -93,6 +93,10 @@ necessary for the mapping.
 This `ref_fruitfly_genome` is added in the `inputs` field of the workflow and in the YAML input file,
 `workflow_input_2.yml`.
 
+## Running the new workflow
+
+The workflow is complete and we only need to complete the YAML input file.
+
 ::::::::::::::::::::::: spoiler
 
 ### workflow_input_2.yml (Click to expand)
@@ -102,6 +106,12 @@ This `ref_fruitfly_genome` is added in the `inputs` field of the workflow and in
 ```
 
 :::::::::::::::::::::::
+
+You have finished the workflow and the input file and now you can run the whole workflow.
+
+```bash
+cwltool --cachedir cache rna_seq_workflow_2.cwl workflow_input_2.yml
+```
 
 ::::::::::::::::::::::::::::: challenge
 
