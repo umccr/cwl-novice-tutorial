@@ -135,3 +135,153 @@ and then click "Restart Docker…"
 :::::::::::::::::::::
 
 :::::::::::::::::::::
+
+<br>
+
+### Validating your dataset
+
+Let's make sure the data we've downloaded is correct and in the right structure.  
+We can do this with a [checksum][checksum_wiki].
+
+
+#### Setting the checksum.  
+
+Under the rnaseq folder create the file `rnaseq.md5` with the following contents.  
+
+::::::::::::::::: spoiler
+
+### rnaseq.md5
+
+```bash
+3c8458cf67d71c22c4c420dd37e23ef2  Drosophila_melanogaster.BDGP6.87.gtf
+036b68a2a8fe8725d48fb5fd89e2b8b2  GSM461177_1_subsampled.fastqsanger
+87b09607057743ecf3e38448630421c9  GSM461177_2_subsampled.fastqsanger
+80f57c0a3537d2e4cd9f1748e7b7da91  dm6-STAR-index/Genome
+e1a0b37b3cae8af4871cfb8c293a98cb  dm6-STAR-index/SA
+eec51bc2096fbfd71f2cdb970529a6f9  dm6-STAR-index/SAindex
+d8f7048f5f882af92c7fda0c711c70ad  dm6-STAR-index/chrLength.txt
+d727129afa13f91ae22bd35e29afd0c0  dm6-STAR-index/chrName.txt
+63645d2aab7fd4c9ed356e071d7b9c2a  dm6-STAR-index/chrNameLength.txt
+f897e16cb9a8d9a4f1cf242938f97ac6  dm6-STAR-index/chrStart.txt
+d5212320af99792dc517f1d4fa830ec1  dm6-STAR-index/exonGeTrInfo.tab
+5ef2835f5c116f55dd20522567152bf8  dm6-STAR-index/exonInfo.tab
+11aa105726dbb95e8f27714fdbd8e897  dm6-STAR-index/geneInfo.tab
+faa97745744f087d06879800a531edea  dm6-STAR-index/sjdbInfo.txt
+8cd08db8cb269461db29d9eb23ad690b  dm6-STAR-index/sjdbList.fromGTF.out.tab
+fd0b412f47ca662ce68e08ca6939a2c7  dm6-STAR-index/sjdbList.out.tab
+bdf26dee24f8cd1ca7b1bd854c882411  dm6-STAR-index/transcriptInfo.tab
+5aadf7ccab5a6b674e76516bf75eaa09  dm6.fa
+```
+
+:::::::::::::::::::::::::::
+
+The following code chunk may be of assistance. 
+You may also use a text editor.  
+
+:::::::::::::::::::::: spoiler
+
+### make_md5.sh
+
+```bash
+(
+  cd rnaseq && \
+  {
+     echo "3c8458cf67d71c22c4c420dd37e23ef2  Drosophila_melanogaster.BDGP6.87.gtf"
+     echo "036b68a2a8fe8725d48fb5fd89e2b8b2  GSM461177_1_subsampled.fastqsanger"
+     echo "87b09607057743ecf3e38448630421c9  GSM461177_2_subsampled.fastqsanger"
+     echo "80f57c0a3537d2e4cd9f1748e7b7da91  dm6-STAR-index/Genome"
+     echo "e1a0b37b3cae8af4871cfb8c293a98cb  dm6-STAR-index/SA"
+     echo "eec51bc2096fbfd71f2cdb970529a6f9  dm6-STAR-index/SAindex"
+     echo "d8f7048f5f882af92c7fda0c711c70ad  dm6-STAR-index/chrLength.txt"
+     echo "d727129afa13f91ae22bd35e29afd0c0  dm6-STAR-index/chrName.txt"
+     echo "63645d2aab7fd4c9ed356e071d7b9c2a  dm6-STAR-index/chrNameLength.txt"
+     echo "f897e16cb9a8d9a4f1cf242938f97ac6  dm6-STAR-index/chrStart.txt"
+     echo "d5212320af99792dc517f1d4fa830ec1  dm6-STAR-index/exonGeTrInfo.tab"
+     echo "5ef2835f5c116f55dd20522567152bf8  dm6-STAR-index/exonInfo.tab"
+     echo "11aa105726dbb95e8f27714fdbd8e897  dm6-STAR-index/geneInfo.tab"
+     echo "faa97745744f087d06879800a531edea  dm6-STAR-index/sjdbInfo.txt"
+     echo "8cd08db8cb269461db29d9eb23ad690b  dm6-STAR-index/sjdbList.fromGTF.out.tab"
+     echo "fd0b412f47ca662ce68e08ca6939a2c7  dm6-STAR-index/sjdbList.out.tab"
+     echo "bdf26dee24f8cd1ca7b1bd854c882411  dm6-STAR-index/transcriptInfo.tab"
+     echo "5aadf7ccab5a6b674e76516bf75eaa09  dm6.fa"
+  } >> rnaseq.md5
+)
+```
+
+::::::::::::::::::::::::
+
+
+
+#### Checking your files
+
+
+```
+(
+  cd rnaseq && \
+  md5sum -c rnaseq.md5
+)
+```
+
+::::::::::::::::::::: spoiler
+
+### md5sum check command outputs
+
+We expect the following outputs from this command:
+
+```
+Drosophila_melanogaster.BDGP6.87.gtf: OK
+GSM461177_1_subsampled.fastqsanger: OK
+GSM461177_2_subsampled.fastqsanger: OK
+dm6-STAR-index/Genome: OK
+dm6-STAR-index/Log.out: OK
+dm6-STAR-index/SA: OK
+dm6-STAR-index/SAindex: OK
+dm6-STAR-index/chrLength.txt: OK
+dm6-STAR-index/chrName.txt: OK
+dm6-STAR-index/chrNameLength.txt: OK
+dm6-STAR-index/chrStart.txt: OK
+dm6-STAR-index/exonGeTrInfo.tab: OK
+dm6-STAR-index/exonInfo.tab: OK
+dm6-STAR-index/geneInfo.tab: OK
+dm6-STAR-index/genomeParameters.txt: OK
+dm6-STAR-index/sjdbInfo.txt: OK
+dm6-STAR-index/sjdbList.fromGTF.out.tab: OK
+dm6-STAR-index/sjdbList.out.tab: OK
+dm6-STAR-index/transcriptInfo.tab: OK
+dm6.fa: OK
+```
+
+::::::::::::::::::
+
+
+::::::::::::::::::::: callout
+
+### md5 Troubleshooting: Windows users only
+
+If you see an error such as 
+
+```
+md5sum: 'Drosophila_melanogaster.BDGP6.87.gtf'$'\r': No such file or directory
+: FAILED open or reader.BDGP6.87.gtf
+```
+
+it may be because `rnaseq.md5` has windows based line endings.  
+
+The following code will install the [dos2unix][dos2unix] cli tool and then convert
+the `rnaseq.md5` file to unix-based line endings.  
+
+```bash
+sudo apt update -yq
+sudo apt install dos2unix -yq
+
+dos2unix rnaseq/rnaseq.md5
+```
+
+Then retry the `md5sum` command
+
+::::::::::::::::::::::::::
+
+
+[dos2unix]: https://phoenixnap.com/kb/convert-dos-to-unix
+[checksum_wiki]: https://en.wikipedia.org/wiki/Checksum
+
