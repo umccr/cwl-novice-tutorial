@@ -64,6 +64,22 @@ By adapting tool descriptors to multiple platforms, this abstraction allows the
 same workflow to be used on different platforms, transparently to the workflow user. 
 This means users can move between local development and cloud and HPC solutions seamlessly.
 
+## Benefits of Computational Workflows
+
+In summary, computational workflows bring many benefits and an ideal computational 
+workflow adopts and provides the properties below:
+
+**Handy Properties of Computational Workflows**[^2]
+
+| 	                                                            | 	                                         |                                                                                                                                                                                                                    |
+|--------------------------------------------------------------|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![](fig/PropsCompute01.png){alt='props compute 01 png'} 	 | **Composition & Abstraction** 	           | Using the best code written by 3rd parties<br>Handle heterogeneity<br>Shield Complexity & incompatibility<br>Shareable reusable, re-mixable methods 	                                                              |
+| ![](fig/PropsCompute02.png){alt='props compute 02 png'} 	 | **Sharing & Adaptability**    	           | Shared method, publishable know-how<br>BYOD / parameters<br>Different implementations<br>Changes in execution infrastructure                        	                                                              |
+| ![](fig/PropsCompute03.png){alt='props compute 03 png'} 	 | **Automation**                	           | Repetitive reproducible pipelines<br>Simulation sweeps<br>Manage data and control flow<br>Optimised monitoring & recovery<br>Automated deployment   	                                                              |
+| ![](fig/PropsCompute04.png){alt='props compute 04 png'} 	 | **Reporting & Accreditation** 	           | Provenance logging & data lineage<br>Auto-documentation<br>Result comparison                                                                        	                                                              |
+| ![](fig/PropsCompute05.png){alt='props compute 05 png'} 	 | **Scalability & Infrastructure Access** 	 | Accessing infrastructures, datasets and tools <br> Optimised computation and data handling <br> Parallelisation <br> Secure sensitive data access & management <br> Interoperating datasets & permission handling	 |
+| ![](fig/PropsCompute06.png){alt='props compute 06 png'}   | **Portability**                           | Dependency handling <br> Containerisation & packaging <br> Moving between on premise & cloud                                                                                                                       |
+
 ## Computational Workflow Managers
 
 Computational workflow managers further extend this abstraction, providing high 
@@ -94,28 +110,11 @@ The rise in popularity of workflows has been matched by a rise in the
 number of disparate workflow managers that are available, each with their own 
 syntax or methods for describing the tools and workflows, reducing portability 
 and interoperability of these workflows. For a comprehensive lists of all known 
-computational workflow systems, see [Computational Data Analysis Workflow Systems]
-(https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems)
-maintained by the CWL community. The Common Workflow Language (CWL) 
-standard has been developed to address these problems, and to serve the general 
-computational workflow needs described above.
-
-## Benefits of Computational Workflows
-
-In summary, computational workflows bring many benefits and an ideal computational 
-workflow adopts and provides the properties below:
-
-**Handy Properties of Computational Workflows**[^2]
-
-| 	                                                            | 	                                         |                                                                                                                                                                                                                    |
-|--------------------------------------------------------------|-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](fig/PropsCompute01.png){alt='props compute 01 png'} 	 | **Composition & Abstraction** 	           | Using the best code written by 3rd parties<br>Handle heterogeneity<br>Shield Complexity & incompatibility<br>Shareable reusable, re-mixable methods 	                                                              |
-| ![](fig/PropsCompute02.png){alt='props compute 02 png'} 	 | **Sharing & Adaptability**    	           | Shared method, publishable know-how<br>BYOD / parameters<br>Different implementations<br>Changes in execution infrastructure                        	                                                              |
-| ![](fig/PropsCompute03.png){alt='props compute 03 png'} 	 | **Automation**                	           | Repetitive reproducible pipelines<br>Simulation sweeps<br>Manage data and control flow<br>Optimised monitoring & recovery<br>Automated deployment   	                                                              |
-| ![](fig/PropsCompute04.png){alt='props compute 04 png'} 	 | **Reporting & Accreditation** 	           | Provenance logging & data lineage<br>Auto-documentation<br>Result comparison                                                                        	                                                              |
-| ![](fig/PropsCompute05.png){alt='props compute 05 png'} 	 | **Scalability & Infrastructure Access** 	 | Accessing infrastructures, datasets and tools <br> Optimised computation and data handling <br> Parallelisation <br> Secure sensitive data access & management <br> Interoperating datasets & permission handling	 |
-| ![](fig/PropsCompute06.png){alt='props compute 06 png'}   | **Portability**                           | Dependency handling <br> Containerisation & packaging <br> Moving between on premise & cloud                                                                                                                       |
-
+computational workflow systems, see [Computational Data Analysis Workflow Systems][computational_data_analysis_workflow_systems]
+maintained by the CWL community. The Common Workflow Language [CWL][cwl_home] 
+standard has been developed to address these problems, and to serve as a
+open standard for describing how to run commandline tools and connect them
+to create workflows.
 
 ## Common Workflow Language
 
@@ -170,9 +169,10 @@ a process known as differential gene expression analysis.
 
 The process looks like this:
 
-![Diagram showing a typical RNA sequencing workflow. The workflow is linear, starting from taking biological samples and sequence reads, through quality control and trimming steps, to mapping to a genome and counting gene reads, to finally carrying out statistical analysis to identify differentially expressed genes.](fig/RNAseqWorkflow.png){alt='RNASeq Workflow graph' style='height: "400px"'}
+![Diagram showing a typical RNA sequencing workflow. The workflow is linear, starting from taking biological samples and sequence reads, through quality control and trimming steps, to mapping to a genome and counting gene reads, to finally carrying out statistical analysis to identify differentially expressed genes.](fig/RNAseqWorkflow.png){alt='RNASeq Workflow graph' style='height: "200px"'}
 
-During this tutorial, the following  analytical steps will be performed.  
+During this tutorial, the following  analytical steps will be performed. 
+
 - Quality control (FASTQC)
 - Adapter trimming
 - Alignment (mapping)
@@ -198,5 +198,8 @@ workflow will be set up to connect these tools and generate the desired output f
 [^3]: M. Wilkinson, M. Dumontier, I. Aalbersberg, et al. (2016): The FAIR Guiding Principles for scientific data management and stewardship. Scientific Data. [https://doi.org/10.1038/sdata.2016.18](https://doi.org/10.1038/sdata.2016.18)
 [^4]: M. R. Crusoe, S. Abeln, A. Iosup, P. Amstutz, J. Chilton, N. Tijanić, H. Ménager, S. Soiland-Reyes, B. Gavrilović, C. Goble, The CWL Community (2021): Methods Included: Standardizing Computational Reuse and Portability with the Common Workflow Language. Communication of the ACM. [https://doi.org/10.1145/3486897](https://doi.org/10.1145/3486897)
 
+[cwl_home]: https://www.commonwl.org
+[computational_data_analysis_workflow_systems]: https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems
 [docker]: https://www.docker.com/
 [yaml_guide]: https://www.commonwl.org/user_guide/topics/yaml-guide.html
+
