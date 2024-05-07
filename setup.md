@@ -567,6 +567,19 @@ mkdir rnaseq
 )
 ```
 
+<br>
+
+### Ignore data files in Git
+
+Git is not designed to track large data files.  
+We should exclude the rnaseq folder from being tracked in this repository.  
+
+```
+echo 'rnaseq/' >> .gitignore
+```
+
+<br>
+
 ### STAR Genome index
 
 To run the STAR aligner tool, index files generated from the reference genome are needed.
