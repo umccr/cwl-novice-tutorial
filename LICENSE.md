@@ -71,5 +71,5 @@ are registered trademarks of [Community Initiatives][CI].
 [cc-by-legal]: https://creativecommons.org/licenses/by/4.0/legalcode
 [apache-2.0-license]: https://opensource.org/licenses/Apache-2.0
 [mit-license]: https://opensource.org/licenses/mit-license.html
-[ci]: http://communityin.org/
+[ci]: https://communityinitiatives.org/
 [osi]: https://opensource.org
