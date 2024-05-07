@@ -23,6 +23,8 @@ You may also wish to go through [Getting started with WSL2][getting_started_with
 
 ::::::::::::::: callout
 
+### Choosing your Linux Flavour of Choice
+
 For this tutorial, we expect you use the Ubuntu distribution as your WSL2 distribution of choice.
 
 ::::::::::::::::

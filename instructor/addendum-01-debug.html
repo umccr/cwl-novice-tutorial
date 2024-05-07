@@ -276,7 +276,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Debugging Workflows</h1>
-        <p>Last updated on 2024-05-06 |
+        <p>Last updated on 2024-05-07 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/addendum-01-debug.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -369,7 +369,7 @@ character.</p>
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Show details</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 while scanning for the next token
@@ -443,7 +443,7 @@ capital letters in field names.</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>CWLTOOL VALIDATE ERROR MESSAGE</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 rna_seq_workflow_fieldname_fail.cwl:1:1:   Object `rna_seq_workflow_fieldname_fail.cwl` is not valid
@@ -458,12 +458,12 @@ rna_seq_workflow_fieldname_fail.cwl:38:5:         invalid field `outputsource`, 
 </div>
 </div>
 </div>
-<div id="callout1" class="callout">
+<div id="ides-are-your-friend" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
+<div id="ides-are-your-friend" class="callout-inner">
+<h3 class="callout-title">IDEs are your friend<a class="anchor" aria-label="anchor" href="#ides-are-your-friend"></a>
 </h3>
 <div class="callout-content">
 <p>Using an IDE can help warn of incorrect fields before needing to
@@ -536,7 +536,7 @@ These errors will show
   <h3 class="accordion-header" id="headingSpoiler3">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>CWLTOOL VALIDATE ERROR MESSAGE</h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 rna_seq_workflow_varname_fail.cwl:8:1:  checking field `steps`
@@ -552,12 +552,12 @@ rna_seq_workflow_varname_fail.cwl:32:7:       checking object
 </div>
 </div>
 </div>
-<div id="callout2" class="callout">
+<div id="ides-are-your-friend-1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout2"></a>
+<div id="ides-are-your-friend-1" class="callout-inner">
+<h3 class="callout-title">IDEs are your friend<a class="anchor" aria-label="anchor" href="#ides-are-your-friend-1"></a>
 </h3>
 <div class="callout-content">
 <p>Using an IDE, a simple Ctrl+F on a variable can help you see where
@@ -575,12 +575,12 @@ your directory. To get the desired output you have to run the workflow
 again.</p>
 <p>Best practice is to check your <code>outputs</code> section before
 running your script to make sure all the outputs you want are there.</p>
-<div id="callout3" class="callout">
+<div id="output-collections" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout3"></a>
+<div id="output-collections" class="callout-inner">
+<h3 class="callout-title">Output Collections<a class="anchor" aria-label="anchor" href="#output-collections"></a>
 </h3>
 <div class="callout-content">
 <p>All file / directory outputs of a workflow or tool will be placed
@@ -659,7 +659,7 @@ the mismatch happens.</p>
   <h3 class="accordion-header" id="headingSpoiler4">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Incompatible type cwltool error message</h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <pre><code>rna_seq_workflow_type_fail.cwl:5:3:   Source 'rna_reads_fruitfly' of type "int" is incompatible
 rna_seq_workflow_type_fail.cwl:12:7:   with sink 'reads_file' of type "File"
@@ -678,12 +678,12 @@ YAML inputs file, for example the fastq file in the RNA-seq
 analysis.</p>
 <p>When you don’t specify a format, an error will occur. You can for
 example use the <a href="https://www.ebi.ac.uk/ols/ontologies/edam" class="external-link">EDAM</a> ontology.</p>
-<div id="callout4" class="callout">
+<div id="format-requirements" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout4"></a>
+<div id="format-requirements" class="callout-inner">
+<h3 class="callout-title">Format requirements<a class="anchor" aria-label="anchor" href="#format-requirements"></a>
 </h3>
 <div class="callout-content">
 <p>The format attribute for a File entry is only required if the format
@@ -762,7 +762,7 @@ the formats for each input for you.</p>
   <h3 class="accordion-header" id="headingSpoiler5">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Incompatible format error message</h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
 <div class="accordion-body">
 <pre><code>ERROR Exception on step 'mapping_reads'
 ERROR [step mapping_reads] Cannot make job: Expected value of 'ForwardReads' to have format http://edamontology.org/format_1930 but
@@ -840,8 +840,8 @@ any links that you are not going to use.
   "url": "https://__USERNAME__.github.io/__PROJECT__/instructor/addendum-01-debug.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/instructor/addendum-01-debug.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-05-06",
-  "datePublished": "2024-05-06"
+  "dateModified": "2024-05-07",
+  "datePublished": "2024-05-07"
 }
 
   </script><script>
