@@ -43,6 +43,8 @@ You may also wish to go through [Getting started with WSL2][getting_started_with
 
 ::::::::::::::: callout
 
+### Choosing your Linux Flavour of Choice
+
 For this tutorial, we expect you use the Ubuntu distribution as your WSL2 distribution of choice.
 
 ::::::::::::::::
@@ -545,6 +547,8 @@ git submodule add https://github.com/common-workflow-library/bio-cwl-tools.git
 Create a new directory inside the `novice-tutorial-exercises` directory and download the data:
 
 :::::::::::::::: callout
+
+### Using subshells
 
 By running the following chunk in brackets the console will return to the
 original working directory after the download is complete

@@ -153,6 +153,8 @@ outputs: []
 
 :::::::::::::::::::::::::::::::::::::: callout
 
+### YAML Key Orders
+
 To make the script more readable the `input` field is put in front of the `output` field.
 However, CWL syntax requires only that each field is properly defined, it does not require them to be in a particular order.
 
