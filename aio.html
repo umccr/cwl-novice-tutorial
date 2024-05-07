@@ -382,48 +382,6 @@ any further technologies.</p>
 allows the same workflow to be used on different platforms,
 transparently to the workflow user. This means users can move between
 local development and cloud and HPC solutions seamlessly.</p>
-</section><section id="computational-workflow-managers"><h2 class="section-heading">Computational Workflow Managers<a class="anchor" aria-label="anchor" href="#computational-workflow-managers"></a>
-</h2>
-<hr class="half-width">
-<p>Computational workflow managers further extend this abstraction,
-providing high level tools for managing data and tools, aiming to help
-users to design and run computational workflows more easily. A
-computational workflow engine provides an interface for launching
-workflows, specifying and handling inputs and collecting and exporting
-outputs, they can also help users by storing completed steps of
-workflows, allowing workflows to be resumed part way, or rerun with
-minimal changes.</p>
-<p>Further, computational workflow managers aid users with the
-automation, monitoring and provenance tracking of the dataflow. They may
-also help users to produce and understand reports and outputs from their
-workflow.</p>
-<div id="workflows-and-provenance" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="workflows-and-provenance" class="callout-inner">
-<h3 class="callout-title">Workflows and Provenance<a class="anchor" aria-label="anchor" href="#workflows-and-provenance"></a>
-</h3>
-<div class="callout-content">
-<p>Another advantage of workflows is that by producing computational
-workflows in a standard format, and publishing them (alongside any data)
-with open access, allow dataflows to be shared in a more FAIR (Findable,
-Accessible, Interoperable, and Reusable) manner.</p>
-</div>
-</div>
-</div>
-</section><section id="why-a-standard-for-workflows-is-needed"><h2 class="section-heading">Why a standard for workflows is needed?<a class="anchor" aria-label="anchor" href="#why-a-standard-for-workflows-is-needed"></a>
-</h2>
-<hr class="half-width">
-<p>The rise in popularity of workflows has been matched by a rise in the
-number of disparate workflow managers that are available, each with
-their own syntax or methods for describing the tools and workflows,
-reducing portability and interoperability of these workflows. For a
-comprehensive lists of all known computational workflow systems, see
-[Computational Data Analysis Workflow Systems] (<a href="https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems" class="external-link uri">https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems</a>)
-maintained by the CWL community. The Common Workflow Language (CWL)
-standard has been developed to address these problems, and to serve the
-general computational workflow needs described above.</p>
 </section><section id="benefits-of-computational-workflows"><h2 class="section-heading">Benefits of Computational Workflows<a class="anchor" aria-label="anchor" href="#benefits-of-computational-workflows"></a>
 </h2>
 <hr class="half-width">
@@ -479,7 +437,50 @@ permission handling</td>
 Moving between on premise &amp; cloud</td>
 </tr>
 </tbody>
-</table></section><section id="common-workflow-language"><h2 class="section-heading">Common Workflow Language<a class="anchor" aria-label="anchor" href="#common-workflow-language"></a>
+</table></section><section id="computational-workflow-managers"><h2 class="section-heading">Computational Workflow Managers<a class="anchor" aria-label="anchor" href="#computational-workflow-managers"></a>
+</h2>
+<hr class="half-width">
+<p>Computational workflow managers further extend this abstraction,
+providing high level tools for managing data and tools, aiming to help
+users to design and run computational workflows more easily. A
+computational workflow engine provides an interface for launching
+workflows, specifying and handling inputs and collecting and exporting
+outputs, they can also help users by storing completed steps of
+workflows, allowing workflows to be resumed part way, or rerun with
+minimal changes.</p>
+<p>Further, computational workflow managers aid users with the
+automation, monitoring and provenance tracking of the dataflow. They may
+also help users to produce and understand reports and outputs from their
+workflow.</p>
+<div id="workflows-and-provenance" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="workflows-and-provenance" class="callout-inner">
+<h3 class="callout-title">Workflows and Provenance<a class="anchor" aria-label="anchor" href="#workflows-and-provenance"></a>
+</h3>
+<div class="callout-content">
+<p>Another advantage of workflows is that by producing computational
+workflows in a standard format, and publishing them (alongside any data)
+with open access, allow dataflows to be shared in a more FAIR (Findable,
+Accessible, Interoperable, and Reusable) manner.</p>
+</div>
+</div>
+</div>
+</section><section id="why-a-standard-for-workflows-is-needed"><h2 class="section-heading">Why a standard for workflows is needed?<a class="anchor" aria-label="anchor" href="#why-a-standard-for-workflows-is-needed"></a>
+</h2>
+<hr class="half-width">
+<p>The rise in popularity of workflows has been matched by a rise in the
+number of disparate workflow managers that are available, each with
+their own syntax or methods for describing the tools and workflows,
+reducing portability and interoperability of these workflows. For a
+comprehensive lists of all known computational workflow systems, see <a href="https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems" class="external-link">Computational
+Data Analysis Workflow Systems</a> maintained by the CWL community. The
+Common Workflow Language <a href="https://www.commonwl.org" class="external-link">CWL</a>
+standard has been developed to address these problems, and to serve as a
+open standard for describing how to run commandline tools and connect
+them to create workflows.</p>
+</section><section id="common-workflow-language"><h2 class="section-heading">Common Workflow Language<a class="anchor" aria-label="anchor" href="#common-workflow-language"></a>
 </h2>
 <hr class="half-width">
 <p>CWL is a free and open standard for describing command-line tool
@@ -546,15 +547,19 @@ sample using next-generation sequencing. The RNA reads are analyzed to
 quantify the relative abundance of different RNA molecules in the
 sample, a process known as differential gene expression analysis.</p>
 <p>The process looks like this:</p>
-<figure><img src="fig/RNAseqWorkflow.png" style='height: "400px"' alt="RNASeq Workflow graph" class="figure mx-auto d-block"><div class="figcaption">Diagram showing a typical RNA sequencing
+<figure><img src="fig/RNAseqWorkflow.png" style='height: "200px"' alt="RNASeq Workflow graph" class="figure mx-auto d-block"><div class="figcaption">Diagram showing a typical RNA sequencing
 workflow. The workflow is linear, starting from taking biological
 samples and sequence reads, through quality control and trimming steps,
 to mapping to a genome and counting gene reads, to finally carrying out
 statistical analysis to identify differentially expressed genes.</div>
 </figure><p>During this tutorial, the following analytical steps will be
-performed.<br>
-- Quality control (FASTQC) - Adapter trimming - Alignment (mapping) -
-Counting reads associated with genes</p>
+performed.</p>
+<ul>
+<li>Quality control (FASTQC)</li>
+<li>Adapter trimming</li>
+<li>Alignment (mapping)</li>
+<li>Counting reads associated with genes</li>
+</ul>
 <p>The different tools necessary for this analysis are already
 available. In this tutorial a workflow will be set up to connect these
 tools and generate the desired output files.</p>
@@ -1416,10 +1421,12 @@ doesn’t have to happen all at once</li>
 </h2>
 <hr class="half-width">
 <p>In the previous episode we worked through a single step workflow,
-carrying out a simple RNA read of the fruitfly genome. In this episode
-the workflow is extended with an equivalent reverse RNA read and the
-next two steps of the RNA-sequencing analysis, trimming the reads and
-aligning the trimmed reads, are added. We will be using the <a href="https://bio.tools/cutadapt" class="external-link"><code>cutadapt</code></a> and <a href="https://bio.tools/star" class="external-link"><code>STAR</code></a> tools for these
+carrying out quality control check on RNA reads of the fruitfly genome.
+In this episode the workflow is extended with an equivalent reverse RNA
+reads and the next two steps of the RNA-sequencing analysis, trimming
+the reads and aligning the trimmed reads, are added. We will be using
+the <a href="https://bio.tools/cutadapt" class="external-link"><code>cutadapt</code></a> and
+<a href="https://bio.tools/star" class="external-link"><code>STAR</code></a> tools for these
 tasks.</p>
 <p>To make a multi-step workflow that can carry all this analysis out,
 we add more entries to the <code>steps</code> field.</p>
@@ -1577,6 +1584,11 @@ genome necessary for the mapping.</p>
 <p>This <code>ref_fruitfly_genome</code> is added in the
 <code>inputs</code> field of the workflow and in the YAML input file,
 <code>workflow_input_2.yml</code>.</p>
+</section><section id="running-the-new-workflow"><h2 class="section-heading">Running the new workflow<a class="anchor" aria-label="anchor" href="#running-the-new-workflow"></a>
+</h2>
+<hr class="half-width">
+<p>The workflow definition is complete and we now only need to write the
+YAML input file.</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
@@ -1607,6 +1619,13 @@ genome necessary for the mapping.</p>
 </div>
 </div>
 </div>
+<p>We have finished the workflow definition and the input file and now
+can run the workflow.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--cachedir</span> cache rna_seq_workflow_2.cwl workflow_input_2.yml</span></code></pre>
+</div>
 <div id="challenge-draw-the-workflow" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1630,7 +1649,7 @@ example Paint or print out the graph.</p>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To find out how the inputs and the steps are connected to each other,
-you look at the <code>in</code> field of the different steps.</p>
+look at the <code>in</code> field of the different steps.</p>
 <figure><img src="fig/Ep3_graph_answer.png" style='height: "300px"' alt="Ep3 empty graph answer" class="figure mx-auto d-block"></figure>
 </div>
 </div>
@@ -1705,10 +1724,10 @@ outputs.</p>
 <code>--print-dot</code> option will print a file suitable for Graphviz
 <code>dot</code> program. This is the command to generate a Scalable
 Vector Graphic (SVG) file:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--print-dot</span> rna_seq_workflow_2.cwl <span class="kw">|</span> <span class="ex">dot</span> <span class="at">-Tsvg</span> <span class="op">&gt;</span> workflow_graph_2.svg</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--print-dot</span> rna_seq_workflow_2.cwl <span class="kw">|</span> <span class="ex">dot</span> <span class="at">-Tsvg</span> <span class="op">&gt;</span> workflow_graph_2.svg</span></code></pre>
 </div>
 <p>The resulting SVG file displays the same graph as the one in the
 cwlviewer. The SVG file can be opened in any web browser and in <a href="https://inkscape.org/" class="external-link">Inkscape</a>, for example.</p>

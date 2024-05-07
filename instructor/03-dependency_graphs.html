@@ -181,6 +181,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#multi-step-workflow">Multi-Step Workflow</a></li>
+<li><a href="#running-the-new-workflow">Running the new workflow</a></li>
 <li><a href="#visualising-a-workflow">Visualising a workflow</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -320,10 +321,12 @@ doesn’t have to happen all at once</li>
 <section id="multi-step-workflow"><h2 class="section-heading">Multi-Step Workflow<a class="anchor" aria-label="anchor" href="#multi-step-workflow"></a>
 </h2>
 <hr class="half-width"><p>In the previous episode we worked through a single step workflow,
-carrying out a simple RNA read of the fruitfly genome. In this episode
-the workflow is extended with an equivalent reverse RNA read and the
-next two steps of the RNA-sequencing analysis, trimming the reads and
-aligning the trimmed reads, are added. We will be using the <a href="https://bio.tools/cutadapt" class="external-link"><code>cutadapt</code></a> and <a href="https://bio.tools/star" class="external-link"><code>STAR</code></a> tools for these
+carrying out quality control check on RNA reads of the fruitfly genome.
+In this episode the workflow is extended with an equivalent reverse RNA
+reads and the next two steps of the RNA-sequencing analysis, trimming
+the reads and aligning the trimmed reads, are added. We will be using
+the <a href="https://bio.tools/cutadapt" class="external-link"><code>cutadapt</code></a> and
+<a href="https://bio.tools/star" class="external-link"><code>STAR</code></a> tools for these
 tasks.</p>
 <p>To make a multi-step workflow that can carry all this analysis out,
 we add more entries to the <code>steps</code> field.</p>
@@ -481,6 +484,10 @@ genome necessary for the mapping.</p>
 <p>This <code>ref_fruitfly_genome</code> is added in the
 <code>inputs</code> field of the workflow and in the YAML input file,
 <code>workflow_input_2.yml</code>.</p>
+</section><section id="running-the-new-workflow"><h2 class="section-heading">Running the new workflow<a class="anchor" aria-label="anchor" href="#running-the-new-workflow"></a>
+</h2>
+<hr class="half-width"><p>The workflow definition is complete and we now only need to write the
+YAML input file.</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
@@ -511,6 +518,13 @@ genome necessary for the mapping.</p>
 </div>
 </div>
 </div>
+<p>We have finished the workflow definition and the input file and now
+can run the workflow.</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--cachedir</span> cache rna_seq_workflow_2.cwl workflow_input_2.yml</span></code></pre>
+</div>
 <div id="challenge-draw-the-workflow" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -533,7 +547,7 @@ example Paint or print out the graph.</p>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>To find out how the inputs and the steps are connected to each other,
-you look at the <code>in</code> field of the different steps.</p>
+look at the <code>in</code> field of the different steps.</p>
 <figure><img src="../fig/Ep3_graph_answer.png" style='height: "300px"' alt="Ep3 empty graph answer" class="figure mx-auto d-block"></figure></div>
 </div>
 </div>
@@ -603,10 +617,10 @@ outputs.</p>
 <code>--print-dot</code> option will print a file suitable for Graphviz
 <code>dot</code> program. This is the command to generate a Scalable
 Vector Graphic (SVG) file:</p>
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--print-dot</span> rna_seq_workflow_2.cwl <span class="kw">|</span> <span class="ex">dot</span> <span class="at">-Tsvg</span> <span class="op">&gt;</span> workflow_graph_2.svg</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--print-dot</span> rna_seq_workflow_2.cwl <span class="kw">|</span> <span class="ex">dot</span> <span class="at">-Tsvg</span> <span class="op">&gt;</span> workflow_graph_2.svg</span></code></pre>
 </div>
 <p>The resulting SVG file displays the same graph as the one in the
 cwlviewer. The SVG file can be opened in any web browser and in <a href="https://inkscape.org/" class="external-link">Inkscape</a>, for example.</p>

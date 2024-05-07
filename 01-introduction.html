@@ -163,9 +163,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#computational-workflows">Computational Workflows</a></li>
+<li><a href="#benefits-of-computational-workflows">Benefits of Computational Workflows</a></li>
 <li><a href="#computational-workflow-managers">Computational Workflow Managers</a></li>
 <li><a href="#why-a-standard-for-workflows-is-needed">Why a standard for workflows is needed?</a></li>
-<li><a href="#benefits-of-computational-workflows">Benefits of Computational Workflows</a></li>
 <li><a href="#common-workflow-language">Common Workflow Language</a></li>
 <li><a href="#rna-sequencing-example">RNA sequencing example</a></li>
 <li><a href="#references">References</a></li>
@@ -353,46 +353,6 @@ any further technologies.</p>
 allows the same workflow to be used on different platforms,
 transparently to the workflow user. This means users can move between
 local development and cloud and HPC solutions seamlessly.</p>
-</section><section id="computational-workflow-managers"><h2 class="section-heading">Computational Workflow Managers<a class="anchor" aria-label="anchor" href="#computational-workflow-managers"></a>
-</h2>
-<hr class="half-width"><p>Computational workflow managers further extend this abstraction,
-providing high level tools for managing data and tools, aiming to help
-users to design and run computational workflows more easily. A
-computational workflow engine provides an interface for launching
-workflows, specifying and handling inputs and collecting and exporting
-outputs, they can also help users by storing completed steps of
-workflows, allowing workflows to be resumed part way, or rerun with
-minimal changes.</p>
-<p>Further, computational workflow managers aid users with the
-automation, monitoring and provenance tracking of the dataflow. They may
-also help users to produce and understand reports and outputs from their
-workflow.</p>
-<div id="workflows-and-provenance" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="workflows-and-provenance" class="callout-inner">
-<h3 class="callout-title">Workflows and Provenance<a class="anchor" aria-label="anchor" href="#workflows-and-provenance"></a>
-</h3>
-<div class="callout-content">
-<p>Another advantage of workflows is that by producing computational
-workflows in a standard format, and publishing them (alongside any data)
-with open access, allow dataflows to be shared in a more FAIR (Findable,
-Accessible, Interoperable, and Reusable) manner.</p>
-</div>
-</div>
-</div>
-</section><section id="why-a-standard-for-workflows-is-needed"><h2 class="section-heading">Why a standard for workflows is needed?<a class="anchor" aria-label="anchor" href="#why-a-standard-for-workflows-is-needed"></a>
-</h2>
-<hr class="half-width"><p>The rise in popularity of workflows has been matched by a rise in the
-number of disparate workflow managers that are available, each with
-their own syntax or methods for describing the tools and workflows,
-reducing portability and interoperability of these workflows. For a
-comprehensive lists of all known computational workflow systems, see
-[Computational Data Analysis Workflow Systems] (<a href="https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems" class="external-link uri">https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems</a>)
-maintained by the CWL community. The Common Workflow Language (CWL)
-standard has been developed to address these problems, and to serve the
-general computational workflow needs described above.</p>
 </section><section id="benefits-of-computational-workflows"><h2 class="section-heading">Benefits of Computational Workflows<a class="anchor" aria-label="anchor" href="#benefits-of-computational-workflows"></a>
 </h2>
 <hr class="half-width"><p>In summary, computational workflows bring many benefits and an ideal
@@ -427,7 +387,48 @@ permission handling</td>
 <td><strong>Portability</strong></td>
 <td>Dependency handling <br> Containerisation &amp; packaging <br>
 Moving between on premise &amp; cloud</td>
-</tr></tbody></table></section><section id="common-workflow-language"><h2 class="section-heading">Common Workflow Language<a class="anchor" aria-label="anchor" href="#common-workflow-language"></a>
+</tr></tbody></table></section><section id="computational-workflow-managers"><h2 class="section-heading">Computational Workflow Managers<a class="anchor" aria-label="anchor" href="#computational-workflow-managers"></a>
+</h2>
+<hr class="half-width"><p>Computational workflow managers further extend this abstraction,
+providing high level tools for managing data and tools, aiming to help
+users to design and run computational workflows more easily. A
+computational workflow engine provides an interface for launching
+workflows, specifying and handling inputs and collecting and exporting
+outputs, they can also help users by storing completed steps of
+workflows, allowing workflows to be resumed part way, or rerun with
+minimal changes.</p>
+<p>Further, computational workflow managers aid users with the
+automation, monitoring and provenance tracking of the dataflow. They may
+also help users to produce and understand reports and outputs from their
+workflow.</p>
+<div id="workflows-and-provenance" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="workflows-and-provenance" class="callout-inner">
+<h3 class="callout-title">Workflows and Provenance<a class="anchor" aria-label="anchor" href="#workflows-and-provenance"></a>
+</h3>
+<div class="callout-content">
+<p>Another advantage of workflows is that by producing computational
+workflows in a standard format, and publishing them (alongside any data)
+with open access, allow dataflows to be shared in a more FAIR (Findable,
+Accessible, Interoperable, and Reusable) manner.</p>
+</div>
+</div>
+</div>
+</section><section id="why-a-standard-for-workflows-is-needed"><h2 class="section-heading">Why a standard for workflows is needed?<a class="anchor" aria-label="anchor" href="#why-a-standard-for-workflows-is-needed"></a>
+</h2>
+<hr class="half-width"><p>The rise in popularity of workflows has been matched by a rise in the
+number of disparate workflow managers that are available, each with
+their own syntax or methods for describing the tools and workflows,
+reducing portability and interoperability of these workflows. For a
+comprehensive lists of all known computational workflow systems, see <a href="https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems" class="external-link">Computational
+Data Analysis Workflow Systems</a> maintained by the CWL community. The
+Common Workflow Language <a href="https://www.commonwl.org" class="external-link">CWL</a>
+standard has been developed to address these problems, and to serve as a
+open standard for describing how to run commandline tools and connect
+them to create workflows.</p>
+</section><section id="common-workflow-language"><h2 class="section-heading">Common Workflow Language<a class="anchor" aria-label="anchor" href="#common-workflow-language"></a>
 </h2>
 <hr class="half-width"><p>CWL is a free and open standard for describing command-line tool
 based workflows<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p>
@@ -492,16 +493,18 @@ sample using next-generation sequencing. The RNA reads are analyzed to
 quantify the relative abundance of different RNA molecules in the
 sample, a process known as differential gene expression analysis.</p>
 <p>The process looks like this:</p>
-<figure><img src="fig/RNAseqWorkflow.png" style='height: "400px"' alt="RNASeq Workflow graph" class="figure mx-auto d-block"><div class="figcaption">Diagram showing a typical RNA sequencing
+<figure><img src="fig/RNAseqWorkflow.png" style='height: "200px"' alt="RNASeq Workflow graph" class="figure mx-auto d-block"><div class="figcaption">Diagram showing a typical RNA sequencing
 workflow. The workflow is linear, starting from taking biological
 samples and sequence reads, through quality control and trimming steps,
 to mapping to a genome and counting gene reads, to finally carrying out
 statistical analysis to identify differentially expressed genes.</div>
 </figure><p>During this tutorial, the following analytical steps will be
-performed.<br>
-- Quality control (FASTQC) - Adapter trimming - Alignment (mapping) -
-Counting reads associated with genes</p>
-<p>The different tools necessary for this analysis are already
+performed.</p>
+<ul><li>Quality control (FASTQC)</li>
+<li>Adapter trimming</li>
+<li>Alignment (mapping)</li>
+<li>Counting reads associated with genes</li>
+</ul><p>The different tools necessary for this analysis are already
 available. In this tutorial a workflow will be set up to connect these
 tools and generate the desired output files.</p>
 <div id="keypoints1" class="callout keypoints">
