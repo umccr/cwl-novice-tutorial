@@ -95,7 +95,7 @@ Use a `requirements` entry with `ResourceRequirement` to allocate a `ramMin` of 
 
 :::::::::::::::::::::::::::::: solution
 
-### Solution: workflow_input_2.yml (Click to expand)
+### Solution: workflow_3.yml (Click to expand)
 
 ```yaml
 `r xfun::file_string('files/rna_seq_workflow_3.cwl')`
