@@ -260,6 +260,48 @@ In this example the workflow is already made, so the graph can be generated usin
 [cwlviewer][cwl_viewer]. To use this tool, the workflow has to be put in a GitHub,
 GitLab or Git repository. To view the graph of the workflow enter the URL and click `Parse Workflow`.
 
+
+:::::::::::::: challenge
+
+### Push your workflow to GitHub 🌶
+
+Add your workflow to a git commit and then push that commit to github.com
+
+
+::::::::::::::
+
+
+:::::::::::::: solution
+
+### Git add / commit / push
+
+Your solution might look like this
+
+```bash
+git add rna_seq_workflow_2.cwl 
+
+git commit -m "Added my second RNASeq CWL Workflow"
+
+git push
+```
+
+::::::::::::::
+
+
+Now it's time to view your workflow!
+
+
+:::::::::::::::: challenge
+
+#### View your workflow in the cwl viewer 🌶
+
+Paste the workflow url into the form on [view.commonwl.org][cwl_viewer]
+
+Your workflow url will be something like `https://github.com/alexiswl/cwl-novice-tutorial/blob/main/rna_seq_workflow_2.cwl`.  
+
+::::::::::::::::
+
+
 The cwlviewer displays the workflow as a graph, starting with the input. Then the different steps
 are shown, each with their input(s) and output(s). The steps are linked to each other using arrows
 accompanied by the input of the next step. The graph ends with the workflow outputs.
@@ -267,6 +309,8 @@ accompanied by the input of the next step. The graph ends with the workflow outp
 The graph of the RNA-seq workflow looks a follows:
 
 ![](fig/Ep3_graph_answer.png){alt="Ep3 graph answer" style='height: "400px"'}
+
+### Generating graphs locally
 
 It is also possible to generate the graph in the command line. `cwltool` has a function that makes a
 graph. The `--print-dot` option will print a file suitable for Graphviz `dot` program. This is the
@@ -277,13 +321,13 @@ cwltool --print-dot rna_seq_workflow_2.cwl | dot -Tsvg > workflow_graph_2.svg
 ```
 
 The resulting SVG file displays the same graph as the one in the cwlviewer. The SVG file can be
-opened in any web browser and in [Inkscape][inkscape], for example.
+opened in any web browser and in [Inkscape][inkscape], for example. Or opened with `code workflow_graph_2.svg` from the terminal.  
 
 :::::::::::::::::::::::::::::::: callout
 
 ### Windows Only: View images from the CLI with wslview
 
-Windows users can run `wslview workflow_graph_2.svg` in their terminal to view the graph in the default web browser
+Windows users can run `wslview workflow_graph_2.svg` in their terminal to view the graph in the default web browser.  
 
 ::::::::::::::::::::::::::::::::
 
