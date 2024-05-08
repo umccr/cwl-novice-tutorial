@@ -93,6 +93,60 @@ necessary for the mapping.
 This `ref_fruitfly_genome` is added in the `inputs` field of the workflow and in the YAML input file,
 `workflow_input_2.yml`.
 
+## Validating the workflow
+
+::::::::::::::::::::::: challenge
+
+
+### Is this a valid workflow?
+
+Use cwltool to validate the workflow
+
+
+::::::::::::::::::::::::
+
+
+:::::::::::::::::::::::: solution
+
+```bash
+cwltool --validate rna_seq_workflow_2.cwl
+```
+
+::::::::::::::::::::::::
+
+
+A warning is thrown after we validate this workflow.  
+
+```
+WARNING Workflow checker warning:
+rna_seq_workflow_2.cwl:51:11: Source 'alignment' of type ["File", {"type": "array", "items":
+                              "File"}] may be incompatible
+rna_seq_workflow_2.cwl:56:7:    with sink 'bam_sorted' of type "File"
+```
+
+:::::::::::::::::::: challenge
+
+### What's in a warning
+
+Should we be concerned about this warning? 
+
+If not, why not?
+
+::::::::::::::::::::
+
+:::::::::::::::::::: solution
+
+### Not all warnings are bad
+
+In this case, the outputs of the mapping step may instead either be just one file, OR an array of files.  
+
+It is important that the invoke the `mapping` step in such a way that only one file is output, as a single file is the 
+requirement of the `index_alignment` step
+
+::::::::::::::::::::
+
+
+
 ## Running the new workflow
 
 The workflow definition is complete and we now only need to write the YAML input file.
