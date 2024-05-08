@@ -181,9 +181,9 @@ In this example the workflow is already made, so the graph can be generated usin
 GitLab or Git repository. To view the graph of the workflow enter the URL and click `Parse Workflow`.
 
 
-:::::::::::::: exercise
+:::::::::::::: challenge
 
-### Push your workflow to GitHub
+### Push your workflow to GitHub 🌶
 
 Add your workflow to a git commit and then push that commit to github.com
 
@@ -211,9 +211,9 @@ git push
 Now it's time to view your workflow!
 
 
-:::::::::::::::: exercise
+:::::::::::::::: challenge
 
-#### View your workflow in the cwl viewer
+#### View your workflow in the cwl viewer 🌶
 
 Paste the workflow url into the form on [view.commonwl.org][cwl_viewer]
 
@@ -241,13 +241,13 @@ cwltool --print-dot rna_seq_workflow_2.cwl | dot -Tsvg > workflow_graph_2.svg
 ```
 
 The resulting SVG file displays the same graph as the one in the cwlviewer. The SVG file can be
-opened in any web browser and in [Inkscape][inkscape], for example.
+opened in any web browser and in [Inkscape][inkscape], for example. Or opened with `code workflow_graph_2.svg` from the terminal.  
 
 :::::::::::::::::::::::::::::::: callout
 
 ### Windows Only: View images from the CLI with wslview
 
-Windows users can run `wslview workflow_graph_2.svg` in their terminal to view the graph in the default web browser
+Windows users can run `wslview workflow_graph_2.svg` in their terminal to view the graph in the default web browser.  
 
 ::::::::::::::::::::::::::::::::
 
