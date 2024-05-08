@@ -98,7 +98,7 @@ This `ref_fruitfly_genome` is added in the `inputs` field of the workflow and in
 ::::::::::::::::::::::: challenge
 
 
-### Is this a valid workflow?
+### Is this a valid workflow? 🌶
 
 Use cwltool to validate the workflow
 
@@ -126,7 +126,7 @@ rna_seq_workflow_2.cwl:56:7:    with sink 'bam_sorted' of type "File"
 
 :::::::::::::::::::: challenge
 
-### What's in a warning
+### What's in a warning 🌶🌶🌶
 
 Should we be concerned about this warning? 
 
