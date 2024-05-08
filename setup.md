@@ -331,26 +331,9 @@ Add the following chunk to the VSCode [user settings json][user_settings_json] t
 
 ### Install Docker
 
-[Click here to follow the instructions for installing docker on linux][docker_server_install]
+[Click here][docker_server_install] and then click on your linux flavour (i.e Ubuntu) to install the docker engine.
 
 <br>
-
-:::::::: callout
-
-## Extra action if you install Docker using Snap
-[Snap](https://snapcraft.io/) is an app management system for linux - which is popular on
-Ubuntu and other systems. Docker is available via Snap - if you have installed it using
-this service you will need to take the following steps, to ensure docker will work properly.
-
-```bash
-mkdir ~/tmp
-export TMPDIR=~/tmp
-```
-
-Each time you open a new terminal you will have to enter the `export TMPDIR=~/tmp` command,
-or you can add it to your `~/.profile` or `~/.bashrc` file.
-
-::::::::::::::
 
 #### Enable docker usage as a non-root user
 
@@ -403,7 +386,7 @@ For other Linux systems, check [the graphviz download page][graphviz_download_pa
 [benten_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=sbg-rabix.benten-cwl
 [redhat_yaml_vs_code_marketplace]: https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml
 [user_settings_json]: https://code.visualstudio.com/docs/getstarted/settings#_settingsjson
-[docker_server_install]: https://docs.docker.com/engine/install/#server
+[docker_server_install]: https://docs.docker.com/engine/install/#supported-platforms
 [enable_user_docker_usage]: https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user
 [graphviz_download_page]: https://graphviz.org/download/#linux
 
