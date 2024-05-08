@@ -163,7 +163,7 @@ to be run on your local machine, or in a HPC or cloud environment, with minimal 
 In this tutorial a bioinformatics RNA-sequencing analysis is used as an example. However,
 there is no specific knowledge needed for this tutorial.
 RNA-sequencing is a technique which examines the quantity and sequences of
-[RNA](https://en.wikipedia.org/wiki/RNA) in a sample using next-generation sequencing.
+[RNA][rna_wiki] in a sample using next-generation sequencing.
 The RNA reads are analyzed to quantify the relative abundance of different RNA molecules in the sample, 
 a process known as differential gene expression analysis.
 
@@ -202,4 +202,5 @@ workflow will be set up to connect these tools and generate the desired output f
 [computational_data_analysis_workflow_systems]: https://github.com/common-workflow-language/common-workflow-language/wiki/Existing-Workflow-systems
 [docker]: https://www.docker.com/
 [yaml_guide]: https://www.commonwl.org/user_guide/topics/yaml-guide.html
+[rna_wiki]: https://en.wikipedia.org/wiki/RNA
 

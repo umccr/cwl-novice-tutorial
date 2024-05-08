@@ -501,6 +501,76 @@ docker pull quay.io/biocontainers/subread:2.0.6--he4a0461_0
 ```
 
 
+
+## GitHub Requirements
+
+This part assumes you have a GitHub.com account.  
+
+If you do not have a GitHub.com account you can create one [here][github_signup]
+
+The following steps will take you through the process of creating a SSH key pair to 
+connect your terminal to GitHub. If you already have this set up, you may skip this part.  
+
+
+:::::::::::::::::: callout
+
+
+### Opening files from the terminal
+
+Whenever you are required to open a file from the terminal, you may type `code /path/to/file`.
+
+This will also create the file if it does not yet exist.  
+
+::::::::::::::::::
+
+
+### SSH Key
+
+After generating an account you will need to generate an SSH Key so that you can pull and push code from your terminal to GitHub.  
+
+In your terminal run the following command
+
+```
+# Create the .ssh directory
+mkdir -p --mode 700 ~/.ssh
+
+ssh-keygen -f ~/.ssh/github -t ed25519 -q -N ""
+```
+
+### Add your public key to GitHub
+
+Head to [GitHub SSH and GPG keys][github_settings].  
+
+Click `New SSH key`.  
+set the title as the name of your computer (this can be anything), and under the 'Key', 
+copy the contents of `~/.ssh/github.pub` from your terminal.  
+
+### Setting your SSH Config
+
+Open up `~/.ssh/config` and add in the following code chunk:
+
+```
+Host github.com
+  IdentityFile /home/YOUR_USER_NAME/.ssh/github
+  User git
+```
+
+### Test your connection
+
+```
+ssh -T git@github.com
+```
+
+You should see a message like so
+
+```
+Hi alexiswl! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+[github_signup]: https://github.com/signup
+[github_settings]: https://github.com/settings/keys
+
+
 ## Data Requirements
 
 You will need to download some example files for this lesson. In this tutorial we will use RNA sequencing data.
@@ -508,17 +578,33 @@ You will need to download some example files for this lesson. In this tutorial w
 ### Setting up a practice Git repository
 
 For this tutorial some existing tools are needed to build the workflow. These existing tools will be imported via GitHub.
-First we need to create an empty git repository for all our files. To do this, use this command:
+
+
+#### Make a repository on GitHub.com
+
+Head to [github.com/new][github_new_repo] and create a new repository.  
+
+Name it `novice-tutorial-exercises`.  
+
+Make sure the repository is `public`.  
+
+Check 'Add a README file', and choose `GNU General Public License v3.0` as your license.
+
+#### Clone the repository
 
 ```bash
-git init novice-tutorial-exercises
+git clone git@github.com/YOUR_GITHUB_USERNAME/novice-tutorial-exercises
 ```
 
-Next, we need to move into our empty git repo:
+Next, we need to move into our git repo:
 
 ```bash
 cd novice-tutorial-exercises
 ```
+
+<br>
+
+#### Add in bio-cwl-tools as a submodule
 
 Then import bio-cwl-tools with this command:
 
@@ -527,6 +613,7 @@ git submodule add https://github.com/common-workflow-library/bio-cwl-tools.git
 ```
 
 <br>
+
 
 ### Downloading sample and reference data
 
@@ -562,6 +649,16 @@ We should exclude the rnaseq folder from being tracked in this repository.
 
 ```
 echo 'rnaseq/' >> .gitignore
+```
+
+### Add .gitignore to git
+
+`.gitignore` is a file that is tracked like all other GitHub commands.  
+
+```
+git add .gitignore
+git commit -m "Don't track files in the rnaseq directory"
+git push
 ```
 
 <br>
@@ -806,4 +903,4 @@ Then retry the `md5sum` command
 
 [dos2unix]: https://phoenixnap.com/kb/convert-dos-to-unix
 [checksum_wiki]: https://en.wikipedia.org/wiki/Checksum
-
+[github_new_repo]: https://github.com/new

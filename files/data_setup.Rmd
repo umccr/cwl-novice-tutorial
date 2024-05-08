@@ -5,17 +5,33 @@ You will need to download some example files for this lesson. In this tutorial w
 ### Setting up a practice Git repository
 
 For this tutorial some existing tools are needed to build the workflow. These existing tools will be imported via GitHub.
-First we need to create an empty git repository for all our files. To do this, use this command:
+
+
+#### Make a repository on GitHub.com
+
+Head to [github.com/new][github_new_repo] and create a new repository.  
+
+Name it `novice-tutorial-exercises`.  
+
+Make sure the repository is `public`.  
+
+Check 'Add a README file', and choose `GNU General Public License v3.0` as your license.
+
+#### Clone the repository
 
 ```bash
-git init novice-tutorial-exercises
+git clone git@github.com/YOUR_GITHUB_USERNAME/novice-tutorial-exercises
 ```
 
-Next, we need to move into our empty git repo:
+Next, we need to move into our git repo:
 
 ```bash
 cd novice-tutorial-exercises
 ```
+
+<br>
+
+#### Add in bio-cwl-tools as a submodule
 
 Then import bio-cwl-tools with this command:
 
@@ -24,6 +40,7 @@ git submodule add https://github.com/common-workflow-library/bio-cwl-tools.git
 ```
 
 <br>
+
 
 ### Downloading sample and reference data
 
@@ -59,6 +76,16 @@ We should exclude the rnaseq folder from being tracked in this repository.
 
 ```
 echo 'rnaseq/' >> .gitignore
+```
+
+### Add .gitignore to git
+
+`.gitignore` is a file that is tracked like all other GitHub commands.  
+
+```
+git add .gitignore
+git commit -m "Don't track files in the rnaseq directory"
+git push
 ```
 
 <br>
@@ -303,4 +330,4 @@ Then retry the `md5sum` command
 
 [dos2unix]: https://phoenixnap.com/kb/convert-dos-to-unix
 [checksum_wiki]: https://en.wikipedia.org/wiki/Checksum
-
+[github_new_repo]: https://github.com/new

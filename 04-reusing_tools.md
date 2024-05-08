@@ -95,7 +95,7 @@ Use a `requirements` entry with `ResourceRequirement` to allocate a `ramMin` of 
 
 :::::::::::::::::::::::::::::: solution
 
-### Solution: workflow_input_2.yml (Click to expand)
+### Solution: workflow_3.yml (Click to expand)
 
 ```yaml
 cwlVersion: v1.2
