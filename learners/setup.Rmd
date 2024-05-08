@@ -128,6 +128,11 @@ dot - graphviz version 2.43.0 (0)
 
 ```
 
+
+```{r, child = 'files/github.Rmd'}
+
+```
+
 ```{r, child = 'files/data_setup.Rmd'}
 
 ```
