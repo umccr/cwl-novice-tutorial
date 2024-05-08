@@ -621,35 +621,10 @@ settings json</a> to attribute CWL to the YAML file type.</p>
 </div>
 <div class="section level3">
 <h3 id="install-docker">Install Docker<a class="anchor" aria-label="anchor" href="#install-docker"></a></h3>
-<p><a href="https://docs.docker.com/engine/install/#server" class="external-link">Click here
-to follow the instructions for installing docker on linux</a></p>
+<p><a href="https://docs.docker.com/engine/install/#supported-platforms" class="external-link">Click
+here</a> and then click on your linux flavour (i.e Ubuntu) to install
+the docker engine.</p>
 <p><br></p>
-<div id="extra-action-if-you-install-docker-using-snap" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="extra-action-if-you-install-docker-using-snap" class="callout-inner">
-<h3 class="callout-title">Extra action if you install Docker using
-Snap<a class="anchor" aria-label="anchor" href="#extra-action-if-you-install-docker-using-snap"></a>
-</h3>
-<div class="callout-content">
-<p><a href="https://snapcraft.io/" class="external-link">Snap</a> is an app management system
-for linux - which is popular on Ubuntu and other systems. Docker is
-available via Snap - if you have installed it using this service you
-will need to take the following steps, to ensure docker will work
-properly.</p>
-<div class="codewrapper sourceCode" id="cb12">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="fu">mkdir</span> ~/tmp</span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="bu">export</span> <span class="va">TMPDIR</span><span class="op">=</span>~/tmp</span></code></pre>
-</div>
-<p>Each time you open a new terminal you will have to enter the
-<code>export TMPDIR=~/tmp</code> command, or you can add it to your
-<code>~/.profile</code> or <code>~/.bashrc</code> file.</p>
-</div>
-</div>
-</div>
 <div class="section level4">
 <h4 id="enable-docker-usage-as-a-non-root-user">Enable docker usage as a non-root user<a class="anchor" aria-label="anchor" href="#enable-docker-usage-as-a-non-root-user"></a></h4>
 <p>Follow the instructions in the Docker documentation to <a href="https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user" class="external-link">enable
@@ -661,11 +636,11 @@ docker usage as a non-root user</a></p>
 <h3 id="install-cwltool">Install cwltool<a class="anchor" aria-label="anchor" href="#install-cwltool"></a></h3>
 <p>First we will make a Python virtual environment by running the
 following commands in the terminal.</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv env       <span class="co"># Create a virtual environment named 'env' in the current directory</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="bu">source</span> env/bin/activate   <span class="co"># Activate the 'env' environment</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv env       <span class="co"># Create a virtual environment named 'env' in the current directory</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="bu">source</span> env/bin/activate   <span class="co"># Activate the 'env' environment</span></span></code></pre>
 </div>
 <p>You will know that this worked as the terminal prompt will now have
 <code>(env)</code> at the beginning.</p>
@@ -685,10 +660,10 @@ Virtual Environment.</p>
 </div>
 </div>
 <p>Next, install cwltool by running the following in the terminal:</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="ex">pip</span> install cwltool</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">pip</span> install cwltool</span></code></pre>
 </div>
 <p>Later we will make visualisations of our workflows. To support that
 we need to install <code>graphviz</code>.</p>
@@ -696,10 +671,10 @@ we need to install <code>graphviz</code>.</p>
 <h5 id="install-graphviz">Install graphviz<a class="anchor" aria-label="anchor" href="#install-graphviz"></a></h5>
 <p>Here is the command for Debian-based Linux systems to install
 <code>graphviz</code> and other helpful programs:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> graphviz wget git nodejs</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">sudo</span> apt-get install <span class="at">-y</span> graphviz wget git nodejs</span></code></pre>
 </div>
 <p>For other Linux systems, check <a href="https://graphviz.org/download/#linux" class="external-link">the graphviz download
 page</a></p>
@@ -713,10 +688,10 @@ Software Installations</a> after completing the setup for Linux.</p>
 <h3 id="docker">Docker<a class="anchor" aria-label="anchor" href="#docker"></a></h3>
 <p>To confirm docker is installed, run the following command to display
 the version number:</p>
-<div class="codewrapper sourceCode" id="cb16">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">docker</span> version</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="ex">docker</span> version</span></code></pre>
 </div>
 <p>You should see something similar to the output shown below.</p>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
@@ -725,7 +700,7 @@ the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Docker Version Output Example</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <pre><code>Client: Docker Engine - Community
  Version:           20.10.13
@@ -764,10 +739,10 @@ Server: Docker Engine - Community
 <h3 id="confirm-cwltool-is-installed">Confirm cwltool is installed<a class="anchor" aria-label="anchor" href="#confirm-cwltool-is-installed"></a></h3>
 <p>To confirm <code>cwltool</code> is installed, run the following
 command to display the version number:</p>
-<div class="codewrapper sourceCode" id="cb18">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--version</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="ex">cwltool</span> <span class="at">--version</span></span></code></pre>
 </div>
 <p>You should see something similar to the output shown below.</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
@@ -776,7 +751,7 @@ command to display the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Cwltool Version Output Example</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <pre><code>/home/learner/env/bin/cwltool 3.1.20220224085855</code></pre>
 </div>
@@ -788,10 +763,10 @@ command to display the version number:</p>
 <h3 id="graphviz">GraphViz<a class="anchor" aria-label="anchor" href="#graphviz"></a></h3>
 <p>To confirm <code>graphviz</code> is installed, run the following
 command to display the version number:</p>
-<div class="codewrapper sourceCode" id="cb20">
+<div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="ex">dot</span> <span class="at">-V</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="ex">dot</span> <span class="at">-V</span></span></code></pre>
 </div>
 <p>You should see something similar to the output shown below.</p>
 <div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
@@ -800,7 +775,7 @@ command to display the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler3">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Graphviz version output example</h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <pre><code>dot - graphviz version 2.43.0 (0)</code></pre>
 </div>
@@ -812,14 +787,14 @@ command to display the version number:</p>
 </h2>
 <hr class="half-width"><p>To avoid having to wait during the class, please run the following
 which will download all the required software containers.</p>
-<div class="codewrapper sourceCode" id="cb22">
+<div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/star:2.7.5c--0</span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/fastqc:0.11.9--hdfd78af_1</span>
-<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/cutadapt:3.7--py39hbf8eff0_1</span>
-<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/samtools:1.14--hb421002_0</span>
-<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/subread:2.0.6--he4a0461_0</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/star:2.7.5c--0</span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/fastqc:0.11.9--hdfd78af_1</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/cutadapt:3.7--py39hbf8eff0_1</span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/samtools:1.14--hb421002_0</span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a><span class="ex">docker</span> pull quay.io/biocontainers/subread:2.0.6--he4a0461_0</span></code></pre>
 </div>
 </section><section id="data-requirements"><h2 class="section-heading">Data Requirements<a class="anchor" aria-label="anchor" href="#data-requirements"></a>
 </h2>
@@ -831,22 +806,22 @@ tutorial we will use RNA sequencing data.</p>
 workflow. These existing tools will be imported via GitHub. First we
 need to create an empty git repository for all our files. To do this,
 use this command:</p>
+<div class="codewrapper sourceCode" id="cb22">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">git</span> init novice-tutorial-exercises</span></code></pre>
+</div>
+<p>Next, we need to move into our empty git repo:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">git</span> init novice-tutorial-exercises</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="bu">cd</span> novice-tutorial-exercises</span></code></pre>
 </div>
-<p>Next, we need to move into our empty git repo:</p>
+<p>Then import bio-cwl-tools with this command:</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="bu">cd</span> novice-tutorial-exercises</span></code></pre>
-</div>
-<p>Then import bio-cwl-tools with this command:</p>
-<div class="codewrapper sourceCode" id="cb25">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">git</span> submodule add https://github.com/common-workflow-library/bio-cwl-tools.git</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="fu">git</span> submodule add https://github.com/common-workflow-library/bio-cwl-tools.git</span></code></pre>
 </div>
 <p><br></p>
 </div>
@@ -868,18 +843,18 @@ the original working directory after the download is complete</p>
 </div>
 </div>
 </div>
-<div class="codewrapper sourceCode" id="cb26">
+<div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="fu">mkdir</span> rnaseq</span>
-<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a><span class="kw">(</span></span>
-<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>  <span class="bu">cd</span> rnaseq</span>
-<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a>  <span class="fu">wget</span> <span class="at">--quiet</span> https://zenodo.org/record/4541751/files/GSM461177_1_subsampled.fastqsanger</span>
-<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>  <span class="fu">wget</span> <span class="at">--quiet</span> https://zenodo.org/record/4541751/files/GSM461177_2_subsampled.fastqsanger</span>
-<span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a>  <span class="fu">wget</span> <span class="at">--quiet</span> https://zenodo.org/record/4541751/files/Drosophila_melanogaster.BDGP6.87.gtf</span>
-<span id="cb26-7"><a href="#cb26-7" tabindex="-1"></a>  <span class="fu">wget</span> <span class="at">--quiet</span> https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz</span>
-<span id="cb26-8"><a href="#cb26-8" tabindex="-1"></a>  <span class="fu">gunzip</span> dm6.fa.gz  <span class="co"># STAR index requires an uncompressed reference genome</span></span>
-<span id="cb26-9"><a href="#cb26-9" tabindex="-1"></a><span class="kw">)</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="fu">mkdir</span> rnaseq</span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="kw">(</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>  <span class="bu">cd</span> rnaseq</span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>  <span class="fu">wget</span> <span class="at">--quiet</span> https://zenodo.org/record/4541751/files/GSM461177_1_subsampled.fastqsanger</span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a>  <span class="fu">wget</span> <span class="at">--quiet</span> https://zenodo.org/record/4541751/files/GSM461177_2_subsampled.fastqsanger</span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a>  <span class="fu">wget</span> <span class="at">--quiet</span> https://zenodo.org/record/4541751/files/Drosophila_melanogaster.BDGP6.87.gtf</span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a>  <span class="fu">wget</span> <span class="at">--quiet</span> https://hgdownload.soe.ucsc.edu/goldenPath/dm6/bigZips/dm6.fa.gz</span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a>  <span class="fu">gunzip</span> dm6.fa.gz  <span class="co"># STAR index requires an uncompressed reference genome</span></span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a><span class="kw">)</span></span></code></pre>
 </div>
 <p><br></p>
 </div>
@@ -904,18 +879,18 @@ appropriate to your set-up.</p>
   <h3 class="accordion-header" id="headingSpoiler4">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Option 1: Download the index</h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p>At least 9 GB of memory is required to generate the index, which will
 occupy 3.3GB of disk.</p>
 <p>If your computer doesn’t have that much memory, then you can download
 the directory by running the following in the <code>rnaseq</code>
 directory:</p>
-<div class="codewrapper sourceCode" id="cb28">
+<div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">wget</span> <span class="at">--quiet</span> <span class="at">--output-document</span> <span class="at">-</span> https://dataverse.nl/api/access/datafile/266295 <span class="kw">|</span> <span class="dt">\</span></span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-C</span> rnaseq <span class="at">-x</span> <span class="at">--xz</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">wget</span> <span class="at">--quiet</span> <span class="at">--output-document</span> <span class="at">-</span> https://dataverse.nl/api/access/datafile/266295 <span class="kw">|</span> <span class="dt">\</span></span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="fu">tar</span> <span class="at">-C</span> rnaseq <span class="at">-x</span> <span class="at">--xz</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -927,24 +902,24 @@ directory:</p>
   <h3 class="accordion-header" id="headingSpoiler5">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Option 2: Generate the index yourself</h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <p>To generate the genome index yourself: create a new file named
 <code>dm6-star-index.yaml</code> in the the
 <code>novice-tutorial-exercises</code> directory with the following
 contents:</p>
-<div class="codewrapper sourceCode" id="cb29">
+<div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a><span class="fu">InputFiles</span><span class="kw">:</span></span>
-<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a><span class="at"> </span><span class="kw">-</span><span class="at"> </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
-<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="at">   </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/dm6.fa</span></span>
-<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a><span class="at">   </span><span class="fu">format</span><span class="kw">:</span><span class="at"> http://edamontology.org/format_1929</span><span class="co">  # FASTA</span></span>
-<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a><span class="fu">IndexName</span><span class="kw">:</span><span class="at"> </span><span class="st">'dm6-STAR-index'</span></span>
-<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a><span class="fu">Overhang</span><span class="kw">:</span><span class="at"> </span><span class="dv">36</span></span>
-<span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a><span class="fu">Gtf</span><span class="kw">:</span></span>
-<span id="cb29-8"><a href="#cb29-8" tabindex="-1"></a><span class="at"> </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
-<span id="cb29-9"><a href="#cb29-9" tabindex="-1"></a><span class="at"> </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/Drosophila_melanogaster.BDGP6.87.gtf</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="fu">InputFiles</span><span class="kw">:</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="at"> </span><span class="kw">-</span><span class="at"> </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a><span class="at">   </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/dm6.fa</span></span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a><span class="at">   </span><span class="fu">format</span><span class="kw">:</span><span class="at"> http://edamontology.org/format_1929</span><span class="co">  # FASTA</span></span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a><span class="fu">IndexName</span><span class="kw">:</span><span class="at"> </span><span class="st">'dm6-STAR-index'</span></span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a><span class="fu">Overhang</span><span class="kw">:</span><span class="at"> </span><span class="dv">36</span></span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a><span class="fu">Gtf</span><span class="kw">:</span></span>
+<span id="cb28-8"><a href="#cb28-8" tabindex="-1"></a><span class="at"> </span><span class="fu">class</span><span class="kw">:</span><span class="at"> File</span></span>
+<span id="cb28-9"><a href="#cb28-9" tabindex="-1"></a><span class="at"> </span><span class="fu">location</span><span class="kw">:</span><span class="at"> rnaseq/Drosophila_melanogaster.BDGP6.87.gtf</span></span></code></pre>
 </div>
 <p>Next use the CWL reference runner <code>cwltool</code> that you
 installed above and the CWL description for the indexing mode of the
@@ -971,13 +946,13 @@ process has failed, and should be cancelled.</p>
 the menu “Preferences” and then selecting “Resources”.</p>
 <p>Windows users can configure WSL 2 to allocate more memory by opening
 the PowerShell and entering the following:</p>
-<div class="codewrapper sourceCode" id="cb32">
+<div class="codewrapper sourceCode" id="cb31">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a><span class="co"># turn off all wsl instances such as docker-desktop</span></span>
-<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a><span class="ex">wsl</span> <span class="at">--shutdown</span></span>
-<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a></span>
-<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a><span class="ex">notepad</span> <span class="st">"</span><span class="va">$env</span><span class="st">:USERPROFILE/.wslconfig"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a><span class="co"># turn off all wsl instances such as docker-desktop</span></span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a><span class="ex">wsl</span> <span class="at">--shutdown</span></span>
+<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a><span class="ex">notepad</span> <span class="st">"</span><span class="va">$env</span><span class="st">:USERPROFILE/.wslconfig"</span></span></code></pre>
 </div>
 <p>In <code>.wslconfig</code> add the following</p>
 <pre class="text"><code>[wsl2]
@@ -1008,29 +983,29 @@ the following contents.</p>
   <h3 class="accordion-header" id="headingSpoiler6">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>rnaseq.md5</h3>
 </button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb34">
+<div class="codewrapper sourceCode" id="cb33">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="ex">3c8458cf67d71c22c4c420dd37e23ef2</span>  Drosophila_melanogaster.BDGP6.87.gtf</span>
-<span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a><span class="ex">036b68a2a8fe8725d48fb5fd89e2b8b2</span>  GSM461177_1_subsampled.fastqsanger</span>
-<span id="cb34-3"><a href="#cb34-3" tabindex="-1"></a><span class="ex">87b09607057743ecf3e38448630421c9</span>  GSM461177_2_subsampled.fastqsanger</span>
-<span id="cb34-4"><a href="#cb34-4" tabindex="-1"></a><span class="ex">80f57c0a3537d2e4cd9f1748e7b7da91</span>  dm6-STAR-index/Genome</span>
-<span id="cb34-5"><a href="#cb34-5" tabindex="-1"></a><span class="ex">e1a0b37b3cae8af4871cfb8c293a98cb</span>  dm6-STAR-index/SA</span>
-<span id="cb34-6"><a href="#cb34-6" tabindex="-1"></a><span class="ex">eec51bc2096fbfd71f2cdb970529a6f9</span>  dm6-STAR-index/SAindex</span>
-<span id="cb34-7"><a href="#cb34-7" tabindex="-1"></a><span class="ex">d8f7048f5f882af92c7fda0c711c70ad</span>  dm6-STAR-index/chrLength.txt</span>
-<span id="cb34-8"><a href="#cb34-8" tabindex="-1"></a><span class="ex">d727129afa13f91ae22bd35e29afd0c0</span>  dm6-STAR-index/chrName.txt</span>
-<span id="cb34-9"><a href="#cb34-9" tabindex="-1"></a><span class="ex">63645d2aab7fd4c9ed356e071d7b9c2a</span>  dm6-STAR-index/chrNameLength.txt</span>
-<span id="cb34-10"><a href="#cb34-10" tabindex="-1"></a><span class="ex">f897e16cb9a8d9a4f1cf242938f97ac6</span>  dm6-STAR-index/chrStart.txt</span>
-<span id="cb34-11"><a href="#cb34-11" tabindex="-1"></a><span class="ex">d5212320af99792dc517f1d4fa830ec1</span>  dm6-STAR-index/exonGeTrInfo.tab</span>
-<span id="cb34-12"><a href="#cb34-12" tabindex="-1"></a><span class="ex">5ef2835f5c116f55dd20522567152bf8</span>  dm6-STAR-index/exonInfo.tab</span>
-<span id="cb34-13"><a href="#cb34-13" tabindex="-1"></a><span class="ex">11aa105726dbb95e8f27714fdbd8e897</span>  dm6-STAR-index/geneInfo.tab</span>
-<span id="cb34-14"><a href="#cb34-14" tabindex="-1"></a><span class="ex">faa97745744f087d06879800a531edea</span>  dm6-STAR-index/sjdbInfo.txt</span>
-<span id="cb34-15"><a href="#cb34-15" tabindex="-1"></a><span class="ex">8cd08db8cb269461db29d9eb23ad690b</span>  dm6-STAR-index/sjdbList.fromGTF.out.tab</span>
-<span id="cb34-16"><a href="#cb34-16" tabindex="-1"></a><span class="ex">fd0b412f47ca662ce68e08ca6939a2c7</span>  dm6-STAR-index/sjdbList.out.tab</span>
-<span id="cb34-17"><a href="#cb34-17" tabindex="-1"></a><span class="ex">bdf26dee24f8cd1ca7b1bd854c882411</span>  dm6-STAR-index/transcriptInfo.tab</span>
-<span id="cb34-18"><a href="#cb34-18" tabindex="-1"></a><span class="ex">5aadf7ccab5a6b674e76516bf75eaa09</span>  dm6.fa</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="ex">3c8458cf67d71c22c4c420dd37e23ef2</span>  Drosophila_melanogaster.BDGP6.87.gtf</span>
+<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a><span class="ex">036b68a2a8fe8725d48fb5fd89e2b8b2</span>  GSM461177_1_subsampled.fastqsanger</span>
+<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a><span class="ex">87b09607057743ecf3e38448630421c9</span>  GSM461177_2_subsampled.fastqsanger</span>
+<span id="cb33-4"><a href="#cb33-4" tabindex="-1"></a><span class="ex">80f57c0a3537d2e4cd9f1748e7b7da91</span>  dm6-STAR-index/Genome</span>
+<span id="cb33-5"><a href="#cb33-5" tabindex="-1"></a><span class="ex">e1a0b37b3cae8af4871cfb8c293a98cb</span>  dm6-STAR-index/SA</span>
+<span id="cb33-6"><a href="#cb33-6" tabindex="-1"></a><span class="ex">eec51bc2096fbfd71f2cdb970529a6f9</span>  dm6-STAR-index/SAindex</span>
+<span id="cb33-7"><a href="#cb33-7" tabindex="-1"></a><span class="ex">d8f7048f5f882af92c7fda0c711c70ad</span>  dm6-STAR-index/chrLength.txt</span>
+<span id="cb33-8"><a href="#cb33-8" tabindex="-1"></a><span class="ex">d727129afa13f91ae22bd35e29afd0c0</span>  dm6-STAR-index/chrName.txt</span>
+<span id="cb33-9"><a href="#cb33-9" tabindex="-1"></a><span class="ex">63645d2aab7fd4c9ed356e071d7b9c2a</span>  dm6-STAR-index/chrNameLength.txt</span>
+<span id="cb33-10"><a href="#cb33-10" tabindex="-1"></a><span class="ex">f897e16cb9a8d9a4f1cf242938f97ac6</span>  dm6-STAR-index/chrStart.txt</span>
+<span id="cb33-11"><a href="#cb33-11" tabindex="-1"></a><span class="ex">d5212320af99792dc517f1d4fa830ec1</span>  dm6-STAR-index/exonGeTrInfo.tab</span>
+<span id="cb33-12"><a href="#cb33-12" tabindex="-1"></a><span class="ex">5ef2835f5c116f55dd20522567152bf8</span>  dm6-STAR-index/exonInfo.tab</span>
+<span id="cb33-13"><a href="#cb33-13" tabindex="-1"></a><span class="ex">11aa105726dbb95e8f27714fdbd8e897</span>  dm6-STAR-index/geneInfo.tab</span>
+<span id="cb33-14"><a href="#cb33-14" tabindex="-1"></a><span class="ex">faa97745744f087d06879800a531edea</span>  dm6-STAR-index/sjdbInfo.txt</span>
+<span id="cb33-15"><a href="#cb33-15" tabindex="-1"></a><span class="ex">8cd08db8cb269461db29d9eb23ad690b</span>  dm6-STAR-index/sjdbList.fromGTF.out.tab</span>
+<span id="cb33-16"><a href="#cb33-16" tabindex="-1"></a><span class="ex">fd0b412f47ca662ce68e08ca6939a2c7</span>  dm6-STAR-index/sjdbList.out.tab</span>
+<span id="cb33-17"><a href="#cb33-17" tabindex="-1"></a><span class="ex">bdf26dee24f8cd1ca7b1bd854c882411</span>  dm6-STAR-index/transcriptInfo.tab</span>
+<span id="cb33-18"><a href="#cb33-18" tabindex="-1"></a><span class="ex">5aadf7ccab5a6b674e76516bf75eaa09</span>  dm6.fa</span></code></pre>
 </div>
 </div>
 </div>
@@ -1044,34 +1019,34 @@ text editor.</p>
   <h3 class="accordion-header" id="headingSpoiler7">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>make_md5.sh</h3>
 </button>
-<div id="collapseSpoiler7" class="accordion-collapse collapse" aria-labelledby="headingSpoiler7" data-bs-parent="#accordionSpoiler7">
+<div id="collapseSpoiler7" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler7" aria-labelledby="headingSpoiler7">
 <div class="accordion-body">
-<div class="codewrapper sourceCode" id="cb35">
+<div class="codewrapper sourceCode" id="cb34">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a><span class="kw">(</span></span>
-<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>  <span class="bu">cd</span> rnaseq <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
-<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a>  <span class="kw">{</span></span>
-<span id="cb35-4"><a href="#cb35-4" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"3c8458cf67d71c22c4c420dd37e23ef2  Drosophila_melanogaster.BDGP6.87.gtf"</span></span>
-<span id="cb35-5"><a href="#cb35-5" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"036b68a2a8fe8725d48fb5fd89e2b8b2  GSM461177_1_subsampled.fastqsanger"</span></span>
-<span id="cb35-6"><a href="#cb35-6" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"87b09607057743ecf3e38448630421c9  GSM461177_2_subsampled.fastqsanger"</span></span>
-<span id="cb35-7"><a href="#cb35-7" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"80f57c0a3537d2e4cd9f1748e7b7da91  dm6-STAR-index/Genome"</span></span>
-<span id="cb35-8"><a href="#cb35-8" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"e1a0b37b3cae8af4871cfb8c293a98cb  dm6-STAR-index/SA"</span></span>
-<span id="cb35-9"><a href="#cb35-9" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"eec51bc2096fbfd71f2cdb970529a6f9  dm6-STAR-index/SAindex"</span></span>
-<span id="cb35-10"><a href="#cb35-10" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"d8f7048f5f882af92c7fda0c711c70ad  dm6-STAR-index/chrLength.txt"</span></span>
-<span id="cb35-11"><a href="#cb35-11" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"d727129afa13f91ae22bd35e29afd0c0  dm6-STAR-index/chrName.txt"</span></span>
-<span id="cb35-12"><a href="#cb35-12" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"63645d2aab7fd4c9ed356e071d7b9c2a  dm6-STAR-index/chrNameLength.txt"</span></span>
-<span id="cb35-13"><a href="#cb35-13" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"f897e16cb9a8d9a4f1cf242938f97ac6  dm6-STAR-index/chrStart.txt"</span></span>
-<span id="cb35-14"><a href="#cb35-14" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"d5212320af99792dc517f1d4fa830ec1  dm6-STAR-index/exonGeTrInfo.tab"</span></span>
-<span id="cb35-15"><a href="#cb35-15" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"5ef2835f5c116f55dd20522567152bf8  dm6-STAR-index/exonInfo.tab"</span></span>
-<span id="cb35-16"><a href="#cb35-16" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"11aa105726dbb95e8f27714fdbd8e897  dm6-STAR-index/geneInfo.tab"</span></span>
-<span id="cb35-17"><a href="#cb35-17" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"faa97745744f087d06879800a531edea  dm6-STAR-index/sjdbInfo.txt"</span></span>
-<span id="cb35-18"><a href="#cb35-18" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"8cd08db8cb269461db29d9eb23ad690b  dm6-STAR-index/sjdbList.fromGTF.out.tab"</span></span>
-<span id="cb35-19"><a href="#cb35-19" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"fd0b412f47ca662ce68e08ca6939a2c7  dm6-STAR-index/sjdbList.out.tab"</span></span>
-<span id="cb35-20"><a href="#cb35-20" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"bdf26dee24f8cd1ca7b1bd854c882411  dm6-STAR-index/transcriptInfo.tab"</span></span>
-<span id="cb35-21"><a href="#cb35-21" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"5aadf7ccab5a6b674e76516bf75eaa09  dm6.fa"</span></span>
-<span id="cb35-22"><a href="#cb35-22" tabindex="-1"></a>  <span class="kw">}</span> <span class="op">&gt;&gt;</span> rnaseq.md5</span>
-<span id="cb35-23"><a href="#cb35-23" tabindex="-1"></a><span class="kw">)</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="kw">(</span></span>
+<span id="cb34-2"><a href="#cb34-2" tabindex="-1"></a>  <span class="bu">cd</span> rnaseq <span class="kw">&amp;&amp;</span> <span class="dt">\</span></span>
+<span id="cb34-3"><a href="#cb34-3" tabindex="-1"></a>  <span class="kw">{</span></span>
+<span id="cb34-4"><a href="#cb34-4" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"3c8458cf67d71c22c4c420dd37e23ef2  Drosophila_melanogaster.BDGP6.87.gtf"</span></span>
+<span id="cb34-5"><a href="#cb34-5" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"036b68a2a8fe8725d48fb5fd89e2b8b2  GSM461177_1_subsampled.fastqsanger"</span></span>
+<span id="cb34-6"><a href="#cb34-6" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"87b09607057743ecf3e38448630421c9  GSM461177_2_subsampled.fastqsanger"</span></span>
+<span id="cb34-7"><a href="#cb34-7" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"80f57c0a3537d2e4cd9f1748e7b7da91  dm6-STAR-index/Genome"</span></span>
+<span id="cb34-8"><a href="#cb34-8" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"e1a0b37b3cae8af4871cfb8c293a98cb  dm6-STAR-index/SA"</span></span>
+<span id="cb34-9"><a href="#cb34-9" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"eec51bc2096fbfd71f2cdb970529a6f9  dm6-STAR-index/SAindex"</span></span>
+<span id="cb34-10"><a href="#cb34-10" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"d8f7048f5f882af92c7fda0c711c70ad  dm6-STAR-index/chrLength.txt"</span></span>
+<span id="cb34-11"><a href="#cb34-11" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"d727129afa13f91ae22bd35e29afd0c0  dm6-STAR-index/chrName.txt"</span></span>
+<span id="cb34-12"><a href="#cb34-12" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"63645d2aab7fd4c9ed356e071d7b9c2a  dm6-STAR-index/chrNameLength.txt"</span></span>
+<span id="cb34-13"><a href="#cb34-13" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"f897e16cb9a8d9a4f1cf242938f97ac6  dm6-STAR-index/chrStart.txt"</span></span>
+<span id="cb34-14"><a href="#cb34-14" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"d5212320af99792dc517f1d4fa830ec1  dm6-STAR-index/exonGeTrInfo.tab"</span></span>
+<span id="cb34-15"><a href="#cb34-15" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"5ef2835f5c116f55dd20522567152bf8  dm6-STAR-index/exonInfo.tab"</span></span>
+<span id="cb34-16"><a href="#cb34-16" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"11aa105726dbb95e8f27714fdbd8e897  dm6-STAR-index/geneInfo.tab"</span></span>
+<span id="cb34-17"><a href="#cb34-17" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"faa97745744f087d06879800a531edea  dm6-STAR-index/sjdbInfo.txt"</span></span>
+<span id="cb34-18"><a href="#cb34-18" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"8cd08db8cb269461db29d9eb23ad690b  dm6-STAR-index/sjdbList.fromGTF.out.tab"</span></span>
+<span id="cb34-19"><a href="#cb34-19" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"fd0b412f47ca662ce68e08ca6939a2c7  dm6-STAR-index/sjdbList.out.tab"</span></span>
+<span id="cb34-20"><a href="#cb34-20" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"bdf26dee24f8cd1ca7b1bd854c882411  dm6-STAR-index/transcriptInfo.tab"</span></span>
+<span id="cb34-21"><a href="#cb34-21" tabindex="-1"></a>     <span class="bu">echo</span> <span class="st">"5aadf7ccab5a6b674e76516bf75eaa09  dm6.fa"</span></span>
+<span id="cb34-22"><a href="#cb34-22" tabindex="-1"></a>  <span class="kw">}</span> <span class="op">&gt;&gt;</span> rnaseq.md5</span>
+<span id="cb34-23"><a href="#cb34-23" tabindex="-1"></a><span class="kw">)</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -1090,7 +1065,7 @@ text editor.</p>
   <h3 class="accordion-header" id="headingSpoiler8">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>md5sum check command outputs</h3>
 </button>
-<div id="collapseSpoiler8" class="accordion-collapse collapse" aria-labelledby="headingSpoiler8" data-bs-parent="#accordionSpoiler8">
+<div id="collapseSpoiler8" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler8" aria-labelledby="headingSpoiler8">
 <div class="accordion-body">
 <p>We expect the following outputs from this command:</p>
 <pre><code><span><span class="va">Drosophila_melanogaster.BDGP6.87.gtf</span><span class="op">:</span> <span class="va">OK</span></span>
@@ -1133,13 +1108,13 @@ endings.</p>
 <p>The following code will install the <a href="https://phoenixnap.com/kb/convert-dos-to-unix" class="external-link">dos2unix</a> cli
 tool and then convert the <code>rnaseq.md5</code> file to unix-based
 line endings.</p>
-<div class="codewrapper sourceCode" id="cb39">
+<div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="at">-yq</span></span>
-<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a><span class="fu">sudo</span> apt install dos2unix <span class="at">-yq</span></span>
-<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a></span>
-<span id="cb39-4"><a href="#cb39-4" tabindex="-1"></a><span class="ex">dos2unix</span> rnaseq/rnaseq.md5</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="at">-yq</span></span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a><span class="fu">sudo</span> apt install dos2unix <span class="at">-yq</span></span>
+<span id="cb38-3"><a href="#cb38-3" tabindex="-1"></a></span>
+<span id="cb38-4"><a href="#cb38-4" tabindex="-1"></a><span class="ex">dos2unix</span> rnaseq/rnaseq.md5</span></code></pre>
 </div>
 <p>Then retry the <code>md5sum</code> command</p>
 </div>
@@ -1200,8 +1175,8 @@ any links that you are not going to use.
   "url": "https://__USERNAME__.github.io/__PROJECT__/index.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/index.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-05-07",
-  "datePublished": "2024-05-07"
+  "dateModified": "2024-05-08",
+  "datePublished": "2024-05-08"
 }
 
   </script><script>
