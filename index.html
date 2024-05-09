@@ -701,7 +701,7 @@ the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Docker Version Output Example</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <pre><code>Client: Docker Engine - Community
  Version:           20.10.13
@@ -752,7 +752,7 @@ command to display the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Cwltool Version Output Example</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <pre><code>/home/learner/env/bin/cwltool 3.1.20220224085855</code></pre>
 </div>
@@ -776,7 +776,7 @@ command to display the version number:</p>
   <h3 class="accordion-header" id="headingSpoiler3">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Graphviz version output example</h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <pre><code>dot - graphviz version 2.43.0 (0)</code></pre>
 </div>
@@ -935,11 +935,13 @@ repository.</p>
 <pre><code>echo 'rnaseq/' &gt;&gt; .gitignore</code></pre>
 </div>
 <div class="section level3">
-<h3 id="add--gitignore-to-git">Add .gitignore to git<a class="anchor" aria-label="anchor" href="#add--gitignore-to-git"></a></h3>
+<h3 id="add-our-changes-to-git">Add our changes to git<a class="anchor" aria-label="anchor" href="#add-our-changes-to-git"></a></h3>
 <p><code>.gitignore</code> is a file that is tracked like all other
 GitHub commands.</p>
-<pre><code>git add .gitignore
-git commit -m "Don't track files in the rnaseq directory"
+<p>Likewise, we also need to let git know we would like to keep
+bio-cwl-tools as a submodule.</p>
+<pre><code>git add .gitignore bio-cwl-tools
+git commit -m "Don't track files in rnaseq dir, added bio-cwl-tools as a submodule"
 git push</code></pre>
 <p><br></p>
 </div>
@@ -956,7 +958,7 @@ appropriate to your set-up.</p>
   <h3 class="accordion-header" id="headingSpoiler4">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Option 1: Download the index</h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <p>At least 9 GB of memory is required to generate the index, which will
 occupy 3.3GB of disk.</p>
@@ -979,7 +981,7 @@ directory:</p>
   <h3 class="accordion-header" id="headingSpoiler5">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Option 2: Generate the index yourself</h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
 <div class="accordion-body">
 <p>To generate the genome index yourself: create a new file named
 <code>dm6-star-index.yaml</code> in the the
@@ -1060,7 +1062,7 @@ the following contents.</p>
   <h3 class="accordion-header" id="headingSpoiler6">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>rnaseq.md5</h3>
 </button>
-<div id="collapseSpoiler6" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler6" aria-labelledby="headingSpoiler6">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb38">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1096,7 +1098,7 @@ text editor.</p>
   <h3 class="accordion-header" id="headingSpoiler7">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>make_md5.sh</h3>
 </button>
-<div id="collapseSpoiler7" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler7" aria-labelledby="headingSpoiler7">
+<div id="collapseSpoiler7" class="accordion-collapse collapse" aria-labelledby="headingSpoiler7" data-bs-parent="#accordionSpoiler7">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb39">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1142,7 +1144,7 @@ text editor.</p>
   <h3 class="accordion-header" id="headingSpoiler8">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>md5sum check command outputs</h3>
 </button>
-<div id="collapseSpoiler8" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler8" aria-labelledby="headingSpoiler8">
+<div id="collapseSpoiler8" class="accordion-collapse collapse" aria-labelledby="headingSpoiler8" data-bs-parent="#accordionSpoiler8">
 <div class="accordion-body">
 <p>We expect the following outputs from this command:</p>
 <pre><code><span><span class="va">Drosophila_melanogaster.BDGP6.87.gtf</span><span class="op">:</span> <span class="va">OK</span></span>
