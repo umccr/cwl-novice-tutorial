@@ -78,13 +78,15 @@ We should exclude the rnaseq folder from being tracked in this repository.
 echo 'rnaseq/' >> .gitignore
 ```
 
-### Add .gitignore to git
+### Add our changes to git
 
 `.gitignore` is a file that is tracked like all other GitHub commands.  
 
+Likewise, we also need to let git know we would like to keep bio-cwl-tools as a submodule.  
+
 ```
-git add .gitignore
-git commit -m "Don't track files in the rnaseq directory"
+git add .gitignore bio-cwl-tools
+git commit -m "Don't track files in rnaseq dir, added bio-cwl-tools as a submodule"
 git push
 ```
 
