@@ -308,7 +308,7 @@
         
 <section id="aio-01-introduction"><p>Content from <a href="01-introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-05-09 |
+<p>Last updated on 2024-05-14 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/01-introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -600,7 +600,7 @@ and stewardship. Scientific Data. <a href="https://doi.org/10.1038/sdata.2016.18
 </ol>
 </div></section><section id="aio-02-shell_to_cwl"><p>Content from <a href="02-shell_to_cwl.html">CWL and Shell Tools</a></p>
 <hr>
-<p>Last updated on 2024-05-09 |
+<p>Last updated on 2024-05-14 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/02-shell_to_cwl.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -1395,7 +1395,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-03-dependency_graphs"><p>Content from <a href="03-dependency_graphs.html">Developing Multi-Step Workflows</a></p>
 <hr>
-<p>Last updated on 2024-05-09 |
+<p>Last updated on 2024-05-14 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/03-dependency_graphs.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -1474,7 +1474,7 @@ forward and reverse RNA reads. Likewise, the
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>rna_seq_workflow_2.cwl (Click to expand)</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1624,7 +1624,7 @@ genome necessary for the mapping.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1640,25 +1640,27 @@ genome necessary for the mapping.</p>
 rna_seq_workflow_2.cwl:51:11: Source 'alignment' of type ["File", {"type": "array", "items":
                               "File"}] may be incompatible
 rna_seq_workflow_2.cwl:56:7:    with sink 'bam_sorted' of type "File"</code></pre>
-<div id="whats-in-a-warning" class="callout discussion">
+<p><br></p>
+<div id="should-we-be-concerned-about-this-warning" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="whats-in-a-warning" class="callout-inner">
-<h3 class="callout-title">What’s in a warning 🌶🌶🌶<a class="anchor" aria-label="anchor" href="#whats-in-a-warning"></a>
+<div id="should-we-be-concerned-about-this-warning" class="callout-inner">
+<h3 class="callout-title">Should we be concerned about this warning
+🌶🌶🌶<a class="anchor" aria-label="anchor" href="#should-we-be-concerned-about-this-warning"></a>
 </h3>
 <div class="callout-content">
-<p>Should we be concerned about this warning?</p>
-<p>If not, why not?</p>
+<p>Not all warnings are bad.<br>
+Should we be concerned about this warning? If not, why not?</p>
 </div>
 </div>
 </div>
 <div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
-  <h4 class="accordion-header" id="headingSolution2">Not all warnings are bad</h4>
+  <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>In this case, the outputs of the mapping step may instead either be
 just one file, OR an array of files.</p>
@@ -1680,7 +1682,7 @@ YAML input file.</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>workflow_input_2.yml (Click to expand)</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1731,7 +1733,7 @@ example Paint or print out the graph.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3">Show me the solution</h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>To find out how the inputs and the steps are connected to each other,
 look at the <code>in</code> field of the different steps.</p>
@@ -1816,7 +1818,7 @@ github.com</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4">Git add / commit / push</h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>Your solution might look like this</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -1925,7 +1927,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-04-reusing_tools"><p>Content from <a href="04-reusing_tools.html">Resources for Reusing Tools and Scripts</a></p>
 <hr>
-<p>Last updated on 2024-05-09 |
+<p>Last updated on 2024-05-14 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/04-reusing_tools.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -2235,7 +2237,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-addendum-01-debug"><p>Content from <a href="addendum-01-debug.html">Debugging Workflows</a></p>
 <hr>
-<p>Last updated on 2024-05-09 |
+<p>Last updated on 2024-05-14 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/addendum-01-debug.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -2328,7 +2330,7 @@ character.</p>
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Show details</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 while scanning for the next token
@@ -2403,7 +2405,7 @@ capital letters in field names.</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>CWLTOOL VALIDATE ERROR MESSAGE</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 rna_seq_workflow_fieldname_fail.cwl:1:1:   Object `rna_seq_workflow_fieldname_fail.cwl` is not valid
@@ -2497,7 +2499,7 @@ These errors will show
   <h3 class="accordion-header" id="headingSpoiler3">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>CWLTOOL VALIDATE ERROR MESSAGE</h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <pre><code>ERROR Tool definition failed validation:
 rna_seq_workflow_varname_fail.cwl:8:1:  checking field `steps`
@@ -2622,7 +2624,7 @@ the mismatch happens.</p>
   <h3 class="accordion-header" id="headingSpoiler4">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Incompatible type cwltool error message</h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <pre><code>rna_seq_workflow_type_fail.cwl:5:3:   Source 'rna_reads_fruitfly' of type "int" is incompatible
 rna_seq_workflow_type_fail.cwl:12:7:   with sink 'reads_file' of type "File"
@@ -2726,7 +2728,7 @@ the formats for each input for you.</p>
   <h3 class="accordion-header" id="headingSpoiler5">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Incompatible format error message</h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <pre><code>ERROR Exception on step 'mapping_reads'
 ERROR [step mapping_reads] Cannot make job: Expected value of 'ForwardReads' to have format http://edamontology.org/format_1930 but
@@ -2748,7 +2750,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-more_info"><p>Content from <a href="more_info.html">More Information</a></p>
 <hr>
-<p>Last updated on 2024-05-09 |
+<p>Last updated on 2024-05-14 |
         
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/more_info.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
@@ -2821,8 +2823,8 @@ Practices</a> in CWL</li>
   "url": "https://__USERNAME__.github.io/__PROJECT__/instructor/aio.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/instructor/aio.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-05-09",
-  "datePublished": "2024-05-09"
+  "dateModified": "2024-05-14",
+  "datePublished": "2024-05-14"
 }
 
   </script><script>
