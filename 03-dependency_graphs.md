@@ -191,19 +191,19 @@ rna_seq_workflow_2.cwl:51:11: Source 'alignment' of type ["File", {"type": "arra
 rna_seq_workflow_2.cwl:56:7:    with sink 'bam_sorted' of type "File"
 ```
 
+<br>
+
 :::::::::::::::::::: challenge
 
-### What's in a warning 🌶🌶🌶
+### Should we be concerned about this warning 🌶🌶🌶
 
-Should we be concerned about this warning? 
-
-If not, why not?
+Not all warnings are bad.  
+Should we be concerned about this warning? If not, why not?
 
 ::::::::::::::::::::
 
 :::::::::::::::::::: solution
 
-### Not all warnings are bad
 
 In this case, the outputs of the mapping step may instead either be just one file, OR an array of files.  
 
