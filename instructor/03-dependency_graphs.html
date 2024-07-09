@@ -27,7 +27,7 @@
             <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
           </abbr>
         </span>
-        
+
       </div>
     </div>
     <div class="selector-container">
@@ -56,7 +56,7 @@
             </li>
           </ul></li>
       </div>
-      
+
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Instructor View <i data-feather="chevron-down"></i>
@@ -179,7 +179,7 @@
                 </div><!--/div.accordion-flush-->
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
-      
+
             <hr></div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordionFlush11">
@@ -198,7 +198,7 @@
     <div class="accordion-header" id="flush-heading1">
         <a href="index.html">Summary and Schedule</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -207,7 +207,7 @@
     <div class="accordion-header" id="flush-heading2">
         <a href="01-introduction.html">1. Introduction</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -216,7 +216,7 @@
     <div class="accordion-header" id="flush-heading3">
         <a href="02-shell_to_cwl.html">2. CWL and Shell Tools</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -230,7 +230,7 @@
         </span>
       </button>
     </div><!--/div.accordion-header-->
-        
+
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#multi-step-workflow">Multi-Step Workflow</a></li>
@@ -239,7 +239,7 @@
 <li><a href="#visualising-a-workflow">Visualising a workflow</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -248,7 +248,7 @@
     <div class="accordion-header" id="flush-heading5">
         <a href="04-reusing_tools.html">4. Resources for Reusing Tools and Scripts</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -257,7 +257,7 @@
     <div class="accordion-header" id="flush-heading6">
         <a href="addendum-01-debug.html">5. Debugging Workflows</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -266,7 +266,7 @@
     <div class="accordion-header" id="flush-heading7">
         <a href="more_info.html">6. More Information</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -297,10 +297,10 @@
               </div>
             </div>
             <hr class="half-width resources"><a href="../instructor/aio.html">See all in one page</a>
-            
+
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
-            
+
             </div>
           </div><!-- /div.accordion -->
         </div><!-- /div.sidebar-inner -->
@@ -321,20 +321,20 @@
           Previous: CWL and Shell Tools
         </a>
         <a class="chapter-link float-end" href="../instructor/04-reusing_tools.html" rel="next">
-          Next: Resources for... 
+          Next: Resources for...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Developing Multi-Step Workflows</h1>
-        <p>Last updated on 2024-07-02 |
-        
+        <p>Last updated on 2024-07-09 |
+
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/03-dependency_graphs.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-        
-        
-        
+
+
+
         <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 0 minutes</p>
-        
+
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -372,8 +372,8 @@ doesn’t have to happen all at once</li>
 </div>
 </div>
 </div>
-<section id="multi-step-workflow"><h2 class="section-heading">Multi-Step Workflow<a class="anchor" aria-label="anchor" href="#multi-step-workflow"></a>
-</h2>
+<section><h2 class="section-heading" id="multi-step-workflow">Multi-Step Workflow<a class="anchor" aria-label="anchor" href="#multi-step-workflow"></a>
+<a class="anchor" aria-label="anchor" href="#multi-step-workflow"></a></h2>
 <hr class="half-width"><p>In the previous episode we worked through a single step workflow,
 carrying out quality control check on RNA reads of the fruitfly genome.
 In this episode the workflow is extended with an equivalent reverse RNA
@@ -407,7 +407,7 @@ forward and reverse RNA reads. Likewise, the
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> rna_seq_workflow_2.cwl (Click to expand) </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -537,8 +537,8 @@ genome necessary for the mapping.</p>
 <p>This <code>ref_fruitfly_genome</code> is added in the
 <code>inputs</code> field of the workflow and in the YAML input file,
 <code>workflow_input_2.yml</code>.</p>
-</section><section id="validating-the-workflow"><h2 class="section-heading">Validating the workflow<a class="anchor" aria-label="anchor" href="#validating-the-workflow"></a>
-</h2>
+</section><section><h2 class="section-heading" id="validating-the-workflow">Validating the workflow<a class="anchor" aria-label="anchor" href="#validating-the-workflow"></a>
+<a class="anchor" aria-label="anchor" href="#validating-the-workflow"></a></h2>
 <hr class="half-width"><div id="is-this-a-valid-workflow" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -556,7 +556,7 @@ genome necessary for the mapping.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -591,7 +591,7 @@ Should we be concerned about this warning? If not, why not?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>In this case, the outputs of the mapping step may instead either be
 just one file, OR an array of files.</p>
@@ -602,8 +602,8 @@ of the <code>index_alignment</code> step</p>
 </div>
 </div>
 </div>
-</section><section id="running-the-new-workflow"><h2 class="section-heading">Running the new workflow<a class="anchor" aria-label="anchor" href="#running-the-new-workflow"></a>
-</h2>
+</section><section><h2 class="section-heading" id="running-the-new-workflow">Running the new workflow<a class="anchor" aria-label="anchor" href="#running-the-new-workflow"></a>
+<a class="anchor" aria-label="anchor" href="#running-the-new-workflow"></a></h2>
 <hr class="half-width"><p>The workflow definition is complete and we now only need to write the
 YAML input file.</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
@@ -611,7 +611,7 @@ YAML input file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> workflow_input_2.yml (Click to expand) </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -661,7 +661,7 @@ example Paint or print out the graph.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>To find out how the inputs and the steps are connected to each other,
 look at the <code>in</code> field of the different steps.</p>
@@ -686,8 +686,8 @@ progress.</p>
 </div>
 </div>
 </div>
-</section><section id="visualising-a-workflow"><h2 class="section-heading">Visualising a workflow<a class="anchor" aria-label="anchor" href="#visualising-a-workflow"></a>
-</h2>
+</section><section><h2 class="section-heading" id="visualising-a-workflow">Visualising a workflow<a class="anchor" aria-label="anchor" href="#visualising-a-workflow"></a>
+<a class="anchor" aria-label="anchor" href="#visualising-a-workflow"></a></h2>
 <hr class="half-width"><p>To visualise a workflow, a graph can be used. This can be done before
 a CWL script is written to visualise how the different steps connect to
 each other. It is also possible to make a graph after the CWL script has
@@ -741,7 +741,7 @@ github.com</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Git add / commit / push </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>Your solution might look like this</p>
 <div class="codewrapper sourceCode" id="cb6">
@@ -837,9 +837,9 @@ explain your workflow or as a planning tool</li>
 </ul></div>
 </div>
 </div>
-<!-- 
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
+any links that you are not going to use.
  -->
 </div>
 </section></div> <!-- / div.lesson-content -->
@@ -854,7 +854,7 @@ any links that you are not going to use.
           Previous: CWL and Shell Tools
         </a>
         <a class="chapter-link float-end" href="../instructor/04-reusing_tools.html" rel="next">
-          Next: Resources for... 
+          Next: Resources for...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -865,18 +865,18 @@ any links that you are not going to use.
       		<footer class="row footer mx-md-3"><hr><div class="col-md-6">
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
-        
+
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/03-dependency_graphs.Rmd" class="external-link">Edit on GitHub</a>
-        
+
 	
         | <a href="https://github.com/__USERNAME__/__PROJECT__/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/__USERNAME__/__PROJECT__/" class="external-link">Source</a></p>
 				<p><a href="https://github.com/__USERNAME__/__PROJECT__/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:https://www.commonwl.org/#Support" class="external-link">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
-        
+
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
-        
+
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.5" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.3" class="external-link">varnish (1.0.3)</a></p>
 			</div>
@@ -900,8 +900,8 @@ any links that you are not going to use.
   "url": "https://__USERNAME__.github.io/__PROJECT__/instructor/03-dependency_graphs.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/instructor/03-dependency_graphs.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-07-02",
-  "datePublished": "2024-07-02"
+  "dateModified": "2024-07-09",
+  "datePublished": "2024-07-09"
 }
 
   </script><script>

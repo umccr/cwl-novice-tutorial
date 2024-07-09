@@ -27,7 +27,7 @@
             <span class="visually-hidden">This lesson is in the beta phase, which means that it is ready for teaching by instructors outside of the original author team.</span>
           </abbr>
         </span>
-        
+
       </div>
     </div>
     <div class="selector-container">
@@ -56,7 +56,7 @@
             </li>
           </ul></li>
       </div>
-      
+
       <div class="dropdown" id="instructor-dropdown">
         <button class="btn btn-secondary dropdown-toggle bordered-button" type="button" id="dropdownMenu1" data-bs-toggle="dropdown" aria-expanded="false">
           <i aria-hidden="true" class="icon" data-feather="eye"></i> Learner View <i data-feather="chevron-down"></i>
@@ -179,7 +179,7 @@
                 </div><!--/div.accordion-flush-->
               </div><!--div.sidenav-view-selector -->
             </div><!--/div.col -->
-      
+
             <hr></div><!--/div.mobile-row -->
 
           <div class="accordion accordion-flush" id="accordionFlush11">
@@ -198,7 +198,7 @@
     <div class="accordion-header" id="flush-heading1">
         <a href="index.html">Summary and Setup</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -207,7 +207,7 @@
     <div class="accordion-header" id="flush-heading2">
         <a href="01-introduction.html">1. Introduction</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -216,7 +216,7 @@
     <div class="accordion-header" id="flush-heading3">
         <a href="02-shell_to_cwl.html">2. CWL and Shell Tools</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -225,7 +225,7 @@
     <div class="accordion-header" id="flush-heading4">
         <a href="03-dependency_graphs.html">3. Developing Multi-Step Workflows</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -239,7 +239,7 @@
         </span>
       </button>
     </div><!--/div.accordion-header-->
-        
+
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#pre-written-tool-descriptions">Pre-written tool descriptions</a></li>
@@ -247,7 +247,7 @@
 <li><a href="#running-the-new-workflow">Running the new workflow</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -256,7 +256,7 @@
     <div class="accordion-header" id="flush-heading6">
         <a href="addendum-01-debug.html">5. Debugging Workflows</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -265,7 +265,7 @@
     <div class="accordion-header" id="flush-heading7">
         <a href="more_info.html">6. More Information</a>
     </div><!--/div.accordion-header-->
-        
+
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
@@ -291,16 +291,16 @@
                       <li>
                         <a href="profiles.html">Learner Profiles</a>
                       </li>
-                      
+
                     </ul></div>
                 </div>
               </div>
             </div>
             <hr class="half-width resources"><a href="aio.html">See all in one page</a>
-            
+
 
             <hr class="d-none d-sm-block d-md-none"><div class="d-grid gap-1">
-            
+
             </div>
           </div><!-- /div.accordion -->
         </div><!-- /div.sidebar-inner -->
@@ -321,18 +321,18 @@
           Previous: Developing
         </a>
         <a class="chapter-link float-end" href="addendum-01-debug.html" rel="next">
-          Next: Debugging Workflows... 
+          Next: Debugging Workflows...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Resources for Reusing Tools and Scripts</h1>
-        <p>Last updated on 2024-07-02 |
-        
+        <p>Last updated on 2024-07-09 |
+
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/04-reusing_tools.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-        
-        
-        
+
+
+
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -360,8 +360,8 @@
 </div>
 </div>
 </div>
-<section id="pre-written-tool-descriptions"><h2 class="section-heading">Pre-written tool descriptions<a class="anchor" aria-label="anchor" href="#pre-written-tool-descriptions"></a>
-</h2>
+<section><h2 class="section-heading" id="pre-written-tool-descriptions">Pre-written tool descriptions<a class="anchor" aria-label="anchor" href="#pre-written-tool-descriptions"></a>
+<a class="anchor" aria-label="anchor" href="#pre-written-tool-descriptions"></a></h2>
 <hr class="half-width"><p>When you start a CWL workflow, it is recommended to check if there is
 already a CWL document available for the tools you want to use. <a href="https://github.com/common-workflow-library/bio-cwl-tools" class="external-link">Bio-cwl-tools</a>
 is a library of CWL documents for biology/life-sciences related
@@ -370,8 +370,8 @@ tools.</p>
 you, however, you can also find them in this library. In this episode
 you will use the bio-cwl-tools library to add the last step to the
 workflow.</p>
-</section><section id="adding-new-step-in-workflow"><h2 class="section-heading">Adding new step in workflow<a class="anchor" aria-label="anchor" href="#adding-new-step-in-workflow"></a>
-</h2>
+</section><section><h2 class="section-heading" id="adding-new-step-in-workflow">Adding new step in workflow<a class="anchor" aria-label="anchor" href="#adding-new-step-in-workflow"></a>
+<a class="anchor" aria-label="anchor" href="#adding-new-step-in-workflow"></a></h2>
 <hr class="half-width"><p>The last step of our workflow is counting the RNA-seq reads for which
 we will use the <a href="https://bio.tools/featurecounts" class="external-link"><code>featureCounts</code></a>
 tool.</p>
@@ -394,7 +394,7 @@ tool need? And what are the outputs of this tool?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The <code>featureCounts</code> CWL document can be found in the <a href="https://github.com/common-workflow-library/bio-cwl-tools/blob/release/subread/featureCounts.cwl" class="external-link">GitHub
 repo</a>.</p>
@@ -441,7 +441,7 @@ commandlinetool</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint1" aria-expanded="false" aria-controls="collapseHint1">
   <h4 class="accordion-header" id="headingHint1"> Hint: Feature Counts Workflow Step </h4>
 </button>
-<div id="collapseHint1" class="accordion-collapse collapse" data-bs-parent="#accordionHint1" aria-labelledby="headingHint1">
+<div id="collapseHint1" class="accordion-collapse collapse" aria-labelledby="headingHint1" data-bs-parent="#accordionHint1">
 <div class="accordion-body">
 <p>Use the <code>run</code> field to add the <code>featureCounts</code>
 tool as a step in the workflow.</p>
@@ -454,7 +454,7 @@ tool as a step in the workflow.</p>
 <button class="accordion-button hint-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHint2" aria-expanded="false" aria-controls="collapseHint2">
   <h4 class="accordion-header" id="headingHint2"> Hint: Upgrade RAM </h4>
 </button>
-<div id="collapseHint2" class="accordion-collapse collapse" data-bs-parent="#accordionHint2" aria-labelledby="headingHint2">
+<div id="collapseHint2" class="accordion-collapse collapse" aria-labelledby="headingHint2" data-bs-parent="#accordionHint2">
 <div class="accordion-body">
 <p>Use a <code>requirements</code> entry with
 <code>ResourceRequirement</code> to allocate a <code>ramMin</code> of
@@ -468,7 +468,7 @@ tool as a step in the workflow.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Solution: workflow_3.yml (Click to expand) </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -553,8 +553,8 @@ tool as a step in the workflow.</p>
 </div>
 </div>
 </div>
-</section><section id="running-the-new-workflow"><h2 class="section-heading">Running the new workflow<a class="anchor" aria-label="anchor" href="#running-the-new-workflow"></a>
-</h2>
+</section><section><h2 class="section-heading" id="running-the-new-workflow">Running the new workflow<a class="anchor" aria-label="anchor" href="#running-the-new-workflow"></a>
+<a class="anchor" aria-label="anchor" href="#running-the-new-workflow"></a></h2>
 <hr class="half-width"><p>The workflow is complete and we only need to complete the YAML input
 file.</p>
 <p>Copy the <code>workflow_input_2.yml</code> file to
@@ -565,7 +565,7 @@ file, which is the <code>fruitfly_gene_model</code> file.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> workflow_input_3.yml (Click to expand) </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -623,9 +623,9 @@ tools</li>
 </ul></div>
 </div>
 </div>
-<!-- 
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
+any links that you are not going to use.
  -->
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
@@ -639,7 +639,7 @@ any links that you are not going to use.
           Previous: Developing
         </a>
         <a class="chapter-link float-end" href="addendum-01-debug.html" rel="next">
-          Next: Debugging Workflows... 
+          Next: Debugging Workflows...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -650,18 +650,18 @@ any links that you are not going to use.
       		<footer class="row footer mx-md-3"><hr><div class="col-md-6">
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
-        
+
         <a href="https://github.com/__USERNAME__/__PROJECT__/edit/main/episodes/04-reusing_tools.Rmd" class="external-link">Edit on GitHub</a>
-        
+
 	
         | <a href="https://github.com/__USERNAME__/__PROJECT__/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
         | <a href="https://github.com/__USERNAME__/__PROJECT__/" class="external-link">Source</a></p>
 				<p><a href="https://github.com/__USERNAME__/__PROJECT__/blob/main/CITATION" class="external-link">Cite</a> | <a href="mailto:https://www.commonwl.org/#Support" class="external-link">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 			</div>
 			<div class="col-md-6">
-        
+
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
-        
+
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.5" class="external-link">sandpaper (0.16.5)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.6" class="external-link">pegboard (0.7.6)</a>, and <a href="https://github.com/carpentries/varnish/tree/1.0.3" class="external-link">varnish (1.0.3)</a></p>
 			</div>
@@ -685,8 +685,8 @@ any links that you are not going to use.
   "url": "https://__USERNAME__.github.io/__PROJECT__/04-reusing_tools.html",
   "identifier": "https://__USERNAME__.github.io/__PROJECT__/04-reusing_tools.html",
   "dateCreated": "2024-04-29",
-  "dateModified": "2024-07-02",
-  "datePublished": "2024-07-02"
+  "dateModified": "2024-07-09",
+  "datePublished": "2024-07-09"
 }
 
   </script><script>
